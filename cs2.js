@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/darkly/bootstrap.min.css" rel="stylesheet">
-    <script>
-    var bungieAPIkey = "0a11942f318647978979f13ad8aa53ee";
+var bungieAPIkey = "0a11942f318647978979f13ad8aa53ee";
     var clan = {};
         clan.memberIds = [];
         clan.memberCount = 0;
@@ -38,13 +31,6 @@
         clan.membersWithOutbreakPerfected = 0;
         clan.membersWithScrap = 0;
 $(document).ready(function() {
-    $("#tablink1").click(function() {
-        openTab("tablink1", "t1")
-    });
-    $("#tablink2").click(function() {
-        openTab("tablink2", "t2")
-    });
-    $("#tablink1").click();
     $.ajax({
         url: "https://www.bungie.net/Platform/GroupV2/1801684/Members/",
         headers: {
@@ -166,85 +152,26 @@ function outputClanData(clanobject) {
     $("#Mountaintop").html(clanobject.membersWithMountaintop);
     $("#membercounter").html(clanobject.membersFetched + "/" + clanobject.memberCount);
     return
-}
-
-function openTab(btn, tabName) {
-    $(".tabcontent").hide();
-    $(".tablinks").removeClass("active");
-    $("#" + tabName).show();
-    $("#" + btn).addClass("active")
 };
-</script>
-</head>
-<body>
-    <div class="tab" id="claninfo">
-    	<button id="tablink1" class="tablinks btn btn-success">Pinnacles </button>
-    </div>
-    <div><span id="membercounter"></span> members</div>
-    <div id="t1" class="tabcontent">
-        <div class="table-sm">
-            <table class="table table-sm">
-                <tbody>
-                   <tr>
-                        <th style="width: 6%" scope="row" class="align-middle text-center"><img src="https://bungie.net/common/destiny2_content/icons/ca86c130898a90ed19a0a317df8ab389.jpg" width="50" height="50"></th>
-                        <td style="width: 12%" class="align-middle"><a href="http://light.gg/i/BIotCQ/" target= "_blank">Luna&#39;s Howl</a></td>
-                        <td style="width: 20%" class="align-middle">Legendary | Energy | Hand Cannon</td>
-                        <td style="width: 8%" class="align-middle"><span class="text-danger">SOLAR</span></td>
-                        <td style="width: 20%" class="align-middle">
-                        	<img style="list-style:none;float: left;padding-left: 0;margin-right: 10px " src="https://bungie.net/common/destiny2_content/icons/90c4f7f35c9d24f4add016722a78404e.png" width="30" height="30">
-                        	<img style="list-style:none;float: left;padding-left: 0;margin-right: 10px" src="https://bungie.net/common/destiny2_content/icons/7cadd68b66ffd3bbedc09aa9c7ba6e03.png" width="30" height="30">
-                        	<img style="list-style:none;float: left;padding-left: 0;margin-right: 10px" src="https://bungie.net/common/destiny2_content/icons/d316be9e70844427e69034b0f06bec75.png" width="30" height="30">
-                        	<img style="list-style:none;float: left;padding-left: 0;margin-right: 10px" src="https://bungie.net/common/destiny2_content/icons/49958f356ea1df930888d15fe6539fe1.png" width="30" height="30">
-                        	<img style="list-style:none;float: left;padding-left: 0;margin-right: 10px" src="https://bungie.net/common/destiny2_content/icons/84ba8155221bbd2e36ffaa9ad977f5ab.png" width="30" height="30">
-                       	</td>
-                        <td style="width: 15%" id="LunasHowl" class="align-middle text-left"></td>
-                    </tr>
-                    <tr>
-                        <th scope="row" class="align-middle text-center"><img src="https://bungie.net/common/destiny2_content/icons/5098b108ad602dc6f003a332e9f74c27.jpg" width="50" height="50"></th>
-                        <td class="align-middle"><a href="http://light.gg/i/B4otCQ/" target= "_blank">Not Forgotten</a></td>
-                        <td class="align-middle">Legendary | Energy | Hand Cannon</td>
-						<td class="align-middle"><span class="text-danger">SOLAR</span></td>
-                        <td class="align-middle">
-                        	<img style="list-style:none;float: left;padding-left: 0;margin-right: 10px" src="https://bungie.net/common/destiny2_content/icons/90c4f7f35c9d24f4add016722a78404e.png" width="30" height="30">
-                        	<img style="list-style:none;float: left;padding-left: 0;margin-right: 10px" src="https://bungie.net/common/destiny2_content/icons/151465ba86df34438248aad2248cce32.png" width="30" height="30">
-                        	<img style="list-style:none;float: left;padding-left: 0;margin-right: 10px" src="https://bungie.net/common/destiny2_content/icons/05e357cd152eb0f665ee986aaa3edc56.png" width="30" height="30">
-                        	<img style="list-style:none;float: left;padding-left: 0;margin-right: 10px" src="https://bungie.net/common/destiny2_content/icons/49958f356ea1df930888d15fe6539fe1.png" width="30" height="30">
-                        	<img style="list-style:none;float: left;padding-left: 0;margin-right: 10px" src="https://bungie.net/common/destiny2_content/icons/84ba8155221bbd2e36ffaa9ad977f5ab.png" width="30" height="30">
-                       	</td>
-                        <td id="NotForgotten" class="align-middle text-left"></td>
-                    </tr>
-                    <tr>
-                        <th scope="row" class="align-middle text-center"><img src="https://bungie.net/common/destiny2_content/icons/b372c65f81ad2d49196a6cec4e07704d.jpg" width="50" height="50"></th>
-                        <td class="align-middle"><a href="http://light.gg/i/GbAG7g/" target= "_blank">The Mountaintop</a></td>
-                        <td class="align-middle">Legendary | Kinetic | Grenade Launcher</td>
-                        <td class="align-middle"><span class="text-muted">KINETIC</span></td>
-                        <td class="align-middle">
-                        	<div>
-                        		<ul style="list-style:none;float: left;padding-left: 0;margin-right: 10px;margin-top: 0.6em">
-                        			<li><img src="https://bungie.net/common/destiny2_content/icons/530b400d5cec3bf6aca7c5efc46fea20.png" width="30" height="30"></li>
-                        		</ul>
-                        		<ul style="list-style:none;float: left;padding-left: 0;margin-right: 10px;margin-top: 0.6em">
-                        			<li><img src="https://bungie.net/common/destiny2_content/icons/823b8ae4f48bca3bb5586167c1666781.png" width="30" height="30"><li>
-                        			<li><img src="https://bungie.net/common/destiny2_content/icons/402765b86ff7b1d97078ac43d5ca39ad.png" width="30" height="30"><li>
-                        		</ul>
-                        		<ul style="list-style:none;float: left;padding-left: 0;margin-right: 10px;margin-top: 0.6em">
-                        			<li><img src="https://bungie.net/common/destiny2_content/icons/c733f59957e33024af80e648729321ad.png" width="30" height="30"></li>
-                        			<li><img src="https://bungie.net/common/destiny2_content/icons/e792675af3774d031a5d30d3824d6e27.png" width="30" height="30"></li>
-                        		</ul>
-                        		<ul style="list-style:none;float: left;padding-left: 0;margin-right: 10px;margin-top: 0.6em">
-                        			<li><img src="https://bungie.net/common/destiny2_content/icons/cd4bc691a022136dc149e56ff4e04bf4.png" width="30" height="30"></li>
-                        		</ul>
-                        		<ul style="list-style:none;float: left;padding-left: 0;margin-right: 10px;margin-top: 0.6em">
-                        			<li><img src="https://bungie.net/common/destiny2_content/icons/22a38b81cb2ec0fe9811b5440a52b223.png" width="30" height="30"></li>
-                        		</ul>
-                        	</div>
-                       	</td>
-                        <td id="Mountaintop" class="align-middle text-left"></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
-</body>
 
-</html>
+$(document).ready(function () {
+
+    $('.star').on('click', function () {
+      $(this).toggleClass('star-checked');
+    });
+
+    $('.ckbox label').on('click', function () {
+      $(this).parents('tr').toggleClass('selected');
+    });
+
+    $('.btn-filter').on('click', function () {
+      var $target = $(this).data('target');
+      if ($target != 'all') {
+        $('.table tr').css('display', 'none');
+        $('.table tr[data-status="' + $target + '"]').fadeIn('slow');
+      } else {
+        $('.table tr').css('display', 'none').fadeIn('slow');
+      }
+    });
+
+ });

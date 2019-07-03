@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/darkly/bootstrap.min.css" rel="stylesheet">
+    <link href="cs2.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/58d6f88603.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="cs2.js"></script>
+
+</head>
+
+<body>
+    <div class="container" id="claninfo">
+        <div class="row">
+            <div class="col-md-12">
+                <h3>Clan Loot v2.0 -- <span id="membercounter"></span> members</h3>
+            </div>
+            <div class="col-md-12">
+                <div class="float-right">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-info btn-filter" data-target="vanguard">Vanguard</button>
+                        <button type="button" class="btn btn-success btn-filter" data-target="vanguard">Gambit</button>
+                        <button type="button" class="btn btn-danger btn-filter" data-target="crucible">Crucible</button>
+                        <button type="button" class="btn btn-default btn-filter" data-target="all">All</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-12 col-md-14 ml-auto mr-auto">
+                <div class="table-responsive table-filter">
+                    <table class="table table-sm">
+                        <thead class="table-borderless">
+                            <tr>
+                                <th>Icon</th>
+                                <th>Name</th>
+                                <th>Description</th>
+                                <th>Element</th>
+                                <th>Perks</th>
+                                <th>Total</th>
+                                <th>Link</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            <tr data-status="crucible">
+                                <td class="align-middle text-left"><img src="https://bungie.net/common/destiny2_content/icons/ca86c130898a90ed19a0a317df8ab389.jpg" width="45" height="45"></td>
+                                <td class="align-middle text-left">Luna's Howl</td>
+                                <td class="align-middle text-left">Legendary | Energy | Hand Cannon</td>
+                                <td class="align-middle text-left"><span class="text-danger">SOLAR</span></td>
+                                <td class="align-middle text-left">
+                                    <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px " src="https://bungie.net/common/destiny2_content/icons/90c4f7f35c9d24f4add016722a78404e.png" width="30" height="30">
+                                    <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/7cadd68b66ffd3bbedc09aa9c7ba6e03.png" width="30" height="30">
+                                    <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/d316be9e70844427e69034b0f06bec75.png" width="30" height="30">
+                                    <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/49958f356ea1df930888d15fe6539fe1.png" width="30" height="30">
+                                    <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/84ba8155221bbd2e36ffaa9ad977f5ab.png" width="30" height="30">
+                                </td>
+                                <td id="LunasHowl" class="align-middle text-left"></td>
+                                <td class="align-middle text-left td-actions">
+                                    <button type="button" rel="tooltip" class="btn btn-success btn-just-icon btn-sm">
+                                        <a href="http://light.gg/i/BIotCQ/" target="_blank"><i class="fas fa-link"></i></a>
+                                    </button>
+                                </td>
+                            </tr>
+
+                            <tr data-status="crucible">
+                                <td class="align-middle text-left"><img src="https://bungie.net/common/destiny2_content/icons/5098b108ad602dc6f003a332e9f74c27.jpg" width="45" height="45"></td>
+                                <td class="align-middle text-left">Not Forgotten</td>
+                                <td class="align-middle text-left">Legendary | Energy | Hand Cannon</td>
+                                <td class="align-middle text-left"><span class="text-danger">SOLAR</span></td>
+                                <td class="align-middle text-left">
+                                    <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/90c4f7f35c9d24f4add016722a78404e.png" width="30" height="30">
+                                    <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/151465ba86df34438248aad2248cce32.png" width="30" height="30">
+                                    <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/05e357cd152eb0f665ee986aaa3edc56.png" width="30" height="30">
+                                    <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/49958f356ea1df930888d15fe6539fe1.png" width="30" height="30">
+                                    <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/84ba8155221bbd2e36ffaa9ad977f5ab.png" width="30" height="30">
+                                </td>
+                                <td id="NotForgotten" class="align-middle text-left"></td>
+                                <td class="align-middle text-left td-actions">
+                                    <button type="button" rel="tooltip" class="btn btn-success btn-just-icon btn-sm">
+                                        <a href="http://light.gg/i/B4otCQ/" target="_blank"><i class="fas fa-link"></i></a>
+                                    </button>
+                                </td>
+                            </tr>
+
+                            <tr data-status="crucible">
+                                <td class="align-middle text-left"><img src="https://bungie.net/common/destiny2_content/icons/b372c65f81ad2d49196a6cec4e07704d.jpg" width="45" height="45"></td>
+                                <td class="align-middle text-left">The Mountaintop</td>
+                                <td class="align-middle text-left">Legendary | Kinetic | Grenade Launcher</td>
+                                <td class="align-middle text-left"><span class="text-muted">KINETIC</span></td>
+                                <td class="align-middle text-left">
+                                    <ul style="list-style:none;float: left;padding-left: 0;margin-right: 5px;margin-top: 0.6em">
+                                        <li><img src="https://bungie.net/common/destiny2_content/icons/530b400d5cec3bf6aca7c5efc46fea20.png" width="30" height="30"></li>
+                                    </ul>
+                                    <ul style="list-style:none;float: left;padding-left: 0;margin-right: 5px;margin-top: 0.6em">
+                                        <li><img src="https://bungie.net/common/destiny2_content/icons/823b8ae4f48bca3bb5586167c1666781.png" width="30" height="30"></li>
+                                        <li><img src="https://bungie.net/common/destiny2_content/icons/402765b86ff7b1d97078ac43d5ca39ad.png" width="30" height="30"></li>
+                                    </ul>
+                                    <ul style="list-style:none;float: left;padding-left: 0;margin-right: 5px;margin-top: 0.6em">
+                                        <li><img src="https://bungie.net/common/destiny2_content/icons/c733f59957e33024af80e648729321ad.png" width="30" height="30"></li>
+                                        <li><img src="https://bungie.net/common/destiny2_content/icons/e792675af3774d031a5d30d3824d6e27.png" width="30" height="30"></li>
+                                    </ul>
+                                    <ul style="list-style:none;float: left;padding-left: 0;margin-right: 5px;margin-top: 0.6em">
+                                        <li><img src="https://bungie.net/common/destiny2_content/icons/cd4bc691a022136dc149e56ff4e04bf4.png" width="30" height="30"></li>
+                                    </ul>
+                                    <ul style="list-style:none;float: left;padding-left: 0;margin-right: 5px;margin-top: 0.6em">
+                                        <li><img src="https://bungie.net/common/destiny2_content/icons/22a38b81cb2ec0fe9811b5440a52b223.png" width="30" height="30"></li>
+                                    </ul>
+                                </td>
+                                <td id="Mountaintop" class="align-middle text-left"></td>
+                                <td class="align-middle text-left td-actions">
+                                    <button type="button" rel="tooltip" class="btn btn-success btn-just-icon btn-sm">
+                                        <a href="http://light.gg/i/B4otCQ/" target="_blank"><i class="fas fa-link"></i></a>
+                                    </button>
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>
