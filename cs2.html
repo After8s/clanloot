@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>CS2</title>
+    
+    <link href="cs2.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/darkly/bootstrap.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <script>
+    var bungieAPIkey = "0a11942f318647978979f13ad8aa53ee";
+    var clan = {};
+        clan.memberIds = [];
+        clan.memberCount = 0;
+        clan.membersFetched = 0;
+        clan.memberName = {};
+        clan.retryCounter = {};
+        clan.unresolvedMemberNames = [];
+        clan.membersWithLunasHowl = 0;
+        clan.membersWithNotForgotten = 0;
+        clan.membersWithMountaintop = 0;
+        clan.membersWithRecluse = 0;
+        clan.membersWithRedrixBroadsword = 0;
+        clan.membersWithLoadedQuestion = 0;
+        clan.membersWithOxygen = 0;
+        clan.membersWithWendigo = 0;
+        clan.membersWithBreakneck = 0;
+        clan.membersWithDelirium = 0;
+        clan.membersWithHush = 0;
+        clan.membersWithOneThousandVoices = 0;
+        clan.membersWithAnarchy = 0;
+        clan.membersWithRevoker = 0;
+        clan.membersWithMalfeasance = 0;
+        clan.membersWithLastWishSparrow = 0;
+        clan.membersWithTarrabah = 0;
+        clan.membersWithAlwaysOnTime = 0;
+        clan.membersWithThorn = 0;
+        clan.membersWithTruth = 0;
+        clan.membersWithTheLastWord = 0;
+        clan.membersWithIzanagisBurden = 0;
+        clan.membersWithOutbreakPerfected = 0;
+        clan.membersWithScrap = 0;
+$(document).ready(function () {
+
+    $('.star').on('click', function () {
+      $(this).toggleClass('star-checked');
+    });
+
+    $('.ckbox label').on('click', function () {
+      $(this).parents('tr').toggleClass('selected');
+    });
+
+    $('.btn-filter').on('click', function () {
+      var $target = $(this).data('target');
+      if ($target != 'all') {
+        $('.table tr').css('display', 'none');
+        $('.table tr[data-status="' + $target + '"]').fadeIn('slow');
+      } else {
+        $('.table tr').css('display', 'none').fadeIn('slow');
+      }
+    });
+
+ });
+    $.ajax({
+        url: "https://www.bungie.net/Platform/GroupV2/1801684/Members/",
+        headers: {
+            "X-API-KEY": bungieAPIkey
+        },
+        method: "GET"
+    }).done(function(data) {
+        if (!data.Response) {
+            $("#claninfo").html("API down?");
+            return
+        }
+        $.each(data.Response.results, function(index, value) {
+            clan.memberIds.push(value.destinyUserInfo.membershipId);
+            clan.retryCounter[value.destinyUserInfo.membershipId] = 0;
+            clan.memberName[value.destinyUserInfo.membershipId] = value.destinyUserInfo.displayName
+        });
+        clan.memberCount = clan.memberIds.length;
+        $.each(clan.memberIds, function(index, memberid) {
+            getAccountData(memberid);
+            checkForSpecialAchievements(memberid)
+        })
+    });
+$(document).ajaxStop(function() {
+    $(".sk-folding-cube").hide();
+    if (clan.unresolvedMemberNames.length > 0) $(".cubelegend").append("<br><small>(unable to fetch " + clan.unresolvedMemberNames.join(", ") + ")</small>")
+});
+
+function getAccountData(memberid) {
+    clan.retryCounter[memberid] = clan.retryCounter[memberid] + 1;
+    if (clan.retryCounter[memberid] > 4) {
+        clan.unresolvedMemberNames.push(clan.memberName[memberid]);
+        return
+    }
+    $.ajax({
+        url: "https://www.bungie.net/Platform/Destiny2/2/Account/" + memberid + "/Character/0/Stats/",
+        headers: {
+            "X-API-KEY": bungieAPIkey
+        },
+        data: {
+            groups: "1,3",
+            modes: "4,5,7,10,12,15,19,25,31,32,37,38,39,41,42,43,44,45,48,49,50,51,52,53,5,4,55,56,57,59,60,61,62,64,65,68,69,70,71,72,73,74"
+        },
+        method: "GET"
+    }).done(function(data) {
+        if (data.ErrorCode > 1 || !data.Response) getAccountData(memberid);
+        else {
+            clan.membersFetched = clan.membersFetched +
+                1;
+            outputClanData(clan)
+        }
+    });
+    return
+}
+
+function checkForSpecialAchievements(memberid) {
+    var aquiredCollectibleStateValues = [0, 8, 16, 64, 80];
+    $.ajax({
+        url: "https://www.bungie.net/Platform/Destiny2/2/Profile/" + memberid + "/?components=800,900",
+        headers: {
+            "X-API-KEY": bungieAPIkey
+        },
+        method: "GET"
+    }).done(function(data) {
+        if (data.ErrorCode > 1 || !data.Response || typeof data.Response.profileCollectibles.data === "undefined") {
+            clan.retryCounter[memberid]++;
+            if (clan.retryCounter[memberid] > 4) {
+                clan.unresolvedMemberNames.push(clan.memberName[memberid]);
+                return
+            }
+            checkForSpecialAchievements(memberid)
+        } else {
+            clan.membersWithLunasHowl = clan.membersWithLunasHowl + (jQuery.inArray(data.Response.profileCollectibles.data.collectibles[3260604718].state, aquiredCollectibleStateValues) !== -1 ? 1 : 0);
+            clan.membersWithNotForgotten = clan.membersWithNotForgotten + (jQuery.inArray(data.Response.profileCollectibles.data.collectibles[3260604717].state, aquiredCollectibleStateValues) !== -1 ? 1 : 0);
+            clan.membersWithRecluse = clan.membersWithRecluse + (jQuery.inArray(data.Response.profileCollectibles.data.collectibles[2335550020].state, aquiredCollectibleStateValues) !== -1 ? 1 : 0);
+            clan.membersWithMountaintop = clan.membersWithMountaintop + (jQuery.inArray(data.Response.profileCollectibles.data.collectibles[4047371119].state, aquiredCollectibleStateValues) !== -1 ? 1 : 0);
+            
+            clan.membersWithRevoker = clan.membersWithRevoker + (jQuery.inArray(data.Response.profileCollectibles.data.collectibles[3066162258].state, aquiredCollectibleStateValues) !== -1 ? 1 : 0);
+            clan.membersWithRB = clan.membersWithRB + (jQuery.inArray(data.Response.profileCollectibles.data.collectibles[1111219481].state, aquiredCollectibleStateValues) !== -1 ? 1 : 0);
+            clan.membersWithLQ = clan.membersWithLQ + (jQuery.inArray(data.Response.profileCollectibles.data.collectibles[3810740723].state, aquiredCollectibleStateValues) !== -1 ? 1 : 0);
+            clan.membersWithOXY = clan.membersWithOXY + (jQuery.inArray(data.Response.profileCollectibles.data.collectibles[543982652].state, aquiredCollectibleStateValues) !== -1 ? 1 : 0);
+            clan.membersWithWEN = clan.membersWithWEN + (jQuery.inArray(data.Response.profileCollectibles.data.collectibles[3830703103].state, aquiredCollectibleStateValues) !== -1 ? 1 : 0);
+            clan.membersWithBN = clan.membersWithBN + (jQuery.inArray(data.Response.profileCollectibles.data.collectibles[1666039008].state, aquiredCollectibleStateValues) !== -1 ? 1 : 0);
+            clan.membersWithDEL = clan.membersWithDEL + (jQuery.inArray(data.Response.profileCollectibles.data.collectibles[1639266456].state, aquiredCollectibleStateValues) !== -1 ? 1 : 0);
+            clan.membersWithOneKay = clan.membersWithOneKay + (jQuery.inArray(data.Response.profileCollectibles.data.collectibles[199171385].state, aquiredCollectibleStateValues) !== -1 ? 1 : 0);
+            clan.membersWithAN = clan.membersWithAN + (jQuery.inArray(data.Response.profileCollectibles.data.collectibles[2220014607].state, aquiredCollectibleStateValues) !== -1 ? 1 : 0);
+            clan.membersWithMalf = clan.membersWithMalf + (jQuery.inArray(data.Response.profileCollectibles.data.collectibles[1660030045].state, aquiredCollectibleStateValues) !== -1 ? 1 : 0);
+            clan.membersWithHush = clan.membersWithHush + (jQuery.inArray(data.Response.profileCollectibles.data.collectibles[1670904512].state, aquiredCollectibleStateValues) !== -1 ? 1 : 0);
+            clan.membersWithTAR = clan.membersWithTAR + (jQuery.inArray(data.Response.profileCollectibles.data.collectibles[2329697053].state, aquiredCollectibleStateValues) !== -1 ? 1 : 0);
+            clan.membersWithAOT = clan.membersWithAOT + (jQuery.inArray(data.Response.profileCollectibles.data.collectibles[1903459810].state, aquiredCollectibleStateValues) !== -1 ? 1 : 0);
+            clan.membersWithTH = clan.membersWithTH + (jQuery.inArray(data.Response.profileCollectibles.data.collectibles[4009683574].state, aquiredCollectibleStateValues) !== -1 ? 1 : 0);
+            clan.membersWithTR = clan.membersWithTR + (jQuery.inArray(data.Response.profileCollectibles.data.collectibles[1763840761].state, aquiredCollectibleStateValues) !== -1 ? 1 : 0);
+            clan.membersWithTLW = clan.membersWithTLW + (jQuery.inArray(data.Response.profileCollectibles.data.collectibles[3074058273].state, aquiredCollectibleStateValues) !== -1 ? 1 : 0);
+            clan.membersWithIB = clan.membersWithIB + (jQuery.inArray(data.Response.profileCollectibles.data.collectibles[24541428].state, aquiredCollectibleStateValues) !== -1 ? 1 : 0);
+            clan.membersWithOP = clan.membersWithOP + (jQuery.inArray(data.Response.profileCollectibles.data.collectibles[2500286745].state, aquiredCollectibleStateValues) !== -1 ? 1 : 0);
+            clan.membersWithScrap = clan.membersWithScrap + (jQuery.inArray(data.Response.profileCollectibles.data.collectibles[1840126886].state, aquiredCollectibleStateValues) !== -1 ? 1 : 0);
+            
+            $.each(data.Response.characterCollectibles.data, function(index, value) {
+                if ((jQuery.inArray(value.collectibles[1469913804].state, aquiredCollectibleStateValues) !== -1)) {
+                    clan.membersWithLWS = clan.membersWithLWS + 1;
+                    return false
+                }
+            });
+            outputClanData(clan)
+        }
+    });
+    return
+}
+
+function getDescendantProp(obj, desc) {
+    var arr = desc.split(".");
+    while (arr.length && (obj = obj[arr.shift()]));
+    return obj
+}
+
+function outputClanData(clanobject) {
+    $("#LunasHowl").html(clanobject.membersWithLunasHowl);
+    $("#NotForgotten").html(clanobject.membersWithNotForgotten);
+    $("#Mountaintop").html(clanobject.membersWithMountaintop);
+    $("#membercounter").html(clanobject.membersFetched + "/" + clanobject.memberCount);
+    return
+}
+
+function openTab(btn, tabName) {
+    $(".tabcontent").hide();
+    $(".tablinks").removeClass("active");
+    $("#" + tabName).show();
+    $("#" + btn).addClass("active")
+};
+</script>
+</head>
+
+<div class="container">
+    <div class="row">
+
+        <section class="content">
+            <h1>Table Filter</h1>
+            <div class="col-md-8 col-md-offset-2">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <div class="pull-right">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-success btn-filter" data-target="pagado">Pagado</button>
+                                <button type="button" class="btn btn-warning btn-filter" data-target="pendiente">Pendiente</button>
+                                <button type="button" class="btn btn-danger btn-filter" data-target="cancelado">Cancelado</button>
+                                <button type="button" class="btn btn-default btn-filter" data-target="all">Todos</button>
+                            </div>
+                        </div>
+                        <div class="table-container">
+                            <table class="table table-filter">
+                                <tbody>
+                                    <tr data-status="pagado">
+                                        <td>
+                                            <div class="ckbox">
+                                                <input type="checkbox" id="checkbox1">
+                                                <label for="checkbox1"></label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <a href="javascript:;" class="star">
+                                                <i class="glyphicon glyphicon-star"></i>
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <div class="media">
+                                                <a href="#" class="pull-left">
+                                                    <img src="https://s3.amazonaws.com/uifaces/faces/twitter/fffabs/128.jpg" class="media-photo">
+                                                </a>
+                                                <div class="media-body">
+                                                    <span class="media-meta pull-right">Febrero 13, 2016</span>
+                                                    <h4 class="title">
+                                                        Lorem Impsum
+                                                        <span class="pull-right pagado">(Pagado)</span>
+                                                    </h4>
+                                                    <p class="summary">Ut enim ad minim veniam, quis nostrud exercitation...</p>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr data-status="pendiente">
+                                        <td>
+                                            <div class="ckbox">
+                                                <input type="checkbox" id="checkbox3">
+                                                <label for="checkbox3"></label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <a href="javascript:;" class="star">
+                                                <i class="glyphicon glyphicon-star"></i>
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <div class="media">
+                                                <a href="#" class="pull-left">
+                                                    <img src="https://s3.amazonaws.com/uifaces/faces/twitter/fffabs/128.jpg" class="media-photo">
+                                                </a>
+                                                <div class="media-body">
+                                                    <span class="media-meta pull-right">Febrero 13, 2016</span>
+                                                    <h4 class="title">
+                                                        Lorem Impsum
+                                                        <span class="pull-right pendiente">(Pendiente)</span>
+                                                    </h4>
+                                                    <p class="summary">Ut enim ad minim veniam, quis nostrud exercitation...</p>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr data-status="cancelado">
+                                        <td>
+                                            <div class="ckbox">
+                                                <input type="checkbox" id="checkbox2">
+                                                <label for="checkbox2"></label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <a href="javascript:;" class="star">
+                                                <i class="glyphicon glyphicon-star"></i>
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <div class="media">
+                                                <a href="#" class="pull-left">
+                                                    <img src="https://s3.amazonaws.com/uifaces/faces/twitter/fffabs/128.jpg" class="media-photo">
+                                                </a>
+                                                <div class="media-body">
+                                                    <span class="media-meta pull-right">Febrero 13, 2016</span>
+                                                    <h4 class="title">
+                                                        Lorem Impsum
+                                                        <span class="pull-right cancelado">(Cancelado)</span>
+                                                    </h4>
+                                                    <p class="summary">Ut enim ad minim veniam, quis nostrud exercitation...</p>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr data-status="pagado" class="selected">
+                                        <td>
+                                            <div class="ckbox">
+                                                <input type="checkbox" id="checkbox4" checked>
+                                                <label for="checkbox4"></label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <a href="javascript:;" class="star star-checked">
+                                                <i class="glyphicon glyphicon-star"></i>
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <div class="media">
+                                                <a href="#" class="pull-left">
+                                                    <img src="https://s3.amazonaws.com/uifaces/faces/twitter/fffabs/128.jpg" class="media-photo">
+                                                </a>
+                                                <div class="media-body">
+                                                    <span class="media-meta pull-right">Febrero 13, 2016</span>
+                                                    <h4 class="title">
+                                                        Lorem Impsum
+                                                        <span class="pull-right pagado">(Pagado)</span>
+                                                    </h4>
+                                                    <p class="summary">Ut enim ad minim veniam, quis nostrud exercitation...</p>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr data-status="pendiente">
+                                        <td>
+                                            <div class="ckbox">
+                                                <input type="checkbox" id="checkbox5">
+                                                <label for="checkbox5"></label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <a href="javascript:;" class="star">
+                                                <i class="glyphicon glyphicon-star"></i>
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <div class="media">
+                                                <a href="#" class="pull-left">
+                                                    <img src="https://s3.amazonaws.com/uifaces/faces/twitter/fffabs/128.jpg" class="media-photo">
+                                                </a>
+                                                <div class="media-body">
+                                                    <span class="media-meta pull-right">Febrero 13, 2016</span>
+                                                    <h4 class="title">
+                                                        Lorem Impsum
+                                                        <span class="pull-right pendiente">(Pendiente)</span>
+                                                    </h4>
+                                                    <p class="summary">Ut enim ad minim veniam, quis nostrud exercitation...</p>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-footer">
+                    <p>
+                        Page © - 2016 <br>
+                        Powered By <a href="https://www.facebook.com/tavo.qiqe.lucero" target="_blank">TavoQiqe</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+    </div>
+</div>
