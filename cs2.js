@@ -9,27 +9,8 @@ var bungieAPIkey = "0a11942f318647978979f13ad8aa53ee";
         clan.membersWithLunasHowl = 0;
         clan.membersWithNotForgotten = 0;
         clan.membersWithMountaintop = 0;
-        clan.membersWithRecluse = 0;
-        clan.membersWithRedrixBroadsword = 0;
-        clan.membersWithLoadedQuestion = 0;
-        clan.membersWithOxygen = 0;
-        clan.membersWithWendigo = 0;
-        clan.membersWithBreakneck = 0;
-        clan.membersWithDelirium = 0;
-        clan.membersWithHush = 0;
-        clan.membersWithOneThousandVoices = 0;
-        clan.membersWithAnarchy = 0;
-        clan.membersWithRevoker = 0;
-        clan.membersWithMalfeasance = 0;
-        clan.membersWithLastWishSparrow = 0;
-        clan.membersWithTarrabah = 0;
-        clan.membersWithAlwaysOnTime = 0;
-        clan.membersWithThorn = 0;
-        clan.membersWithTruth = 0;
-        clan.membersWithTheLastWord = 0;
-        clan.membersWithIzanagisBurden = 0;
-        clan.membersWithOutbreakPerfected = 0;
-        clan.membersWithScrap = 0;
+        clan.membersWithRedrixsBroadsword = 0;
+        
 $(document).ready(function() {
     $.ajax({
         url: "https://www.bungie.net/Platform/GroupV2/1801684/Members/",
@@ -107,9 +88,9 @@ function checkForSpecialAchievements(memberid) {
             clan.membersWithNotForgotten = clan.membersWithNotForgotten + (jQuery.inArray(data.Response.profileCollectibles.data.collectibles[3260604717].state, aquiredCollectibleStateValues) !== -1 ? 1 : 0);
             clan.membersWithRecluse = clan.membersWithRecluse + (jQuery.inArray(data.Response.profileCollectibles.data.collectibles[2335550020].state, aquiredCollectibleStateValues) !== -1 ? 1 : 0);
             clan.membersWithMountaintop = clan.membersWithMountaintop + (jQuery.inArray(data.Response.profileCollectibles.data.collectibles[4047371119].state, aquiredCollectibleStateValues) !== -1 ? 1 : 0);
+            clan.membersWithRedrixsBroadsword = clan.membersWithRedrixsBroadsword + (jQuery.inArray(data.Response.profileCollectibles.data.collectibles[1111219481].state, aquiredCollectibleStateValues) !== -1 ? 1 : 0);
             
             clan.membersWithRevoker = clan.membersWithRevoker + (jQuery.inArray(data.Response.profileCollectibles.data.collectibles[3066162258].state, aquiredCollectibleStateValues) !== -1 ? 1 : 0);
-            clan.membersWithRB = clan.membersWithRB + (jQuery.inArray(data.Response.profileCollectibles.data.collectibles[1111219481].state, aquiredCollectibleStateValues) !== -1 ? 1 : 0);
             clan.membersWithLQ = clan.membersWithLQ + (jQuery.inArray(data.Response.profileCollectibles.data.collectibles[3810740723].state, aquiredCollectibleStateValues) !== -1 ? 1 : 0);
             clan.membersWithOXY = clan.membersWithOXY + (jQuery.inArray(data.Response.profileCollectibles.data.collectibles[543982652].state, aquiredCollectibleStateValues) !== -1 ? 1 : 0);
             clan.membersWithWEN = clan.membersWithWEN + (jQuery.inArray(data.Response.profileCollectibles.data.collectibles[3830703103].state, aquiredCollectibleStateValues) !== -1 ? 1 : 0);
@@ -150,6 +131,7 @@ function outputClanData(clanobject) {
     $("#LunasHowl").html(clanobject.membersWithLunasHowl);
     $("#NotForgotten").html(clanobject.membersWithNotForgotten);
     $("#Mountaintop").html(clanobject.membersWithMountaintop);
+    $("#RedrixsBroadsword").html(clanobject.membersWithRedrixsBroadsword);
     $("#membercounter").html(clanobject.membersFetched + "/" + clanobject.memberCount);
     return
 };
