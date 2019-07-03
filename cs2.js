@@ -14,6 +14,8 @@ var bungieAPIkey = "0a11942f318647978979f13ad8aa53ee";
         clan.membersWithLoadedQuestion = 0;
         clan.membersWithRevoker = 0;
         clan.membersWithHush = 0;
+        clan.membersWithWendigo = 0;
+        clan.membersWithBreackneck = 0;
         
 $(document).ready(function() {
     $.ajax({
@@ -96,10 +98,10 @@ function checkForSpecialAchievements(memberid) {
             clan.membersWithLoadedQuestion = clan.membersWithLoadedQuestion + (jQuery.inArray(data.Response.profileCollectibles.data.collectibles[3810740723].state, aquiredCollectibleStateValues) !== -1 ? 1 : 0);
             clan.membersWithRevoker = clan.membersWithRevoker + (jQuery.inArray(data.Response.profileCollectibles.data.collectibles[3066162258].state, aquiredCollectibleStateValues) !== -1 ? 1 : 0);
             clan.membersWithHush = clan.membersWithHush + (jQuery.inArray(data.Response.profileCollectibles.data.collectibles[1670904512].state, aquiredCollectibleStateValues) !== -1 ? 1 : 0);
-            
-            clan.membersWithOXY = clan.membersWithOXY + (jQuery.inArray(data.Response.profileCollectibles.data.collectibles[543982652].state, aquiredCollectibleStateValues) !== -1 ? 1 : 0);
-            clan.membersWithWEN = clan.membersWithWEN + (jQuery.inArray(data.Response.profileCollectibles.data.collectibles[3830703103].state, aquiredCollectibleStateValues) !== -1 ? 1 : 0);
-            clan.membersWithBN = clan.membersWithBN + (jQuery.inArray(data.Response.profileCollectibles.data.collectibles[1666039008].state, aquiredCollectibleStateValues) !== -1 ? 1 : 0);
+            clan.membersWithWendigo = clan.membersWithWendigo + (jQuery.inArray(data.Response.profileCollectibles.data.collectibles[3830703103].state, aquiredCollectibleStateValues) !== -1 ? 1 : 0);
+            clan.membersWithBreackneck = clan.membersWithBreackneck + (jQuery.inArray(data.Response.profileCollectibles.data.collectibles[1666039008].state, aquiredCollectibleStateValues) !== -1 ? 1 : 0);
+
+            clan.membersWithOXY = clan.membersWithOXY + (jQuery.inArray(data.Response.profileCollectibles.data.collectibles[543982652].state, aquiredCollectibleStateValues) !== -1 ? 1 : 0);        
             clan.membersWithDEL = clan.membersWithDEL + (jQuery.inArray(data.Response.profileCollectibles.data.collectibles[1639266456].state, aquiredCollectibleStateValues) !== -1 ? 1 : 0);
             clan.membersWithOneKay = clan.membersWithOneKay + (jQuery.inArray(data.Response.profileCollectibles.data.collectibles[199171385].state, aquiredCollectibleStateValues) !== -1 ? 1 : 0);
             clan.membersWithAN = clan.membersWithAN + (jQuery.inArray(data.Response.profileCollectibles.data.collectibles[2220014607].state, aquiredCollectibleStateValues) !== -1 ? 1 : 0);
@@ -140,6 +142,8 @@ function outputClanData(clanobject) {
     $("#LoadedQuestion").html(clanobject.membersWithLoadedQuestion);
     $("#Revoker").html(clanobject.membersWithRevoker);
     $("#Hush").html(clanobject.membersWithHush);
+    $("#Wendigo").html(clanobject.membersWithWendigo);
+    $("#Breackneck").html(clanobject.membersWithBreackneck);
     $("#membercounter").html(clanobject.membersFetched + "/" + clanobject.memberCount);
     return
 };
@@ -149,7 +153,7 @@ $(document).ready(function () {
     $('.btn-filter').on('click', function () {
       var $target = $(this).data('target');
       if ($target != 'all') {
-        $('.table tr').css('display', 'none');
+        $('.table tr:not(.alwaysthere)').css('display', 'none');
         $('.table tr[data-status="' + $target + '"]').fadeIn('slow');
       } else {
         $('.table tr').css('display', 'none').fadeIn('slow');

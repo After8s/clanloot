@@ -312,3 +312,10 @@ small{
 .text-void {
   color: #d92ed5;
 }
+.sticky-footer {
+    position: fixed;
+    bottom: 0;
+    width: 100% !important;
+    background-color: #222;
+    border-top: 1px solid #808080;
+}
