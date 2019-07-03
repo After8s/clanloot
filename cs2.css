@@ -62,9 +62,9 @@ small{
     border-bottom-left-radius: 0 !important;
 }
 .btn{
-    padding: 12px 30px !important;
+    padding: 5px 20px !important;
     margin: 5px 1px;
-    font-size: 12px !important;
+    font-size: 14px !important;
     box-shadow: 0 2px 2px 0 hsla(0,0%,60%,.14), 0 3px 1px -2px hsla(0,0%,60%,.2), 0 1px 5px 0 hsla(0,0%,60%,.12);
 }
 .btn .material-icons{
@@ -145,7 +145,6 @@ small{
      line-height: 29px; 
 }
 
-
 .table {
     width: 100%;
     max-width: 100%;
@@ -189,10 +188,6 @@ small{
     font-size: 17px;
     padding-top: 20px;
     text-align: right;
-}
-
-.table-striped>tbody>tr:nth-of-type(odd) {
-    background-color: #f9f9f9 !important;
 }
 
 /*animation*/
@@ -296,10 +291,6 @@ small{
 .table-filter .media-photo {
   width: 35px;
 }
-.table-filter .media-body {
-    display: block;
-    /* Had to use this style to force the div to expand (wasn't necessary with my bootstrap version 3.3.6) */
-}
 .table-filter .media-meta {
   font-size: 11px;
   color: #999;
@@ -315,15 +306,9 @@ small{
   font-size: .8em;
   margin-right: 20px;
 }
-.table-filter .media .title span.pagado {
-  color: #5cb85c;
-}
-.table-filter .media .title span.pendiente {
-  color: #f0ad4e;
-}
-.table-filter .media .title span.cancelado {
-  color: #d9534f;
-}
 .table-filter .media .summary {
   font-size: 14px;
+}
+.text-void {
+  color: #d92ed5;
 }
