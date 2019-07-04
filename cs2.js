@@ -28,6 +28,8 @@ var bungieAPIkey = "0a11942f318647978979f13ad8aa53ee";
         clan.membersWithAnarchy = 0;
         clan.membersWithOutbreakPerfected = 0;
         clan.membersWithWhisper = 0;
+        clan.membersWithRedrixsClaymore = 0;
+        clan.membersWithWishEnder = 0;
         
 $(document).ready(function() {
     $.ajax({
@@ -124,6 +126,8 @@ function checkForSpecialAchievements(memberid) {
             clan.membersWithAnarchy = clan.membersWithAnarchy + (jQuery.inArray(data.Response.profileCollectibles.data.collectibles[2220014607].state, aquiredCollectibleStateValues) !== -1 ? 1 : 0);
             clan.membersWithOutbreakPerfected = clan.membersWithOutbreakPerfected + (jQuery.inArray(data.Response.profileCollectibles.data.collectibles[2500286745].state, aquiredCollectibleStateValues) !== -1 ? 1 : 0);
             clan.membersWithWhisper = clan.membersWithWhisper + (jQuery.inArray(data.Response.profileCollectibles.data.collectibles[3875807583].state, aquiredCollectibleStateValues) !== -1 ? 1 : 0);
+            clan.membersWithRedrixsClaymore = clan.membersWithRedrixsClaymore + (jQuery.inArray(data.Response.profileCollectibles.data.collectibles[4274523516].state, aquiredCollectibleStateValues) !== -1 ? 1 : 0);
+            clan.membersWithWishEnder = clan.membersWithWishEnder + (jQuery.inArray(data.Response.profileCollectibles.data.collectibles[1660030044].state, aquiredCollectibleStateValues) !== -1 ? 1 : 0);
             
             outputClanData(clan)
         }
@@ -160,6 +164,8 @@ function outputClanData(clanobject) {
     $("#Anarchy").html(clanobject.membersWithAnarchy);
     $("#OutbreakPerfected").html(clanobject.membersWithOutbreakPerfected);
     $("#Whisper").html(clanobject.membersWithWhisper);
+    $("#RedrixsClaymore").html(clanobject.membersWithRedrixsClaymore);
+    $("#WishEnder").html(clanobject.membersWithWishEnder);
     $("#membercounter").html(clanobject.membersFetched + "/" + clanobject.memberCount);
     return
 };
