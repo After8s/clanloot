@@ -61,13 +61,13 @@ small{
     border-top-left-radius: 0 !important;
     border-bottom-left-radius: 0 !important;
 }
-.btn{
+.btn {
     padding: 5px 20px !important;
     margin: 5px 1px;
     font-size: 14px !important;
     box-shadow: 0 2px 2px 0 hsla(0,0%,60%,.14), 0 3px 1px -2px hsla(0,0%,60%,.2), 0 1px 5px 0 hsla(0,0%,60%,.12);
 }
-.btn .material-icons{
+.btn .material-icons {
     position: relative;
     display: inline-block;
     top: 0;
@@ -76,7 +76,7 @@ small{
     font-size: 1.1rem;
     vertical-align: middle;
 }
-.btn.btn-sm{
+.btn.btn-sm {
     border-radius:3px !important;
 }
 
@@ -101,7 +101,7 @@ small{
     border-radius: 50% !important;
 }
 
-.btn.btn-link{
+.btn.btn-link {
     background: transparent;
     box-shadow: none;
     color: #999;
@@ -122,7 +122,7 @@ small{
                 0 8px 10px -5px rgba(76,175,80,.2) !important;
     background: #47a44b  !important;
 }
-.btn.btn-success.btn-link{
+.btn.btn-success.btn-link {
     background-color: transparent !important;
     color: #4caf50 !important;
     box-shadow: none !important;
@@ -148,7 +148,7 @@ small{
 .table {
     width: 100%;
     max-width: 100%;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
     background-color: transparent;
 }
 

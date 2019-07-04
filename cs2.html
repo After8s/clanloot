@@ -24,6 +24,7 @@
                         <button type="button" class="btn btn-info btn-filter" data-target="vanguard">Vanguard</button>
                         <button type="button" class="btn btn-success btn-filter" data-target="gambit">Gambit</button>
                         <button type="button" class="btn btn-danger btn-filter" data-target="crucible">Crucible</button>
+                        <button type="button" class="btn btn-warning btn-filter" data-target="collectibles">Collectibles</button>
                         <button type="button" class="btn btn-default btn-filter" data-target="all">All</button>
                     </div>
                 </div>
@@ -45,9 +46,109 @@
                         </thead>
                         <tbody>
 
+                            <tr data-status="gambit">
+                                <td class="align-middle text-left"><img src="https://bungie.net/common/destiny2_content/icons/11eeb53a1b5915c5e1740c0dda9b5f05.jpg" width="45" height="45"></td>
+                                <td class="align-middle text-left">21% Delirium <span class="badge badge-pill badge-success">Pinnacle</span></td>
+                                <td class="align-middle text-left">Legendary | Power | Machine Gun</td>
+                                <td class="align-middle text-left"><span class="text-info">ARC</span></td>
+                                <td class="align-middle text-left">
+                                    <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/0ab090e93e19da9e841b0f94c5ab7de6.png" width="30" height="30">
+                                    <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/7cadd68b66ffd3bbedc09aa9c7ba6e03.png" width="30" height="30">
+                                    <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/4cd73ae5b1bc1ae0afc7adb34c2f2df6.png" width="30" height="30">
+                                    <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/e5d9d70aadec948e851d443c64ff5d9d.png" width="30" height="30">
+                                    <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/03e2db0c911d07fc0e9f505927aab055.png" width="30" height="30">
+                                </td>
+                                <td id="Delirium" class="align-middle text-left"></td>
+                                <td class="align-middle text-left td-actions">
+                                    <button type="button" rel="tooltip" class="btn btn-success btn-just-icon btn-sm">
+                                        <a href="http://light.gg/i/orlnXw/" target= "_blank"><i class="fas fa-link"></i></a>
+                                    </button>
+                                </td>
+                            </tr>
+
+                            <tr data-status="gambit">
+                                <td class="align-middle text-left"><img src="https://bungie.net/common/destiny2_content/icons/6476417e115081cbb54d6c9fb7741fff.jpg" width="45" height="45"></td>
+                                <td class="align-middle text-left">Breakneck <span class="badge badge-pill badge-success">Pinnacle</span></td>
+                                <td class="align-middle text-left">Legendary | Kinetic | Auto Rifle</td>
+                                <td class="align-middle text-left"><span class="text-white">KINETIC</span></td>
+                                <td class="align-middle text-left">
+                                    <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/90c4f7f35c9d24f4add016722a78404e.png" width="30" height="30">
+                                    <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/7cadd68b66ffd3bbedc09aa9c7ba6e03.png" width="30" height="30">
+                                    <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/4cd73ae5b1bc1ae0afc7adb34c2f2df6.png" width="30" height="30">
+                                    <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/e9aa2f479812bfabc8d48effde384737.png" width="30" height="30">
+                                    <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/66de24e28cf352bb7669305e21bccf62.png" width="30" height="30">
+                                </td>
+                                <td id="Breakneck" class="align-middle text-left"></td>
+                                <td class="align-middle text-left td-actions">
+                                    <button type="button" rel="tooltip" class="btn btn-success btn-just-icon btn-sm">
+                                        <a href="http://light.gg/i/-K1VEw/" target= "_blank"><i class="fas fa-link"></i></a>
+                                    </button>
+                                </td>
+                            </tr>
+
+                            <tr data-status="gambit">
+                                <td class="align-middle text-left"><img src="https://bungie.net/common/destiny2_content/icons/dfac5b867e558fc6b4acc167a97556eb.jpg" width="45" height="45"></td>
+                                <td class="align-middle text-left">Hush <span class="badge badge-pill badge-success">Pinnacle</span></td>
+                                <td class="align-middle text-left">Legendary | Energy | Combat Bow</td>
+                                <td class="align-middle text-left"><span class="text-danger">SOLAR</span></td>
+                                <td class="align-middle text-left">
+                                    <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/cac618873b5a9d2d4c6a6a849aab8fee.png" width="30" height="30">
+                                    <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/a4ef0735253539a0244f7073f1622d98.png" width="30" height="30">
+                                    <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/78fb6b578baa9492a489b6ee98696c6b.png" width="30" height="30">
+                                    <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/0fd9dbe1c09b8cc7d0be888c68ff4526.png" width="30" height="30">
+                                    <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/ffc05be14c0ab4c181292df00a01d99b.png" width="30" height="30">
+                                </td>
+                                <td id="Hush" class="align-middle text-left"></td>
+                                <td class="align-middle text-left td-actions">
+                                    <button type="button" rel="tooltip" class="btn btn-success btn-just-icon btn-sm">
+                                        <a href="http://light.gg/i/8r5zXg/" target= "_blank"><i class="fas fa-link"></i></a>
+                                    </button>
+                                </td>
+                            </tr>
+
+                            <tr data-status="collectibles">
+                                <td class="align-middle text-left"><img src="https://bungie.net/common/destiny2_content/icons/e799303d622fd31d2a553c1346d593cd.jpg" width="45" height="45"></td>
+                                <td class="align-middle text-left">Izanagi&#39;s Burden</td>
+                                <td class="align-middle text-left">Exotic | Kinetic | Sniper Rifle</td>
+                                <td class="align-middle text-left"><span class="text-white">KINETIC</span></td>
+                                <td class="align-middle text-left">
+                                    <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/cac618873b5a9d2d4c6a6a849aab8fee.png" width="30" height="30">
+                                    <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/a4ef0735253539a0244f7073f1622d98.png" width="30" height="30">
+                                    <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/78fb6b578baa9492a489b6ee98696c6b.png" width="30" height="30">
+                                    <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/0fd9dbe1c09b8cc7d0be888c68ff4526.png" width="30" height="30">
+                                    <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/ffc05be14c0ab4c181292df00a01d99b.png" width="30" height="30">
+                                </td>
+                                <td id="IzanagisBurden" class="align-middle text-left"></td>
+                                <td class="align-middle text-left td-actions">
+                                    <button type="button" rel="tooltip" class="btn btn-success btn-just-icon btn-sm">
+                                       <a href="http://light.gg/i/F0lwvw/" target= "_blank"><i class="fas fa-link"></i></a>
+                                    </button>
+                                </td>
+                            </tr>
+
+                            <tr data-status="vanguard">
+                                <td class="align-middle text-left"><img src="https://bungie.net/common/destiny2_content/icons/a233aa2e2cba2f8a15f998dee8f8a5bd.jpg" width="45" height="45"></td>
+                                <td class="align-middle text-left">Loaded Question <span class="badge badge-pill badge-info">Pinnacle</span></td>
+                                <td class="align-middle text-left">Legendary | Energy | Fusion Rifle</td>
+                                <td class="align-middle text-left"><span class="text-info">ARC</span></td>
+                                <td class="align-middle text-left">
+                                    <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/65fdde950b85bdd1e0383e1016a73661.png" width="30" height="30">
+                                    <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/ee62caf152c3747675fe43c544d72e45.png" width="30" height="30">
+                                    <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/51460192e92adf82869709d44073774c.png" width="30" height="30">
+                                    <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/d355b1117307c9f187729249361cecc3.png" width="30" height="30">
+                                    <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/68b82437cba6eeb5a215c2c8240861a5.png" width="30" height="30">
+                                </td>
+                                <td id="LoadedQuestion" class="align-middle text-left"></td>
+                                <td class="align-middle text-left td-actions">
+                                    <button type="button" rel="tooltip" class="btn btn-success btn-just-icon btn-sm">
+                                        <a href="http://light.gg/i/I8WgIg/" target= "_blank"><i class="fas fa-link"></i></a>
+                                    </button>
+                                </td>
+                            </tr>
+
                             <tr data-status="crucible">
                                 <td class="align-middle text-left"><img src="https://bungie.net/common/destiny2_content/icons/ca86c130898a90ed19a0a317df8ab389.jpg" width="45" height="45"></td>
-                                <td class="align-middle text-left">Luna's Howl</td>
+                                <td class="align-middle text-left">Luna&#39;s Howl <span class="badge badge-pill badge-danger">Pinnacle</span></td>
                                 <td class="align-middle text-left">Legendary | Energy | Hand Cannon</td>
                                 <td class="align-middle text-left"><span class="text-danger">SOLAR</span></td>
                                 <td class="align-middle text-left">
@@ -65,9 +166,29 @@
                                 </td>
                             </tr>
 
+                            <tr data-status="collectibles">
+                                <td class="align-middle text-left"><img src="https://bungie.net/common/destiny2_content/icons/86ef7fd7c087c434a16089602e2c00de.jpg" width="45" height="45"></td>
+                                <td class="align-middle text-left">Malfeasance</td>
+                                <td class="align-middle text-left">Exotic | Kinetic | Hand Cannon</td>
+                                <td class="align-middle text-left"><span class="text-white">KINETIC</span></td>
+                                <td class="align-middle text-left">
+                                    <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/f24147140d7a0078afede13575c96f4e.png" width="30" height="30">
+                                    <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/18cc75bf9a17bb80b5109f1b8909521f.png" width="30" height="30">
+                                    <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/4cd73ae5b1bc1ae0afc7adb34c2f2df6.png" width="30" height="30">
+                                    <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/724dcdf5650865435b4accf304460ab9.png" width="30" height="30">
+                                    <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/a5ff58a344799006cb7149f2ce881611.png" width="30" height="30">
+                                </td>
+                                <td id="Malfeasance" class="align-middle text-left"></td>
+                                <td class="align-middle text-left td-actions">
+                                    <button type="button" rel="tooltip" class="btn btn-success btn-just-icon btn-sm">
+                                        <a href="http://light.gg/i/6zA2DA/" target= "_blank"><i class="fas fa-link"></i></a>
+                                    </button>
+                                </td>
+                            </tr>
+
                             <tr data-status="crucible">
                                 <td class="align-middle text-left"><img src="https://bungie.net/common/destiny2_content/icons/5098b108ad602dc6f003a332e9f74c27.jpg" width="45" height="45"></td>
-                                <td class="align-middle text-left">Not Forgotten</td>
+                                <td class="align-middle text-left">Not Forgotten <span class="badge badge-pill badge-danger">Pinnacle</span></td>
                                 <td class="align-middle text-left">Legendary | Energy | Hand Cannon</td>
                                 <td class="align-middle text-left"><span class="text-danger">SOLAR</span></td>
                                 <td class="align-middle text-left">
@@ -85,9 +206,129 @@
                                 </td>
                             </tr>
 
+                            <tr data-status="collectibles">
+                                <td class="align-middle text-left"><img src="https://bungie.net/common/destiny2_content/icons/0421f2a3fdff6fd946f7e20951b08876.jpg" width="45" height="45"></td>
+                                <td class="align-middle text-left">One Thousand Voices</td>
+                                <td class="align-middle text-left">Exotic | Power | Fusion Rifle</td>
+                                <td class="align-middle text-left"><span class="text-danger">SOLAR</span></td>
+                                <td class="align-middle text-left">
+                                    <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/b43d4f63974ece10f6b18e4974e86f8d.png" width="30" height="30">
+                                    <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/151465ba86df34438248aad2248cce32.png" width="30" height="30">
+                                    <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/381b7a519ca06b70b5ff8f793dfad038.png" width="30" height="30">
+                                    <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/52a4646804b96ed190f1e1ae97b64e17.png" width="30" height="30">
+                                    <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/27c6695ec475d3fa1aefa71c2b099bfc.png" width="30" height="30">
+                                </td>
+                                <td id="OneThousandVoices" class="align-middle text-left"></td>
+                                <td class="align-middle text-left td-actions">
+                                    <button type="button" rel="tooltip" class="btn btn-success btn-just-icon btn-sm">
+                                        <a href="http://light.gg/i/jdxVew/" target="_blank"><i class="fas fa-link"></i></a>
+                                    </button>
+                                </td>
+                            </tr>
+
+                            <tr data-status="vanguard">
+                                <td class="align-middle text-left"><img src="https://bungie.net/common/destiny2_content/icons/2effa057233e8d622a477d9d7e9b03f2.jpg" width="45" height="45"></td>
+                                <td class="align-middle text-left">Oxygen SR3 <span class="badge badge-pill badge-info">Pinnacle</span></td>
+                                <td class="align-middle text-left">Legendary | Energy | Scout Rifle</td>
+                                <td class="align-middle text-left"><span class="text-danger">SOLAR</span></td>
+                                <td class="align-middle text-left">
+                                    <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/90c4f7f35c9d24f4add016722a78404e.png" width="30" height="30">
+                                    <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/7cadd68b66ffd3bbedc09aa9c7ba6e03.png" width="30" height="30">
+                                    <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/05e357cd152eb0f665ee986aaa3edc56.png" width="30" height="30">
+                                    <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/8fe8293ba02002f69bfa052a0c44223f.png" width="30" height="30">
+                                    <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/1cd82297f969dd5659da6bf2e475d1ca.png" width="30" height="30">
+                                </td>
+                                <td id="Oxygen" class="align-middle text-left"></td>
+                                <td class="align-middle text-left td-actions">
+                                    <button type="button" rel="tooltip" class="btn btn-success btn-just-icon btn-sm">
+                                        <a href="http://light.gg/i/Mj3l6A/" target= "_blank"><i class="fas fa-link"></i></a>
+                                    </button>
+                                </td>
+                            </tr>
+
+                             <tr data-status="crucible">
+                                <td class="align-middle text-left"><img src="https://bungie.net/common/destiny2_content/icons/848176acba2ececb3b06f222bccee406.jpg" width="45" height="45"></td>
+                                <td class="align-middle text-left">Redrix&#39;s Broadsword <span class="badge badge-pill badge-danger">Pinnacle</span></td>
+                                <td class="align-middle text-left">Legendary | Kinetic | Pulse Rifle</td>
+                                <td class="align-middle text-left"><span class="text-white">KINETIC</span></td>
+                                <td class="align-middle text-left">
+                                    <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/65fdde950b85bdd1e0383e1016a73661.png" width="30" height="30">
+                                    <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/376aa9bd8c392567f501012fc3b3d4d0.png" width="30" height="30">
+                                    <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/f06239ee156ee70f99b48e8e1970dbca.png" width="30" height="30">
+                                    <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/22f478a5c757c128b7c367ddc42180ab.png" width="30" height="30">
+                                    <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/c65ca84ff8fe31b00fb0bb569ddf25a8.png" width="30" height="30">
+                                </td>
+                                <td id="RedrixsBroadsword" class="align-middle text-left"></td>
+                                <td class="align-middle text-left td-actions">
+                                    <button type="button" rel="tooltip" class="btn btn-success btn-just-icon btn-sm">
+                                        <a href="http://light.gg/i/Cq03RQ/" target= "_blank"><i class="fas fa-link"></i></a>
+                                    </button>
+                                </td>
+                            </tr>
+
+                            <tr data-status="crucible">
+                                <td class="align-middle text-left"><img src="https://bungie.net/common/destiny2_content/icons/929777eec5d64e8d26742bb2bf2ed63b.jpg" width="45" height="45"></td>
+                                <td class="align-middle text-left">Revoker <span class="badge badge-pill badge-danger">Pinnacle</span></td>
+                                <td class="align-middle text-left">Legendary | Kinetic | Sniper Rifle</td>
+                                <td class="align-middle text-left"><span class="text-white">KINETIC</span></td>
+                                <td class="align-middle text-left">
+                                    <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/0a18b7264e9fb76764756a25d0a20fd2.png" width="30" height="30">
+                                    <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/151465ba86df34438248aad2248cce32.png" width="30" height="30">
+                                    <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/05e357cd152eb0f665ee986aaa3edc56.png" width="30" height="30">
+                                    <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/49df9d90b3f27bd5ec6a9b35f4c10def.png" width="30" height="30">
+                                    <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/430ead5fae2b0db7252180d6c8cf5465.png" width="30" height="30">
+                                </td>
+                                <td id="Revoker" class="align-middle text-left"></td>
+                                <td class="align-middle text-left td-actions">
+                                    <button type="button" rel="tooltip" class="btn btn-success btn-just-icon btn-sm">
+                                        <a href="http://light.gg/i/6IgEJw/" target= "_blank"><i class="fas fa-link"></i></a>
+                                    </button>
+                                </td>
+                            </tr>
+
+                            <tr data-status="collectibles">
+                                <td class="align-middle text-left"><img src="https://bungie.net/common/destiny2_content/icons/ce6bd07715a082bad0ba946f5f8dca5e.jpg" width="45" height="45"></td>
+                                <td class="align-middle text-left">Tarrabah</td>
+                                <td class="align-middle text-left">Exotic | Energy | Submachine Gun</td>
+                                <td class="align-middle text-left"><span class="text-danger">SOLAR</span></td>
+                                <td class="align-middle text-left">
+                                    <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/0a18b7264e9fb76764756a25d0a20fd2.png" width="30" height="30">
+                                    <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/151465ba86df34438248aad2248cce32.png" width="30" height="30">
+                                    <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/05e357cd152eb0f665ee986aaa3edc56.png" width="30" height="30">
+                                    <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/49df9d90b3f27bd5ec6a9b35f4c10def.png" width="30" height="30">
+                                    <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/430ead5fae2b0db7252180d6c8cf5465.png" width="30" height="30">
+                                </td>
+                                <td id="Tarrabah" class="align-middle text-left"></td>
+                                <td class="align-middle text-left td-actions">
+                                    <button type="button" rel="tooltip" class="btn btn-success btn-just-icon btn-sm">
+                                       <a href="http://light.gg/i/PH9puQ/" target= "_blank"><i class="fas fa-link"></i></a>
+                                    </button>
+                                </td>
+                            </tr>
+
+                            <tr data-status="collectibles">
+                                <td class="align-middle text-left"><img src="https://bungie.net/common/destiny2_content/icons/f7ca2e7dfde0f38ead5ce1c36176603f.jpg" width="45" height="45"></td>
+                                <td class="align-middle text-left">The Last Word</td>
+                                <td class="align-middle text-left">Exotic | Kinetic | Hand Cannon</td>
+                                <td class="align-middle text-left"><span class="text-white">KINETIC</span></td>
+                                <td class="align-middle text-left">
+                                    <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/86055eedc999f5c6d805a8912c79cff5.png" width="30" height="30">
+                                    <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/18cc75bf9a17bb80b5109f1b8909521f.png" width="30" height="30">
+                                    <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/05e357cd152eb0f665ee986aaa3edc56.png" width="30" height="30">
+                                    <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/9f3c3ae1bddbed21af1cc6487338028e.png" width="30" height="30">
+                                    <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/cbe48e1decc292c61d296e0d3159a372.png" width="30" height="30">
+                                </td>
+                                <td id="TheLastWord" class="align-middle text-left"></td>
+                                <td class="align-middle text-left td-actions">
+                                    <button type="button" rel="tooltip" class="btn btn-success btn-just-icon btn-sm">
+                                        <a href="http://light.gg/i/2WlOUQ/" target= "_blank"><i class="fas fa-link"></i></a>
+                                    </button>
+                                </td>
+                            </tr>
+
                             <tr data-status="crucible">
                                 <td class="align-middle text-left"><img src="https://bungie.net/common/destiny2_content/icons/b372c65f81ad2d49196a6cec4e07704d.jpg" width="45" height="45"></td>
-                                <td class="align-middle text-left">The Mountaintop</td>
+                                <td class="align-middle text-left">The Mountaintop <span class="badge badge-pill badge-danger">Pinnacle</span></td>
                                 <td class="align-middle text-left">Legendary | Kinetic | Grenade Launcher</td>
                                 <td class="align-middle text-left"><span class="text-white">KINETIC</span></td>
                                 <td class="align-middle text-left">
@@ -118,28 +359,8 @@
                             </tr>
 
                             <tr data-status="crucible">
-                                <td class="align-middle text-left"><img src="https://bungie.net/common/destiny2_content/icons/848176acba2ececb3b06f222bccee406.jpg" width="45" height="45"></td>
-                                <td class="align-middle text-left">Redrix's Broadsword</td>
-                                <td class="align-middle text-left">Legendary | Kinetic | Pulse Rifle</td>
-                                <td class="align-middle text-left"><span class="text-white">KINETIC</span></td>
-                                <td class="align-middle text-left">
-                                    <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/65fdde950b85bdd1e0383e1016a73661.png" width="30" height="30">
-                                    <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/376aa9bd8c392567f501012fc3b3d4d0.png" width="30" height="30">
-                                    <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/f06239ee156ee70f99b48e8e1970dbca.png" width="30" height="30">
-                                    <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/22f478a5c757c128b7c367ddc42180ab.png" width="30" height="30">
-                                    <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/c65ca84ff8fe31b00fb0bb569ddf25a8.png" width="30" height="30">
-                                </td>
-                                <td id="RedrixsBroadsword" class="align-middle text-left"></td>
-                                <td class="align-middle text-left td-actions">
-                                    <button type="button" rel="tooltip" class="btn btn-success btn-just-icon btn-sm">
-                                        <a href="http://light.gg/i/Cq03RQ/" target= "_blank"><i class="fas fa-link"></i></a>
-                                    </button>
-                                </td>
-                            </tr>
-
-                            <tr data-status="crucible">
                                 <td class="align-middle text-left"><img src="https://bungie.net/common/destiny2_content/icons/8f5bedcac2559d153f6df266d9f4d04b.jpg" width="45" height="45"></td>
-                                <td class="align-middle text-left">The Recluse</td>
+                                <td class="align-middle text-left">The Recluse <span class="badge badge-pill badge-danger">Pinnacle</span></td>
                                 <td class="align-middle text-left">Legendary | Energy | Submachine Gun</td>
                                 <td class="align-middle text-left"><span class="text-void">VOID</span></td>
                                 <td class="align-middle text-left">
@@ -157,69 +378,29 @@
                                 </td>
                             </tr>
 
-                            <tr data-status="vanguard">
-                                <td class="align-middle text-left"><img src="https://bungie.net/common/destiny2_content/icons/a233aa2e2cba2f8a15f998dee8f8a5bd.jpg" width="45" height="45"></td>
-                                <td class="align-middle text-left">Loaded Question</td>
-                                <td class="align-middle text-left">Legendary | Energy | Fusion Rifle</td>
-                                <td class="align-middle text-left"><span class="text-info">ARC</span></td>
+                             <tr data-status="collectibles">
+                                <td class="align-middle text-left"><img src="https://bungie.net/common/destiny2_content/icons/dadddaaa66c1dd3d450dd758345af389.jpg" width="45" height="45"></td>
+                                <td class="align-middle text-left">Truth</td>
+                                <td class="align-middle text-left">Exotic | Power | Rocket Launcher</td>
+                                <td class="align-middle text-left"><span class="text-void">VOID</span></td>
                                 <td class="align-middle text-left">
-                                    <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/65fdde950b85bdd1e0383e1016a73661.png" width="30" height="30">
-                                    <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/ee62caf152c3747675fe43c544d72e45.png" width="30" height="30">
-                                    <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/51460192e92adf82869709d44073774c.png" width="30" height="30">
-                                    <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/d355b1117307c9f187729249361cecc3.png" width="30" height="30">
-                                    <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/68b82437cba6eeb5a215c2c8240861a5.png" width="30" height="30">
+                                    <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/0b3b2cd33020a6a45af5b045f5cdac3f.png" width="30" height="30">
+                                    <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/402765b86ff7b1d97078ac43d5ca39ad.png" width="30" height="30">
+                                    <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/d541a7c35981cb9caceaf3736097adb9.png" width="30" height="30">
+                                    <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/4b62cf374e460cf685eac7da87ee86c4.png" width="30" height="30">
+                                    <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/433673d0d64fd026c771612a6a9ff7f7.png" width="30" height="30">
                                 </td>
-                                <td id="LoadedQuestion" class="align-middle text-left"></td>
+                                <td id="Truth" class="align-middle text-left"></td>
                                 <td class="align-middle text-left td-actions">
                                     <button type="button" rel="tooltip" class="btn btn-success btn-just-icon btn-sm">
-                                        <a href="http://light.gg/i/I8WgIg/" target= "_blank"><i class="fas fa-link"></i></a>
-                                    </button>
-                                </td>
-                            </tr>
-
-                            <tr data-status="crucible">
-                                <td class="align-middle text-left"><img src="https://bungie.net/common/destiny2_content/icons/929777eec5d64e8d26742bb2bf2ed63b.jpg" width="45" height="45"></td>
-                                <td class="align-middle text-left">Revoker</td>
-                                <td class="align-middle text-left">Legendary | Kinetic | Sniper Rifle</td>
-                                <td class="align-middle text-left"><span class="text-white">KINETIC</span></td>
-                                <td class="align-middle text-left">
-                                    <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/0a18b7264e9fb76764756a25d0a20fd2.png" width="30" height="30">
-                                    <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/151465ba86df34438248aad2248cce32.png" width="30" height="30">
-                                    <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/05e357cd152eb0f665ee986aaa3edc56.png" width="30" height="30">
-                                    <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/49df9d90b3f27bd5ec6a9b35f4c10def.png" width="30" height="30">
-                                    <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/430ead5fae2b0db7252180d6c8cf5465.png" width="30" height="30">
-                                </td>
-                                <td id="Revoker" class="align-middle text-left"></td>
-                                <td class="align-middle text-left td-actions">
-                                    <button type="button" rel="tooltip" class="btn btn-success btn-just-icon btn-sm">
-                                        <a href="http://light.gg/i/6IgEJw/" target= "_blank"><i class="fas fa-link"></i></a>
-                                    </button>
-                                </td>
-                            </tr>
-
-                            <tr data-status="gambit">
-                                <td class="align-middle text-left"><img src="https://bungie.net/common/destiny2_content/icons/dfac5b867e558fc6b4acc167a97556eb.jpg" width="45" height="45"></td>
-                                <td class="align-middle text-left">Hush</td>
-                                <td class="align-middle text-left">Legendary | Energy | Combat Bow</td>
-                                <td class="align-middle text-left"><span class="text-danger">SOLAR</span></td>
-                                <td class="align-middle text-left">
-                                    <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/cac618873b5a9d2d4c6a6a849aab8fee.png" width="30" height="30">
-                                    <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/a4ef0735253539a0244f7073f1622d98.png" width="30" height="30">
-                                    <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/78fb6b578baa9492a489b6ee98696c6b.png" width="30" height="30">
-                                    <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/0fd9dbe1c09b8cc7d0be888c68ff4526.png" width="30" height="30">
-                                    <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/ffc05be14c0ab4c181292df00a01d99b.png" width="30" height="30">
-                                </td>
-                                <td id="Hush" class="align-middle text-left"></td>
-                                <td class="align-middle text-left td-actions">
-                                    <button type="button" rel="tooltip" class="btn btn-success btn-just-icon btn-sm">
-                                        <a href="http://light.gg/i/8r5zXg/" target= "_blank"><i class="fas fa-link"></i></a>
+                                        <a href="http://light.gg/i/33qiRw/" target= "_blank"><i class="fas fa-link"></i></a>
                                     </button>
                                 </td>
                             </tr>
 
                             <tr data-status="vanguard">
                                 <td class="align-middle text-left"><img src="https://bungie.net/common/destiny2_content/icons/1242a9eff118e8cfc3cd6ebc3995f626.jpg" width="45" height="45"></td>
-                                <td class="align-middle text-left">Wendigo GL3</td>
+                                <td class="align-middle text-left">Wendigo GL3 <span class="badge badge-pill badge-info">Pinnacle</span></td>
                                 <td class="align-middle text-left">Legendary | Power | Grenade Launcher</td>
                                 <td class="align-middle text-left"><span class="text-info">ARC</span></td>
                                 <td class="align-middle text-left">
@@ -237,35 +418,15 @@
                                 </td>
                             </tr>
 
-                            <tr data-status="gambit">
-                                <td class="align-middle text-left"><img src="https://bungie.net/common/destiny2_content/icons/6476417e115081cbb54d6c9fb7741fff.jpg" width="45" height="45"></td>
-                                <td class="align-middle text-left">Breakneck</td>
-                                <td class="align-middle text-left">Legendary | Kinetic | Auto Rifle</td>
-                                <td class="align-middle text-left"><span class="text-white">KINETIC</span></td>
-                                <td class="align-middle text-left">
-                                    <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/90c4f7f35c9d24f4add016722a78404e.png" width="30" height="30">
-                                    <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/7cadd68b66ffd3bbedc09aa9c7ba6e03.png" width="30" height="30">
-                                    <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/4cd73ae5b1bc1ae0afc7adb34c2f2df6.png" width="30" height="30">
-                                    <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/e9aa2f479812bfabc8d48effde384737.png" width="30" height="30">
-                                    <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/66de24e28cf352bb7669305e21bccf62.png" width="30" height="30">
-                                </td>
-                                <td id="Breakneck" class="align-middle text-left"></td>
-                                <td class="align-middle text-left td-actions">
-                                    <button type="button" rel="tooltip" class="btn btn-success btn-just-icon btn-sm">
-                                        <a href="http://light.gg/i/-K1VEw/" target= "_blank"><i class="fas fa-link"></i></a>
-                                    </button>
-                                </td>
-                            </tr>
-
                         </tbody>
                     </table>
                 </div>
             </div>
         </div>
     </div>
-    <footer class="sticky-footer text-center py-3">
+    <footer class="sticky-footer text-center py-2">
         <div class="container">
-            <div class="text-muted">&copy; <script>document.write((new Date).getFullYear());</script> & made with <span style="color: #e25555;">&hearts;</span> by dazzah87</div>
+            <div class="text-muted">&copy; <script>document.write((new Date).getFullYear());</script> & made with <span style="color: #e25555;">&hearts;</span> by <a href="https://braytech.org/2/4611686018429398651/2305843009261535339/legend" target= "_blank">dazzah87</a></div>
         </div>
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>

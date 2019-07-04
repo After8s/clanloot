@@ -16,6 +16,17 @@ var bungieAPIkey = "0a11942f318647978979f13ad8aa53ee";
         clan.membersWithHush = 0;
         clan.membersWithWendigo = 0;
         clan.membersWithBreakneck = 0;
+        clan.membersWithMalfeasance = 0;
+        clan.membersWithOxygen = 0;
+        clan.membersWithTheLastWord = 0;
+        clan.membersWithTruth = 0;
+        clan.membersWithThorn = 0;
+        clan.membersWithDelirium = 0;
+        clan.membersWithIzanagisBurden = 0;
+        clan.membersWithTarrabah = 0;
+        clan.membersWithOneThousandVoices = 0;
+        clan.membersWithAnarchy = 0;
+        clan.membersWithOutbreakPerfected = 0;
         
 $(document).ready(function() {
     $.ajax({
@@ -100,19 +111,19 @@ function checkForSpecialAchievements(memberid) {
             clan.membersWithHush = clan.membersWithHush + (jQuery.inArray(data.Response.profileCollectibles.data.collectibles[1670904512].state, aquiredCollectibleStateValues) !== -1 ? 1 : 0);
             clan.membersWithWendigo = clan.membersWithWendigo + (jQuery.inArray(data.Response.profileCollectibles.data.collectibles[3830703103].state, aquiredCollectibleStateValues) !== -1 ? 1 : 0);
             clan.membersWithBreakneck = clan.membersWithBreakneck + (jQuery.inArray(data.Response.profileCollectibles.data.collectibles[1666039008].state, aquiredCollectibleStateValues) !== -1 ? 1 : 0);
-
-            clan.membersWithOXY = clan.membersWithOXY + (jQuery.inArray(data.Response.profileCollectibles.data.collectibles[543982652].state, aquiredCollectibleStateValues) !== -1 ? 1 : 0);        
-            clan.membersWithDEL = clan.membersWithDEL + (jQuery.inArray(data.Response.profileCollectibles.data.collectibles[1639266456].state, aquiredCollectibleStateValues) !== -1 ? 1 : 0);
-            clan.membersWithOneKay = clan.membersWithOneKay + (jQuery.inArray(data.Response.profileCollectibles.data.collectibles[199171385].state, aquiredCollectibleStateValues) !== -1 ? 1 : 0);
-            clan.membersWithAN = clan.membersWithAN + (jQuery.inArray(data.Response.profileCollectibles.data.collectibles[2220014607].state, aquiredCollectibleStateValues) !== -1 ? 1 : 0);
-            clan.membersWithMalf = clan.membersWithMalf + (jQuery.inArray(data.Response.profileCollectibles.data.collectibles[1660030045].state, aquiredCollectibleStateValues) !== -1 ? 1 : 0); 
-            clan.membersWithTAR = clan.membersWithTAR + (jQuery.inArray(data.Response.profileCollectibles.data.collectibles[2329697053].state, aquiredCollectibleStateValues) !== -1 ? 1 : 0);
+            clan.membersWithMalfeasance = clan.membersWithMalfeasance + (jQuery.inArray(data.Response.profileCollectibles.data.collectibles[1660030045].state, aquiredCollectibleStateValues) !== -1 ? 1 : 0);
+            clan.membersWithOxygen = clan.membersWithOxygen + (jQuery.inArray(data.Response.profileCollectibles.data.collectibles[543982652].state, aquiredCollectibleStateValues) !== -1 ? 1 : 0);
+            clan.membersWithTheLastWord = clan.membersWithTheLastWord + (jQuery.inArray(data.Response.profileCollectibles.data.collectibles[3074058273].state, aquiredCollectibleStateValues) !== -1 ? 1 : 0);
+            clan.membersWithTruth = clan.membersWithTruth + (jQuery.inArray(data.Response.profileCollectibles.data.collectibles[1763840761].state, aquiredCollectibleStateValues) !== -1 ? 1 : 0);
+            clan.membersWithThorn = clan.membersWithThorn + (jQuery.inArray(data.Response.profileCollectibles.data.collectibles[4009683574].state, aquiredCollectibleStateValues) !== -1 ? 1 : 0);
+            clan.membersWithDelirium = clan.membersWithDelirium + (jQuery.inArray(data.Response.profileCollectibles.data.collectibles[1639266456].state, aquiredCollectibleStateValues) !== -1 ? 1 : 0);
+            clan.membersWithIzanagisBurden = clan.membersWithIzanagisBurden + (jQuery.inArray(data.Response.profileCollectibles.data.collectibles[24541428].state, aquiredCollectibleStateValues) !== -1 ? 1 : 0);
+            clan.membersWithTarrabah = clan.membersWithTarrabah + (jQuery.inArray(data.Response.profileCollectibles.data.collectibles[2329697053].state, aquiredCollectibleStateValues) !== -1 ? 1 : 0); 
+            clan.membersWithOneThousandVoices = clan.membersWithOneThousandVoices + (jQuery.inArray(data.Response.profileCollectibles.data.collectibles[199171385].state, aquiredCollectibleStateValues) !== -1 ? 1 : 0);
+            clan.membersWithAnarchy = clan.membersWithAnarchy + (jQuery.inArray(data.Response.profileCollectibles.data.collectibles[2220014607].state, aquiredCollectibleStateValues) !== -1 ? 1 : 0);
+            clan.membersWithOutbreakPerfected = clan.membersWithOutbreakPerfected + (jQuery.inArray(data.Response.profileCollectibles.data.collectibles[2500286745].state, aquiredCollectibleStateValues) !== -1 ? 1 : 0);
+            
             clan.membersWithAOT = clan.membersWithAOT + (jQuery.inArray(data.Response.profileCollectibles.data.collectibles[1903459810].state, aquiredCollectibleStateValues) !== -1 ? 1 : 0);
-            clan.membersWithTH = clan.membersWithTH + (jQuery.inArray(data.Response.profileCollectibles.data.collectibles[4009683574].state, aquiredCollectibleStateValues) !== -1 ? 1 : 0);
-            clan.membersWithTR = clan.membersWithTR + (jQuery.inArray(data.Response.profileCollectibles.data.collectibles[1763840761].state, aquiredCollectibleStateValues) !== -1 ? 1 : 0);
-            clan.membersWithTLW = clan.membersWithTLW + (jQuery.inArray(data.Response.profileCollectibles.data.collectibles[3074058273].state, aquiredCollectibleStateValues) !== -1 ? 1 : 0);
-            clan.membersWithIB = clan.membersWithIB + (jQuery.inArray(data.Response.profileCollectibles.data.collectibles[24541428].state, aquiredCollectibleStateValues) !== -1 ? 1 : 0);
-            clan.membersWithOP = clan.membersWithOP + (jQuery.inArray(data.Response.profileCollectibles.data.collectibles[2500286745].state, aquiredCollectibleStateValues) !== -1 ? 1 : 0);
             clan.membersWithScrap = clan.membersWithScrap + (jQuery.inArray(data.Response.profileCollectibles.data.collectibles[1840126886].state, aquiredCollectibleStateValues) !== -1 ? 1 : 0);
             
             $.each(data.Response.characterCollectibles.data, function(index, value) {
@@ -144,6 +155,17 @@ function outputClanData(clanobject) {
     $("#Hush").html(clanobject.membersWithHush);
     $("#Wendigo").html(clanobject.membersWithWendigo);
     $("#Breakneck").html(clanobject.membersWithBreakneck);
+    $("#Malfeasance").html(clanobject.membersWithMalfeasance);
+    $("#Oxygen").html(clanobject.membersWithOxygen);
+    $("#TheLastWord").html(clanobject.membersWithTheLastWord);
+    $("#Truth").html(clanobject.membersWithTruth);
+    $("#Thorn").html(clanobject.membersWithThorn);
+    $("#Delirium").html(clanobject.membersWithDelirium);
+    $("#IzanagisBurden").html(clanobject.membersWithIzanagisBurden);
+    $("#Tarrabah").html(clanobject.membersWithTarrabah);
+    $("#OneThousandVoices").html(clanobject.membersWithOneThousandVoices);
+    $("#Anarchy").html(clanobject.membersWithAnarchy);
+    $("#OutbreakPerfected").html(clanobject.membersWithOutbreakPerfected);
     $("#membercounter").html(clanobject.membersFetched + "/" + clanobject.memberCount);
     return
 };
