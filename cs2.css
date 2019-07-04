@@ -310,7 +310,13 @@ small{
   font-size: 14px;
 }
 .text-void {
-  color: #d92ed5;
+  color: #BD97D5;
+}
+.text-solar {
+  color: #EC7D3F;
+}
+.text-arc {
+  color: #9CCFED;
 }
 .sticky-footer {
     position: fixed;
