@@ -6,31 +6,31 @@ var bungieAPIkey = "0a11942f318647978979f13ad8aa53ee";
         clan.memberName = {};
         clan.retryCounter = {};
         clan.unresolvedMemberNames = [];
-        clan.membersWithLunasHowl = 0;
-        clan.membersWithNotForgotten = 0;
-        clan.membersWithMountaintop = 0;
-        clan.membersWithRedrixsBroadsword = 0;
-        clan.membersWithRecluse = 0;
-        clan.membersWithLoadedQuestion = 0;
-        clan.membersWithRevoker = 0;
-        clan.membersWithHush = 0;
-        clan.membersWithWendigo = 0;
-        clan.membersWithBreakneck = 0;
-        clan.membersWithMalfeasance = 0;
-        clan.membersWithOxygen = 0;
-        clan.membersWithTheLastWord = 0;
-        clan.membersWithTruth = 0;
-        clan.membersWithThorn = 0;
-        clan.membersWithDelirium = 0;
-        clan.membersWithIzanagisBurden = 0;
-        clan.membersWithTarrabah = 0;
-        clan.membersWithOneThousandVoices = 0;
-        clan.membersWithAnarchy = 0;
-        clan.membersWithOutbreakPerfected = 0;
-        clan.membersWithWhisper = 0;
-        clan.membersWithRedrixsClaymore = 0;
-        clan.membersWithWishEnder = 0;
-        clan.membersWithDutyBound = 0;
+        clan.membersWithLunasHowl = {got: [],need: [],amountgot:0,amountneed:0};
+        clan.membersWithNotForgotten = {got: [],need: [],amountgot:0,amountneed:0};
+        clan.membersWithMountaintop = {got: [],need: [],amountgot:0,amountneed:0};
+        clan.membersWithRedrixsBroadsword = {got: [],need: [],amountgot:0,amountneed:0};
+        clan.membersWithRecluse= {got: [],need: [],amountgot:0,amountneed:0};
+        clan.membersWithLoadedQuestion = {got: [],need: [],amountgot:0,amountneed:0};
+        clan.membersWithRevoker = {got: [],need: [],amountgot:0,amountneed:0};
+        clan.membersWithHush = {got: [],need: [],amountgot:0,amountneed:0};
+        clan.membersWithWendigo = {got: [],need: [],amountgot:0,amountneed:0};
+        clan.membersWithBreakneck = {got: [],need: [],amountgot:0,amountneed:0};
+        clan.membersWithMalfeasance = {got: [],need: [],amountgot:0,amountneed:0};
+        clan.membersWithOxygen = {got: [],need: [],amountgot:0,amountneed:0};
+        clan.membersWithTheLastWord = {got: [],need: [],amountgot:0,amountneed:0};
+        clan.membersWithTruth = {got: [],need: [],amountgot:0,amountneed:0};
+        clan.membersWithThorn = {got: [],need: [],amountgot:0,amountneed:0};
+        clan.membersWithDelirium = {got: [],need: [],amountgot:0,amountneed:0};
+        clan.membersWithIzanagisBurden = {got: [],need: [],amountgot:0,amountneed:0};
+        clan.membersWithTarrabah = {got: [],need: [],amountgot:0,amountneed:0};
+        clan.membersWithOneThousandVoices = {got: [],need: [],amountgot:0,amountneed:0};
+        clan.membersWithAnarchy = {got: [],need: [],amountgot:0,amountneed:0};
+        clan.membersWithOutbreakPerfected = {got: [],need: [],amountgot:0,amountneed:0};
+        clan.membersWithWhisper = {got: [],need: [],amountgot:0,amountneed:0};
+        clan.membersWithRedrixsClaymore = {got: [],need: [],amountgot:0,amountneed:0};
+        clan.membersWithWishEnder = {got: [],need: [],amountgot:0,amountneed:0};
+        clan.membersWithDutyBound = {got: [],need: [],amountgot:0,amountneed:0};
         
 $(document).ready(function() {
     $.ajax({
@@ -127,15 +127,31 @@ function checkForSpecialAchievements(memberid) {
             clan.membersWithAnarchy = clan.membersWithAnarchy + (jQuery.inArray(data.Response.profileCollectibles.data.collectibles[2220014607].state, aquiredCollectibleStateValues) !== -1 ? 1 : 0);
             clan.membersWithOutbreakPerfected = clan.membersWithOutbreakPerfected + (jQuery.inArray(data.Response.profileCollectibles.data.collectibles[2500286745].state, aquiredCollectibleStateValues) !== -1 ? 1 : 0);
             clan.membersWithWhisper = clan.membersWithWhisper + (jQuery.inArray(data.Response.profileCollectibles.data.collectibles[3875807583].state, aquiredCollectibleStateValues) !== -1 ? 1 : 0);
-            clan.membersWithRedrixsClaymore = clan.membersWithRedrixsClaymore + (jQuery.inArray(data.Response.profileCollectibles.data.collectibles[4274523516].state, aquiredCollectibleStateValues) !== -1 ? 1 : 0);
-            clan.membersWithWishEnder = clan.membersWithWishEnder + (jQuery.inArray(data.Response.profileCollectibles.data.collectibles[1660030044].state, aquiredCollectibleStateValues) !== -1 ? 1 : 0);
             
+            //profileCollectibles system 
+            if (jQuery.inArray(data.Response.profileCollectibles.data.collectibles[1660030044].state, aquiredCollectibleStateValues) !== -1) {
+                clan.membersWithWishEnder.amountgot = clan.membersWithWishEnder.amountgot + 1;
+                clan.membersWithWishEnder.got.push(clan.memberName[memberid]);
+            } else {
+                clan.membersWithWishEnder.amountneed = clan.membersWithWishEnder.amountneed + 1;
+                clan.membersWithWishEnder.need.push(clan.memberName[memberid]);
+            }
+            
+            //characterCollectibles system
+            tmpItemWasNotFound = true;
             $.each(data.Response.characterCollectibles.data, function(index, value) {
                 if ((jQuery.inArray(value.collectibles[1333654061].state, aquiredCollectibleStateValues) !== -1)) {
-                    clan.membersWithDutyBound = clan.membersWithDutyBound + 1;
+                    clan.membersWithDutyBound.amountgot = clan.membersWithDutyBound.amountgot + 1;
+                    clan.membersWithDutyBound.got.push(clan.memberName[memberid]);
+                    tmpItemWasNotFound = false;
                     return false
                 }
             });
+            if (tmpItemWasNotFound) {
+                clan.membersWithDutyBound.amountneed = clan.membersWithDutyBound.amountneed + 1;
+                clan.membersWithDutyBound.need.push(clan.memberName[memberid]);
+            }
+
             outputClanData(clan)
         }
     });
@@ -149,31 +165,31 @@ function getDescendantProp(obj, desc) {
 }
 
 function outputClanData(clanobject) {
-    $("#LunasHowl").html(clanobject.membersWithLunasHowl);
-    $("#NotForgotten").html(clanobject.membersWithNotForgotten);
-    $("#Mountaintop").html(clanobject.membersWithMountaintop);
-    $("#RedrixsBroadsword").html(clanobject.membersWithRedrixsBroadsword);
-    $("#Recluse").html(clanobject.membersWithRecluse);
-    $("#LoadedQuestion").html(clanobject.membersWithLoadedQuestion);
-    $("#Revoker").html(clanobject.membersWithRevoker);
-    $("#Hush").html(clanobject.membersWithHush);
-    $("#Wendigo").html(clanobject.membersWithWendigo);
-    $("#Breakneck").html(clanobject.membersWithBreakneck);
-    $("#Malfeasance").html(clanobject.membersWithMalfeasance);
-    $("#Oxygen").html(clanobject.membersWithOxygen);
-    $("#TheLastWord").html(clanobject.membersWithTheLastWord);
-    $("#Truth").html(clanobject.membersWithTruth);
-    $("#Thorn").html(clanobject.membersWithThorn);
-    $("#Delirium").html(clanobject.membersWithDelirium);
-    $("#IzanagisBurden").html(clanobject.membersWithIzanagisBurden);
-    $("#Tarrabah").html(clanobject.membersWithTarrabah);
-    $("#OneThousandVoices").html(clanobject.membersWithOneThousandVoices);
-    $("#Anarchy").html(clanobject.membersWithAnarchy);
-    $("#OutbreakPerfected").html(clanobject.membersWithOutbreakPerfected);
-    $("#Whisper").html(clanobject.membersWithWhisper);
-    $("#RedrixsClaymore").html(clanobject.membersWithRedrixsClaymore);
-    $("#WishEnder").html(clanobject.membersWithWishEnder);
-    $("#DutyBound").html(clanobject.membersWithDutyBound);
+    $("#LunasHowl").html(clanobject.membersWithLunasHowl.amountgot);
+    $("#NotForgotten").html(clanobject.membersWithNotForgotten.amountgot);
+    $("#Mountaintop").html(clanobject.membersWithMountaintop.amountgot);
+    $("#RedrixsBroadsword").html(clanobject.membersWithRedrixsBroadsword.amountgot);
+    $("#Recluse").html(clanobject.membersWithRecluse.amountgot);
+    $("#LoadedQuestion").html(clanobject.membersWithLoadedQuestion.amountgot);
+    $("#Revoker").html(clanobject.membersWithRevoker.amountgot);
+    $("#Hush").html(clanobject.membersWithHush.amountgot);
+    $("#Wendigo").html(clanobject.membersWithWendigo.amountgot);
+    $("#Breakneck").html(clanobject.membersWithBreakneck.amountgot);
+    $("#Malfeasance").html(clanobject.membersWithMalfeasance.amountgot);
+    $("#Oxygen").html(clanobject.membersWithOxygen.amountgot);
+    $("#TheLastWord").html(clanobject.membersWithTheLastWord.amountgot);
+    $("#Truth").html(clanobject.membersWithTruth.amountgot);
+    $("#Thorn").html(clanobject.membersWithThorn.amountgot);
+    $("#Delirium").html(clanobject.membersWithDelirium.amountgot);
+    $("#IzanagisBurden").html(clanobject.membersWithIzanagisBurden.amountgot);
+    $("#Tarrabah").html(clanobject.membersWithTarrabah.amountgot);
+    $("#OneThousandVoices").html(clanobject.membersWithOneThousandVoices.amountgot);
+    $("#Anarchy").html(clanobject.membersWithAnarchy.amountgot);
+    $("#OutbreakPerfected").html(clanobject.membersWithOutbreakPerfected.amountgot);
+    $("#Whisper").html(clanobject.membersWithWhisper.amountgot);
+    $("#RedrixsClaymore").html(clanobject.membersWithRedrixsClaymore.amountgot);
+    $("#WishEnder").html(clanobject.membersWithWishEnder.amountgot);
+    $("#DutyBound").html(clanobject.membersWithDutyBound.amountgot);
     $("#membercounter").html(clanobject.membersFetched + "/" + clanobject.memberCount);
     return
 };
