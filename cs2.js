@@ -30,6 +30,7 @@ var bungieAPIkey = "0a11942f318647978979f13ad8aa53ee";
         clan.membersWithWhisper = 0;
         clan.membersWithRedrixsClaymore = 0;
         clan.membersWithWishEnder = 0;
+        clan.membersWithDutyBound = 0;
         
 $(document).ready(function() {
     $.ajax({
@@ -129,6 +130,12 @@ function checkForSpecialAchievements(memberid) {
             clan.membersWithRedrixsClaymore = clan.membersWithRedrixsClaymore + (jQuery.inArray(data.Response.profileCollectibles.data.collectibles[4274523516].state, aquiredCollectibleStateValues) !== -1 ? 1 : 0);
             clan.membersWithWishEnder = clan.membersWithWishEnder + (jQuery.inArray(data.Response.profileCollectibles.data.collectibles[1660030044].state, aquiredCollectibleStateValues) !== -1 ? 1 : 0);
             
+            $.each(data.Response.characterCollectibles.data, function(index, value) {
+                if ((jQuery.inArray(value.collectibles[1333654061].state, aquiredCollectibleStateValues) !== -1)) {
+                    clan.membersWithDutyBound = clan.membersWithDutyBound + 1;
+                    return false
+                }
+            });
             outputClanData(clan)
         }
     });
@@ -166,6 +173,7 @@ function outputClanData(clanobject) {
     $("#Whisper").html(clanobject.membersWithWhisper);
     $("#RedrixsClaymore").html(clanobject.membersWithRedrixsClaymore);
     $("#WishEnder").html(clanobject.membersWithWishEnder);
+    $("#DutyBound").html(clanobject.membersWithDutyBound);
     $("#membercounter").html(clanobject.membersFetched + "/" + clanobject.memberCount);
     return
 };
