@@ -31,16 +31,15 @@ var bungieAPIkey = "0a11942f318647978979f13ad8aa53ee";
         clan.membersWith.Whisper             = {hash:3875807583,apilocation:'profileCollectibles',  got:[],need:[],amountgot:0,amountneed:0};
         clan.membersWith.RedrixsClaymore     = {hash:4274523516,apilocation:'profileCollectibles',  got:[],need:[],amountgot:0,amountneed:0};
         clan.membersWith.WishEnder           = {hash:1660030044,apilocation:'profileCollectibles',  got:[],need:[],amountgot:0,amountneed:0};
-        clan.membersWith.DutyBound           = {hash:1333654061,apilocation:'characterCollectibles',got:[],need:[],amountgot:0,amountneed:0};
-        clan.membersWith.SiliconNeuroma      = {hash:1152758802,apilocation:'characterCollectibles',got:[],need:[],amountgot:0,amountneed:0};
-        clan.membersWith.BrayTechOsprey      = {hash:1534387877,apilocation:'characterCollectibles',got:[],need:[],amountgot:0,amountneed:0};
-        clan.membersWith.TheLongGoodbye      = {hash:1186314105,apilocation:'characterCollectibles',got:[],need:[],amountgot:0,amountneed:0};
-        clan.membersWith.MindbendersAmbition = {hash:1074861258,apilocation:'characterCollectibles',got:[],need:[],amountgot:0,amountneed:0};
-        clan.membersWith.MilitiasBirthright  = {hash:1602518767,apilocation:'characterCollectibles',got:[],need:[],amountgot:0,amountneed:0};
-        clan.membersWith.WardensLaw          = {hash:1279318101,apilocation:'characterCollectibles',got:[],need:[],amountgot:0,amountneed:0};
-        clan.membersWith.HorrorsLeast        = {hash:1099984904,apilocation:'characterCollectibles',got:[],need:[],amountgot:0,amountneed:0};
-        clan.membersWith.DFA                 = {hash:1279318110,apilocation:'characterCollectibles',got:[],need:[],amountgot:0,amountneed:0};
-
+        clan.membersWith.MindbendersAmbition = {hash:1074861258,apilocation:'profileCollectibles',  got:[],need:[],amountgot:0,amountneed:0};
+        clan.membersWith.WardensLaw          = {hash:1279318101,apilocation:'profileCollectibles',  got:[],need:[],amountgot:0,amountneed:0};
+        clan.membersWith.TheLongGoodbye      = {hash:1186314105,apilocation:'profileCollectibles',  got:[],need:[],amountgot:0,amountneed:0};
+        clan.membersWith.MilitiasBirthright  = {hash:1602518767,apilocation:'profileCollectibles',  got:[],need:[],amountgot:0,amountneed:0};
+        clan.membersWith.HorrorsLeast        = {hash:1099984904,apilocation:'profileCollectibles',  got:[],need:[],amountgot:0,amountneed:0};
+        clan.membersWith.DFA                 = {hash:1279318110,apilocation:'characterCollectibles',  got:[],need:[],amountgot:0,amountneed:0};
+        clan.membersWith.BrayTechOsprey      = {hash:1534387877,apilocation:'characterCollectibles',  got:[],need:[],amountgot:0,amountneed:0};
+        clan.membersWith.SiliconNeuroma      = {hash:1152758802,apilocation:'characterCollectibles',  got:[],need:[],amountgot:0,amountneed:0};
+        clan.membersWith.DutyBound           = {hash:1333654061,apilocation:'characterCollectibles',  got:[],need:[],amountgot:0,amountneed:0};
      
 $(document).ready(function() {
     $.ajax({
@@ -164,7 +163,7 @@ function getDescendantProp(obj, desc) {
 function outputClanData(clanobject) {
     
     $.each(clanobject.membersWith, function(weapon, weapondata) {
-        $("#"+weapon).html(weapondata.amountgot).prop('title', weapondata.got.sort().join(", "));
+        $("#"+weapon).html(weapondata.amountgot).prop('title', weapondata.need.sort().join(", "));
     }); 
   
     $("#membercounter").html(clanobject.membersFetched + "/" + clanobject.memberCount);
