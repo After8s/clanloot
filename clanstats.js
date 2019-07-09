@@ -168,7 +168,7 @@ function getDescendantProp(obj, desc) {
 function outputClanData(clanobject) {
     
     $.each(clanobject.membersWith, function(weapon, weapondata) {
-        $("#"+weapon).html(weapondata.amountgot).attr('data-content' , weapondata.got.sort().join(", ")+'<br>missed by:<br>'+ weapondata.need.sort().join(", "));
+        $("#"+weapon).html(weapondata.amountgot).attr('data-content' , weapondata.got.sort().join(", ")+'<div width="274"><hr><h3 class="popover-header">Missed by:</h3></div>'+ weapondata.need.sort().join(", "));
     });  
   
     $("#membercounter").html(clanobject.membersFetched + "/" + clanobject.memberCount);
@@ -176,7 +176,20 @@ function outputClanData(clanobject) {
 };
 
 $(document).ready(function () {
-    $('[data-toggle="popover"]').popover();
+    $(function(){
+    $('[data-toggle=popover]:not([data-popover-content])').popover();
+    $('[data-toggle=popover][data-popover-content]').popover({
+        html : true,
+        content: function() {
+          var content = $(this).attr("data-popover-content");
+          return $(content).children(".popover-body").html();
+        },
+        title: function() {
+          var title = $(this).attr("data-popover-content");
+          return $(title).children(".popover-heading").html();
+        }
+    });
+});
     
     $('.btn-filter').on('click', function () {
       var $target = $(this).data('target');
