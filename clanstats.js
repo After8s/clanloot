@@ -38,6 +38,7 @@ var bungieAPIkey = "0a11942f318647978979f13ad8aa53ee";
         clan.membersWith.HorrorsLeast        = {hash:1099984904,apilocation:'profileCollectibles',  got:[],need:[],amountgot:0,amountneed:0};
         clan.membersWith.EmperorsChosen      = {hash:2678796997,apilocation:'profileCollectibles',  got:[],need:[],amountgot:0,amountneed:0};
         clan.membersWith.AlwaysOnTime        = {hash:1903459810,apilocation:'profileCollectibles',  got:[],need:[],amountgot:0,amountneed:0};
+        clan.membersWith.AThousandWings      = {hash:3142437750,apilocation:'profileCollectibles',  got:[],need:[],amountgot:0,amountneed:0};
         clan.membersWith.CleansingKnife      = {hash:1469913804,apilocation:'characterCollectibles',  got:[],need:[],amountgot:0,amountneed:0};
         clan.membersWith.DFA                 = {hash:1279318110,apilocation:'characterCollectibles',  got:[],need:[],amountgot:0,amountneed:0};
         clan.membersWith.BrayTechOsprey      = {hash:1534387877,apilocation:'characterCollectibles',  got:[],need:[],amountgot:0,amountneed:0};
