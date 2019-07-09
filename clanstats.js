@@ -168,15 +168,16 @@ function getDescendantProp(obj, desc) {
 function outputClanData(clanobject) {
     
     $.each(clanobject.membersWith, function(weapon, weapondata) {
-        $("#"+weapon).html(weapondata.amountgot).prop('title', weapondata.need.sort().join(", "));
-    }); 
+        $("#"+weapon).html(weapondata.amountgot).attr('data-content' , weapondata.got.sort().join(", ")+'<br>missed by:<br>'+ weapondata.need.sort().join(", "));
+    });  
   
     $("#membercounter").html(clanobject.membersFetched + "/" + clanobject.memberCount);
     return
 };
 
 $(document).ready(function () {
-
+    $('[data-toggle="popover"]').popover();
+    
     $('.btn-filter').on('click', function () {
       var $target = $(this).data('target');
       if ($target != 'all') {
