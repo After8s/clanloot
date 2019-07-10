@@ -69,8 +69,8 @@ small{
 }
 .btn-destinations {
     color: #fff !important;
-    background-color: #42474C;
-    border-color: #42474C;
+    background-color: #7A7A5D;
+    border-color: #7A7A5D;
 }
 .btn-crucible {
     color: #fff !important;
@@ -87,10 +87,10 @@ small{
     background-color: #2F8C72;
     border-color: #2F8C72;
 }
-.btn-nightfall {
-    color: #C1602C !important;
-    background-color: #343E49;
-    border-color: #343E49;
+.btn-vanguard {
+    color: #fff !important;
+    background-color: #293D59;
+    border-color: #293D59;
 }
 .btn-all {
     color: #fff !important;

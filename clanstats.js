@@ -44,6 +44,8 @@ var bungieAPIkey = "0a11942f318647978979f13ad8aa53ee";
         clan.membersWith.BadJuju                = {hash:4207100358,apilocation:'profileCollectibles',  got:[],need:[],amountgot:0,amountneed:0};
         clan.membersWith.Lumina                 = {hash:2924632392,apilocation:'profileCollectibles',  got:[],need:[],amountgot:0,amountneed:0};
         clan.membersWith.WormGod                = {hash:2466440635,apilocation:'profileCollectibles',  got:[],need:[],amountgot:0,amountneed:0};
+        clan.membersWith.Goldtusk               = {hash:3376099856,apilocation:'profileCollectibles',  got:[],need:[],amountgot:0,amountneed:0};
+        clan.membersWith.ThroneCleaver          = {hash:1692129580,apilocation:'profileCollectibles',  got:[],need:[],amountgot:0,amountneed:0};
         clan.membersWith.CleansingKnife         = {hash:1469913804,apilocation:'characterCollectibles',  got:[],need:[],amountgot:0,amountneed:0};
         clan.membersWith.DFA                    = {hash:1279318110,apilocation:'characterCollectibles',  got:[],need:[],amountgot:0,amountneed:0};
         clan.membersWith.BrayTechOsprey         = {hash:1534387877,apilocation:'characterCollectibles',  got:[],need:[],amountgot:0,amountneed:0};
@@ -56,6 +58,10 @@ var bungieAPIkey = "0a11942f318647978979f13ad8aa53ee";
         clan.membersWith.ImpactVelocity         = {hash:3036030067,apilocation:'characterCollectibles',  got:[],need:[],amountgot:0,amountneed:0};
         clan.membersWith.PallasGalliot          = {hash:3163873689,apilocation:'characterCollectibles',  got:[],need:[],amountgot:0,amountneed:0};
         clan.membersWith.Trichromatica          = {hash:1718922261,apilocation:'characterCollectibles',  got:[],need:[],amountgot:0,amountneed:0};
+        clan.membersWith.Ermine                 = {hash:3163873693,apilocation:'characterCollectibles',  got:[],need:[],amountgot:0,amountneed:0};
+        clan.membersWith.WishMaker              = {hash:3360537485,apilocation:'characterCollectibles',  got:[],need:[],amountgot:0,amountneed:0};
+        clan.membersWith.FurtiveShell           = {hash:3360537486,apilocation:'characterCollectibles',  got:[],need:[],amountgot:0,amountneed:0};
+        clan.membersWith.DriftApart             = {hash:3163873691,apilocation:'characterCollectibles',  got:[],need:[],amountgot:0,amountneed:0};
      
 $(document).ready(function() {
     $.ajax({
