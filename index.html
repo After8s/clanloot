@@ -20,14 +20,15 @@
     <div class="container" id="claninfo">
         <div class="row">
             <div class="col-md-12">
-                <h3>Clan Loot v2.1 -- <span id="membercounter"></span> members</h3>
+                <h3>Clan Loot v2.2 -- <span id="membercounter"></span> members</h3>
                 <div class="float-right">
                     <div>
-                        <button type="button" class="btn btn-info btn-filter" data-target="vanguard">Vanguard</button>
-                        <button type="button" class="btn btn-success btn-filter" data-target="gambit">Gambit</button>
-                        <button type="button" class="btn btn-danger btn-filter" data-target="crucible">Crucible</button>
-                        <button type="button" class="btn btn-warning btn-filter" data-target="exotics">Exotics</button>
-                        <button type="button" class="btn btn-light btn-filter" data-target="all">All</button>
+                        <button type="button" class="btn btn-destinations btn-filter" data-target="destinations" title="Destinations"><img src="https://www.bungie.net/common/destiny2_content/icons/DestinyActivityModeDefinition_f6de6d95f600f199c9a674c73cbefbcc.png" width="30" height="30"></button>
+                        <button type="button" class="btn btn-vanguard btn-filter" data-target="vanguard" title="Strikes/Nightfalls"><img src="https://www.bungie.net/common/destiny2_content/icons/f2154b781b36b19760efcb23695c66fe.png" width="30" height="30"></button>
+                        <button type="button" class="btn btn-gambit btn-filter" data-target="gambit" title="Gambit"><img src="https://www.bungie.net/common/destiny2_content/icons/fc31e8ede7cc15908d6e2dfac25d78ff.png" width="30" height="30"></button>
+                        <button type="button" class="btn btn-crucible btn-filter" data-target="crucible" title="Crucible"><img src="https://www.bungie.net/common/destiny2_content/icons/1cb62a65b240d80b4fd0ae55482a1c68.png" width="30" height="30"></button>
+                        <button type="button" class="btn btn-raid btn-filter" data-target="raid" title="Raids"><img src="https://www.bungie.net/common/destiny2_content/icons/8b1bfd1c1ce1cab51d23c78235a6e067.png" width="30" height="30"></button>
+                        <button type="button" class="btn btn-light btn-filter" data-target="all" title="All"><img src="https://www.bungie.net/common/destiny2_content/icons/d3b2afca86d26c707c91f72bc910a938.png" width="30" height="30"></button>
                     </div>
                 </div>
             </div>
@@ -60,37 +61,37 @@
                                     <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/e5d9d70aadec948e851d443c64ff5d9d.png" width="30" height="30">
                                     <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/03e2db0c911d07fc0e9f505927aab055.png" width="30" height="30">
                                 </td>
-                                <td><h4><span id="Delirium" class="badge badge-primary align-middle" tabindex="0" data-toggle="popover" data-html="true" data-trigger="focus" data-placement="left" title="Owned by:" data-content=""></span></h4></td>
+                                <td><h4><span id="Delirium" class="badge badge-primary align-middle" tabindex="0" data-toggle="popover" data-html="true" data-trigger="focus" data-placement="left" title="Missed by:" data-content=""></span></h4></td>
                                 <td class="align-middle text-left td-actions"> 
                                     <a href="http://light.gg/i/orlnXw/" target= "_blank"><i class="fas fa-link" aria-hidden="true"></i></a>
                                 </td>
                             </tr>
 
-                            <tr data-status="vanguard">
+                            <tr data-status="destinations">
                                 <td class="align-middle text-left"><img src="https://bungie.net/common/destiny2_content/icons/3139365d986ccaaf4e3cea8845d8df72.jpg" width="45" height="45"></td>
                                 <td class="align-middle text-left">A Thousand Wings <span class="badge badge-pill badge-secondary">The Whisper</span></td>
                                 <td class="align-middle text-left">Exotic | Ship</td>
                                 <td class="align-middle text-left"></td>
                                 <td class="align-middle text-left"></td>
-                                <td><h4><span id="AThousandWings" class="badge badge-primary align-middle"></span></h4></td>
+                                <td><h4><span id="AThousandWings" class="badge badge-primary align-middle" tabindex="0" data-toggle="popover" data-html="true" data-trigger="focus" data-placement="left" title="Missed by:" data-content=""></span></h4></td>
                                 <td class="align-middle text-left td-actions">
                                     <a href="http://light.gg/i/sMTiyg/" target= "_blank"><i class="fas fa-link" aria-hidden="true"></i></a>
                                 </td>
                             </tr>
 
-                            <tr data-status="vanguard">
+                            <tr data-status="raid">
                                 <td class="align-middle text-left"><img src="https://bungie.net/common/destiny2_content/icons/99ebc52e53a7b6cfe845d97d07892d7e.jpg" width="45" height="45"></td>
                                 <td class="align-middle text-left">Always on Time <span class="badge badge-pill badge-secondary">Scourge of the Past</span></td>
                                 <td class="align-middle text-left">Exotic | Sparrow</td>
                                 <td class="align-middle text-left"></td>
                                 <td class="align-middle text-left"></td>
-                                <td><h4><span id="AlwaysOnTime" class="badge badge-primary align-middle"></span></h4></td>
+                               <td><h4><span id="AlwaysOnTime" class="badge badge-primary align-middle" tabindex="0" data-toggle="popover" data-html="true" data-trigger="focus" data-placement="left" title="Missed by:" data-content=""></span></h4></td>
                                 <td class="align-middle text-left td-actions">
                                     <a href="http://light.gg/i/eC_CxQ/" target= "_blank"><i class="fas fa-link" aria-hidden="true"></i></a>
                                 </td>
                             </tr>
 
-                            <tr data-status="exotics">
+                            <tr data-status="raid">
                                 <td class="align-middle text-left"><img src="https://bungie.net/common/destiny2_content/icons/474558c3e58e56b9a351c4064a74c5ca.jpg" width="45" height="45"></td>
                                 <td class="align-middle text-left">Anarchy <span class="badge badge-pill badge-secondary">Scourge of the Past</span></td>
                                 <td class="align-middle text-left">Exotic | Power | Grenade Launcher</td>
@@ -102,7 +103,7 @@
                                     <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/274a7f773a1bec5feb48bda6d9ecaa10.png" width="30" height="30">
                                     <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/433673d0d64fd026c771612a6a9ff7f7.png" width="30" height="30">
                                 </td>
-                                <td><h4><span id="Anarchy" class="badge badge-primary align-middle"></span></h4></td>
+                                <td><h4><span id="Anarchy" class="badge badge-primary align-middle" tabindex="0" data-toggle="popover" data-html="true" data-trigger="focus" data-placement="left" title="Missed by:" data-content=""></span></h4></td>
                                 <td class="align-middle text-left td-actions">
                                     <a href="http://light.gg/i/DjumjQ/" target= "_blank"><i class="fas fa-link" aria-hidden="true"></i></a>
                                 </td>
@@ -110,7 +111,7 @@
 
                             <tr data-status="vanguard">
                                 <td class="align-middle text-left"><img src="https://bungie.net/common/destiny2_content/icons/659ebe95206951d7c97022b47a93c459.jpg" width="45" height="45"></td>
-                                <td class="align-middle text-left">BrayTech Osprey <span class="badge badge-pill badge-secondary" data-balloon-pos="up" aria-label="Strange Terrain">Nightfall</span></td>
+                                <td class="align-middle text-left">BrayTech Osprey <span class="badge badge-pill badge-secondary">Strange Terrain</span></td>
                                 <td class="align-middle text-left">Legendary | Power | Rocket Launcher</td>
                                 <td class="align-middle text-left"><span class="text-void">VOID</span></td>
                                 <td class="align-middle text-left">
@@ -131,7 +132,7 @@
                                         <li><img src="https://bungie.net/common/destiny2_content/icons/26eb5d8ffd1c09e212ad2ea51ffd5ef9.png" width="30" height="30"></li>
                                     </ul>
                                 </td>
-                                <td><h4><span id="BrayTechOsprey" class="badge badge-primary align-middle"></span></h4></td>
+                                <td><h4><span id="BrayTechOsprey" class="badge badge-primary align-middle" tabindex="0" data-toggle="popover" data-html="true" data-trigger="focus" data-placement="left" title="Missed by:" data-content=""></span></h4></td>
                                 <td class="align-middle text-left td-actions">
                                     <a href="http://light.gg/i/2XL-cg/" target= "_blank"><i class="fas fa-link" aria-hidden="true"></i></a>
                                 </td>
@@ -149,19 +150,19 @@
                                     <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/e9aa2f479812bfabc8d48effde384737.png" width="30" height="30">
                                     <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/66de24e28cf352bb7669305e21bccf62.png" width="30" height="30">
                                 </td>
-                                <td><h4><span id="Breakneck" class="badge badge-primary align-middle"></span></h4></td>
+                                <td><h4><span id="Breakneck" class="badge badge-primary align-middle" tabindex="0" data-toggle="popover" data-html="true" data-trigger="focus" data-placement="left" title="Missed by:" data-content=""></span></h4></td>
                                 <td class="align-middle text-left td-actions">
                                     <a href="http://light.gg/i/-K1VEw/" target= "_blank"><i class="fas fa-link" aria-hidden="true"></i></a>
                                 </td>
                             </tr>
 
-                            <tr data-status="vanguard">
+                            <tr data-status="raid">
                                 <td class="align-middle text-left"><img src="https://bungie.net/common/destiny2_content/icons/1fdad47579f1ac76e77524a3c9ef2e09.jpg" width="45" height="45"></td>
                                 <td class="align-middle text-left">Cleansing Knife <span class="badge badge-pill badge-secondary">Last Wish</span></td>
                                 <td class="align-middle text-left">Legendary | Sparrow</td>
                                 <td class="align-middle text-left"></td>
                                 <td class="align-middle text-left"></td>
-                                <td><h4><span id="CleansingKnife" class="badge badge-primary align-middle"></span></h4></td>
+                                <td><h4><span id="CleansingKnife" class="badge badge-primary align-middle" tabindex="0" data-toggle="popover" data-html="true" data-trigger="focus" data-placement="left" title="Missed by:" data-content=""></span></h4></td>
                                 <td class="align-middle text-left td-actions">
                                     <a href="http://light.gg/i/KIUUfA/" target= "_blank"><i class="fas fa-link" aria-hidden="true"></i></a>
                                 </td>
@@ -169,7 +170,7 @@
 
                             <tr data-status="vanguard">
                                 <td class="align-middle text-left"><img src="https://bungie.net/common/destiny2_content/icons/6e692a14162839d0489e11cf9d84746e.jpg" width="45" height="45"></td>
-                                <td class="align-middle text-left">D.F.A. <span class="badge badge-pill badge-secondary" data-balloon-pos="up" aria-label="Tree of Probabilities">Nightfall</span></td>
+                                <td class="align-middle text-left">D.F.A. <span class="badge badge-pill badge-secondary">Tree of Probabilities</span></td>
                                 <td class="align-middle text-left">Legendary | Kinetic | Hand Cannon</td>
                                 <td class="align-middle text-left"><span class="text-white">KINETIC</span></td>
                                 <td class="align-middle text-left">
@@ -190,15 +191,44 @@
                                         <li><img src="https://bungie.net/common/destiny2_content/icons/e9aa2f479812bfabc8d48effde384737.png" width="30" height="30"></li>
                                     </ul>
                                 </td>
-                                <td><h4><span id="DFA" class="badge badge-primary align-middle"></span></h4></td>
+                                <td><h4><span id="DFA" class="badge badge-primary align-middle" tabindex="0" data-toggle="popover" data-html="true" data-trigger="focus" data-placement="left" title="Missed by:" data-content=""></span></h4></td>
                                 <td class="align-middle text-left td-actions">
                                     <a href="http://light.gg/i/yVWi_A/" target= "_blank"><i class="fas fa-link" aria-hidden="true"></i></a>
                                 </td>
                             </tr>
 
+                            <tr data-status="destinations">
+                                <td class="align-middle text-left"><img src="https://bungie.net/common/destiny2_content/icons/7edaac92b0e3e8dd753aad637aa71a52.jpg" width="45" height="45"></td>
+                                <td class="align-middle text-left">Death&#39;s Razor <span class="badge badge-pill badge-secondary">Heroic Menagerie</span></td>
+                                <td class="align-middle text-left">Legendary | Power | Sword</td>
+                                <td class="align-middle text-left"><span class="text-solar">SOLAR</span></td>
+                                <td class="align-middle text-left">
+                                    <ul style="list-style:none;float: left;padding-left: 0;margin-right: 5px;margin-bottom: 0">
+                                        <li><img src="https://bungie.net/common/destiny2_content/icons/ad56b0e83d31592d9984cdf2f392452a.png" width="30" height="30"></li>
+                                    </ul>
+                                    <ul style="list-style:none;float: left;padding-left: 0;margin-right: 5px;margin-bottom: 0">
+                                        <li><img src="https://bungie.net/common/destiny2_content/icons/bf4e60b9b3289fb9d2c3ffa0e4c2cc04.png" width="30" height="30"></li>
+                                    </ul>
+                                    <ul style="list-style:none;float: left;padding-left: 0;margin-right: 5px;margin-bottom: 0">
+                                        <li><img src="https://bungie.net/common/destiny2_content/icons/27372dd0065672d9308804a2a0a442bd.png" width="30" height="30"></li>
+                                    </ul>
+                                    <ul style="list-style:none;float: left;padding-left: 0;margin-right: 5px;margin-bottom: 0">
+                                        <li><img src="https://bungie.net/common/destiny2_content/icons/8a42d3e3d7b4c1c38755f5e0ac186f0b.png" width="30" height="30"></li>
+                                    </ul>
+                                    <ul style="list-style:none;float: left;padding-left: 0;margin-right: 5px;margin-bottom: 0">
+                                        <li><img src="https://bungie.net/common/destiny2_content/icons/5c4e494d008a8c2cf4c4361ab42c9973.png" width="30" height="30"></li>
+                                        <li><img src="https://bungie.net/common/destiny2_content/icons/71d5ae9c845b5895d906eff9b667959c.png" width="30" height="30"></li>
+                                    </ul>
+                                </td>
+                               <td><h4><span id="DeathsRazor" class="badge badge-primary align-middle" tabindex="0" data-toggle="popover" data-html="true" data-trigger="focus" data-placement="left" title="Missed by:" data-content=""></span></h4></td>
+                                <td class="align-middle text-left td-actions">
+                                    <a href="http://light.gg/i/anL2IQ/" target= "_blank"><i class="fas fa-link" aria-hidden="true"></i></a>
+                                </td>
+                            </tr>
+
                             <tr data-status="vanguard">
                                 <td class="align-middle text-left"><img src="https://bungie.net/common/destiny2_content/icons/0497af906c184a43fa7e2accae899c35.jpg" width="45" height="45"></td>
-                                <td class="align-middle text-left">Duty Bound <span class="badge badge-pill badge-secondary" data-balloon-pos="up" aria-label="Savathûn's Song">Nightfall</span></td>
+                                <td class="align-middle text-left">Duty Bound <span class="badge badge-pill badge-secondary">Savathûn's Song</span></td>
                                 <td class="align-middle text-left">Legendary | Kinetic | Auto Rifle</td>
                                 <td class="align-middle text-left"><span class="text-white">KINETIC</span></td>
                                 <td class="align-middle text-left">
@@ -218,7 +248,7 @@
                                         <li><img src="https://bungie.net/common/destiny2_content/icons/e9aa2f479812bfabc8d48effde384737.png" width="30" height="30"></li>
                                     </ul>
                                 </td>
-                                <td><h4><span id="DutyBound" class="badge badge-primary align-middle"></span></h4></td>
+                                <td><h4><span id="DutyBound" class="badge badge-primary align-middle" tabindex="0" data-toggle="popover" data-html="true" data-trigger="focus" data-placement="left" title="Missed by:" data-content=""></span></h4></td>
                                 <td class="align-middle text-left td-actions">
                                     <a href="http://light.gg/i/3AHnVg/" target= "_blank"><i class="fas fa-link" aria-hidden="true"></i></a>
                                 </td>
@@ -226,7 +256,7 @@
 
                             <tr data-status="vanguard">
                                 <td class="align-middle text-left"><img src="https://bungie.net/common/destiny2_content/icons/c5454c80b15ecb3b3abf2d69d4bfe5ff.jpg" width="45" height="45"></td>
-                                <td class="align-middle text-left">Horror&#39;s Least <span class="badge badge-pill badge-secondary" data-balloon-pos="up" aria-label="The Corrupted">Nightfall</span></td>
+                                <td class="align-middle text-left">Horror&#39;s Least <span class="badge badge-pill badge-secondary">The Corrupted</span></td>
                                 <td class="align-middle text-left">Legendary | Energy | Pulse Rifle</td>
                                 <td class="align-middle text-left"><span class="text-arc">ARC</span></td>
                                 <td class="align-middle text-left">
@@ -236,7 +266,7 @@
                                     <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/49958f356ea1df930888d15fe6539fe1.png" width="30" height="30">
                                     <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/22f478a5c757c128b7c367ddc42180ab.png" width="30" height="30">
                                 </td>
-                                <td><h4><span id="HorrorsLeast" class="badge badge-primary align-middle"></span></h4></td>
+                                <td><h4><span id="HorrorsLeast" class="badge badge-primary align-middle" tabindex="0" data-toggle="popover" data-html="true" data-trigger="focus" data-placement="left" title="Missed by:" data-content=""></span></h4></td>
                                 <td class="align-middle text-left td-actions">
                                     <a href="http://light.gg/i/gnLePw/" target= "_blank"><i class="fas fa-link" aria-hidden="true"></i></a>
                                 </td>
@@ -254,13 +284,25 @@
                                     <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/0fd9dbe1c09b8cc7d0be888c68ff4526.png" width="30" height="30">
                                     <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/ffc05be14c0ab4c181292df00a01d99b.png" width="30" height="30">
                                 </td>
-                                <td><h4><span id="Hush" class="badge badge-primary align-middle"></span></h4></td>
+                                <td><h4><span id="Hush" class="badge badge-primary align-middle" tabindex="0" data-toggle="popover" data-html="true" data-trigger="focus" data-placement="left" title="Missed by:" data-content=""></span></h4></td>
                                 <td class="align-middle text-left td-actions">
                                     <a href="http://light.gg/i/8r5zXg/" target= "_blank"><i class="fas fa-link"></i></a>
                                 </td>
                             </tr>
 
-                            <tr data-status="exotics">
+                            <tr data-status="vanguard">
+                                <td class="align-middle text-left"><img src="https://bungie.net/common/destiny2_content/icons/4d0ecd27dd8a6d02a8a0f3b2618a097e.jpg" width="45" height="45"></td>
+                                <td class="align-middle text-left">Impact Velocity <span class="badge badge-pill badge-secondary">Exodus Crash</span></td>
+                                <td class="align-middle text-left">Exotic | Sparrow</td>
+                                <td class="align-middle text-left"></td>
+                                <td class="align-middle text-left"></td>
+                                <td><h4><span id="ImpactVelocity" class="badge badge-primary align-middle" tabindex="0" data-toggle="popover" data-html="true" data-trigger="focus" data-placement="left" title="Missed by:" data-content=""></span></h4></td>
+                                <td class="align-middle text-left td-actions">
+                                    <a href="http://light.gg/i/Ha5WpA/" target= "_blank"><i class="fas fa-link" aria-hidden="true"></i></a>
+                                </td>
+                            </tr>
+
+                            <tr data-status="destinations">
                                 <td class="align-middle text-left"><img src="https://bungie.net/common/destiny2_content/icons/e799303d622fd31d2a553c1346d593cd.jpg" width="45" height="45"></td>
                                 <td class="align-middle text-left">Izanagi&#39;s Burden</td>
                                 <td class="align-middle text-left">Exotic | Kinetic | Sniper Rifle</td>
@@ -272,7 +314,7 @@
                                     <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/22f478a5c757c128b7c367ddc42180ab.png" width="30" height="30">
                                     <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/433673d0d64fd026c771612a6a9ff7f7.png" width="30" height="30">
                                 </td>
-                                <td><h4><span id="IzanagisBurden" class="badge badge-primary align-middle"></span></h4></td>
+                                <td><h4><span id="IzanagisBurden" class="badge badge-primary align-middle" tabindex="0" data-toggle="popover" data-html="true" data-trigger="focus" data-placement="left" title="Missed by:" data-content=""></span></h4></td>
                                 <td class="align-middle text-left td-actions">
                                     <a href="http://light.gg/i/F0lwvw/" target= "_blank"><i class="fas fa-link" aria-hidden="true"></i></a>
                                 </td>
@@ -290,7 +332,7 @@
                                     <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/d355b1117307c9f187729249361cecc3.png" width="30" height="30">
                                     <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/68b82437cba6eeb5a215c2c8240861a5.png" width="30" height="30">
                                 </td>
-                                <td><h4><span id="LoadedQuestion" class="badge badge-primary align-middle"></span></h4></td>
+                                <td><h4><span id="LoadedQuestion" class="badge badge-primary align-middle" tabindex="0" data-toggle="popover" data-html="true" data-trigger="focus" data-placement="left" title="Missed by:" data-content=""></span></h4></td>
                                 <td class="align-middle text-left td-actions">
                                     <a href="http://light.gg/i/I8WgIg/" target= "_blank"><i class="fas fa-link" aria-hidden="true"></i></a>
                                 </td>
@@ -308,13 +350,13 @@
                                     <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/49958f356ea1df930888d15fe6539fe1.png" width="30" height="30">
                                     <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/84ba8155221bbd2e36ffaa9ad977f5ab.png" width="30" height="30">
                                 </td>
-                                <td><h4><span id="LunasHowl" class="badge badge-primary align-middle"></span></h4></td>
+                               <td><h4><span id="LunasHowl" class="badge badge-primary align-middle" tabindex="0" data-toggle="popover" data-html="true" data-trigger="focus" data-placement="left" title="Missed by:" data-content=""></span></h4></td>
                                 <td class="align-middle text-left td-actions">
                                     <a href="http://light.gg/i/BIotCQ/" target="_blank"><i class="fas fa-link"></i></a>
                                 </td>
                             </tr>
 
-                            <tr data-status="exotics">
+                            <tr data-status="gambit">
                                 <td class="align-middle text-left"><img src="https://bungie.net/common/destiny2_content/icons/86ef7fd7c087c434a16089602e2c00de.jpg" width="45" height="45"></td>
                                 <td class="align-middle text-left">Malfeasance</td>
                                 <td class="align-middle text-left">Exotic | Kinetic | Hand Cannon</td>
@@ -326,7 +368,7 @@
                                     <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/724dcdf5650865435b4accf304460ab9.png" width="30" height="30">
                                     <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/a5ff58a344799006cb7149f2ce881611.png" width="30" height="30">
                                 </td>
-                                <td><h4><span id="Malfeasance" class="badge badge-primary align-middle"></span></h4></td>
+                                <td><h4><span id="Malfeasance" class="badge badge-primary align-middle" tabindex="0" data-toggle="popover" data-html="true" data-trigger="focus" data-placement="left" title="Missed by:" data-content=""></span></h4></td>
                                 <td class="align-middle text-left td-actions">
                                     <a href="http://light.gg/i/6zA2DA/" target= "_blank"><i class="fas fa-link" aria-hidden="true"></i></a>
                                 </td>
@@ -334,7 +376,7 @@
 
                             <tr data-status="vanguard">
                                 <td class="align-middle text-left"><img src="https://bungie.net/common/destiny2_content/icons/0d39a47ea705e188a3674fa5f41b99a5.jpg" width="45" height="45"></td>
-                                <td class="align-middle text-left">Mindbender&#39;s Ambition <span class="badge badge-pill badge-secondary" data-balloon-pos="up" aria-label="The Hollowed Lair">Nightfall</span></td>
+                                <td class="align-middle text-left">Mindbender&#39;s Ambition <span class="badge badge-pill badge-secondary">The Hollowed Lair</span></td>
                                 <td class="align-middle text-left">Legendary | Energy | Shotgun</td>
                                 <td class="align-middle text-left"><span class="text-solar">SOLAR</span></td>
                                 <td class="align-middle text-left">
@@ -344,7 +386,7 @@
                                     <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/0fd9dbe1c09b8cc7d0be888c68ff4526.png" width="30" height="30">
                                     <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/e9aa2f479812bfabc8d48effde384737.png" width="30" height="30">
                                 </td>
-                                <td><h4><span id="MindbendersAmbition" class="badge badge-primary align-middle"></span></h4></td>
+                               <td><h4><span id="MindbendersAmbition" class="badge badge-primary align-middle" tabindex="0" data-toggle="popover" data-html="true" data-trigger="focus" data-placement="left" title="Missed by:" data-content=""></span></h4></td>
                                 <td class="align-middle text-left td-actions">
                                     <a href="http://light.gg/i/YAJv9Q/" target= "_blank"><i class="fas fa-link" aria-hidden="true"></i></a>
                                 </td>
@@ -362,13 +404,13 @@
                                     <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/49958f356ea1df930888d15fe6539fe1.png" width="30" height="30">
                                     <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/84ba8155221bbd2e36ffaa9ad977f5ab.png" width="30" height="30">
                                 </td>
-                                <td><h4><span id="NotForgotten" class="badge badge-primary align-middle"></span></h4></td>
+                                <td><h4><span id="NotForgotten" class="badge badge-primary align-middle" tabindex="0" data-toggle="popover" data-html="true" data-trigger="focus" data-placement="left" title="Missed by:" data-content=""></span></h4></td>
                                 <td class="align-middle text-left td-actions">
                                     <a href="http://light.gg/i/B4otCQ/" target="_blank"><i class="fas fa-link"></i></a>
                                 </td>
                             </tr>
 
-                            <tr data-status="exotics">
+                            <tr data-status="raid">
                                 <td class="align-middle text-left"><img src="https://bungie.net/common/destiny2_content/icons/0421f2a3fdff6fd946f7e20951b08876.jpg" width="45" height="45"></td>
                                 <td class="align-middle text-left">One Thousand Voices <span class="badge badge-pill badge-secondary">Last Wish</span></td>
                                 <td class="align-middle text-left">Exotic | Power | Fusion Rifle</td>
@@ -380,13 +422,13 @@
                                     <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/52a4646804b96ed190f1e1ae97b64e17.png" width="30" height="30">
                                     <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/27c6695ec475d3fa1aefa71c2b099bfc.png" width="30" height="30">
                                 </td>
-                               <td><h4><span id="OneThousandVoices" class="badge badge-primary align-middle"></span></h4></td>
+                               <td><h4><span id="OneThousandVoices" class="badge badge-primary align-middle" tabindex="0" data-toggle="popover" data-html="true" data-trigger="focus" data-placement="left" title="Missed by:" data-content=""></span></h4></td>
                                 <td class="align-middle text-left td-actions">
                                     <a href="http://light.gg/i/jdxVew/" target="_blank"><i class="fas fa-link" aria-hidden="true"></i></a>
                                 </td>
                             </tr>
 
-                            <tr data-status="exotics">
+                            <tr data-status="destinations">
                                 <td class="align-middle text-left"><img src="https://bungie.net/common/destiny2_content/icons/65e4839c3750bcefbcb595dc6b7ee38a.jpg" width="45" height="45"></td>
                                 <td class="align-middle text-left">Outbreak Perfected <span class="badge badge-pill badge-secondary">Zero Hour</span></td>
                                 <td class="align-middle text-left">Exotic | Kinetic | Pulse Rifle</td>
@@ -398,7 +440,7 @@
                                     <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/22f478a5c757c128b7c367ddc42180ab.png" width="30" height="30">
                                     <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/8cff6c217f588c3a092610890c38081f.png" width="30" height="30">
                                 </td>
-                                <td><h4><span id="OutbreakPerfected" class="badge badge-primary align-middle"></span></h4></td>
+                                <td><h4><span id="OutbreakPerfected" class="badge badge-primary align-middle" tabindex="0" data-toggle="popover" data-html="true" data-trigger="focus" data-placement="left" title="Missed by:" data-content=""></span></h4></td>
                                 <td class="align-middle text-left td-actions">
                                     <a href="http://light.gg/i/q_7YFw/" target="_blank"><i class="fas fa-link" aria-hidden="true"></i></a>
                                 </td>
@@ -416,9 +458,21 @@
                                     <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/8fe8293ba02002f69bfa052a0c44223f.png" width="30" height="30">
                                     <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/1cd82297f969dd5659da6bf2e475d1ca.png" width="30" height="30">
                                 </td>
-                                <td><h4><span id="Oxygen" class="badge badge-primary align-middle"></span></h4></td>
+                                <td><h4><span id="Oxygen" class="badge badge-primary align-middle" tabindex="0" data-toggle="popover" data-html="true" data-trigger="focus" data-placement="left" title="Missed by:" data-content=""></span></h4></td>
                                 <td class="align-middle text-left td-actions">
                                     <a href="http://light.gg/i/Mj3l6A/" target= "_blank"><i class="fas fa-link" aria-hidden="true"></i></a>
+                                </td>
+                            </tr>
+
+                            <tr data-status="destinations">
+                                <td class="align-middle text-left"><img src="https://bungie.net/common/destiny2_content/icons/70d9fc6adb0a207f43a127142acbd415.jpg" width="45" height="45"></td>
+                                <td class="align-middle text-left">Pallas Galliot <span class="badge badge-pill badge-secondary">The Shattered Throne</span></td>
+                                <td class="align-middle text-left">Legendary | Ship</td>
+                                <td class="align-middle text-left"></td>
+                                <td class="align-middle text-left"></td>
+                                <td><h4><span id="PallasGalliot" class="badge badge-primary align-middle" tabindex="0" data-toggle="popover" data-html="true" data-trigger="focus" data-placement="left" title="Missed by:" data-content=""></span></h4></td>
+                                <td class="align-middle text-left td-actions">
+                                    <a href="http://light.gg/i/TTeEqQ/" target= "_blank"><i class="fas fa-link" aria-hidden="true"></i></a>
                                 </td>
                             </tr>
 
@@ -434,7 +488,7 @@
                                     <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/22f478a5c757c128b7c367ddc42180ab.png" width="30" height="30">
                                     <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/c65ca84ff8fe31b00fb0bb569ddf25a8.png" width="30" height="30">
                                 </td>
-                               <td><h4><span id="RedrixsBroadsword" class="badge badge-primary align-middle"></span></h4></td>
+                               <td><h4><span id="RedrixsBroadsword" class="badge badge-primary align-middle" tabindex="0" data-toggle="popover" data-html="true" data-trigger="focus" data-placement="left" title="Missed by:" data-content=""></span></h4></td>
                                 <td class="align-middle text-left td-actions">
                                     <a href="http://light.gg/i/Cq03RQ/" target= "_blank"><i class="fas fa-link" aria-hidden="true"></i></a>
                                 </td>
@@ -461,7 +515,7 @@
                                         <li><img src="https://bungie.net/common/destiny2_content/icons/c65ca84ff8fe31b00fb0bb569ddf25a8.png" width="30" height="30"></li>
                                     </ul>
                                 </td>
-                                <td><h4><span id="RedrixsClaymore" class="badge badge-primary align-middle"></span></h4></td>
+                                <td><h4><span id="RedrixsClaymore" class="badge badge-primary align-middle" tabindex="0" data-toggle="popover" data-html="true" data-trigger="focus" data-placement="left" title="Missed by:" data-content=""></span></h4></td>
                                 <td class="align-middle text-left td-actions">
                                     <a href="http://light.gg/i/faBxCw/" target= "_blank"><i class="fas fa-link" aria-hidden="true"></i></a>
                                 </td>
@@ -479,19 +533,19 @@
                                     <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/49df9d90b3f27bd5ec6a9b35f4c10def.png" width="30" height="30">
                                     <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/430ead5fae2b0db7252180d6c8cf5465.png" width="30" height="30">
                                 </td>
-                                <td><h4><span id="Revoker" class="badge badge-primary align-middle"></span></h4></td>
+                                <td><h4><span id="Revoker" class="badge badge-primary align-middle" tabindex="0" data-toggle="popover" data-html="true" data-trigger="focus" data-placement="left" title="Missed by:" data-content=""></span></h4></td>
                                 <td class="align-middle text-left td-actions">
                                     <a href="http://light.gg/i/6IgEJw/" target= "_blank"><i class="fas fa-link" aria-hidden="true"></i></a>
                                 </td>
                             </tr>
 
-                            <tr data-status="vanguard">
+                            <tr data-status="destinations">
                                 <td class="align-middle text-left"><img src="https://bungie.net/common/destiny2_content/icons/16080557373919bf6ab606214045544d.jpg" width="45" height="45"></td>
                                 <td class="align-middle text-left">SCRAP CF-717-91 <span class="badge badge-pill badge-secondary">Zero Hour</span></td>
                                 <td class="align-middle text-left">Exotic | Ship</td>
                                 <td class="align-middle text-left"></td>
                                 <td class="align-middle text-left"></td>
-                                <td><h4><span id="Scrap" class="badge badge-primary align-middle"></span></h4></td>
+                                <td><h4><span id="Scrap" class="badge badge-primary align-middle" tabindex="0" data-toggle="popover" data-html="true" data-trigger="focus" data-placement="left" title="Missed by:" data-content=""></span></h4></td>
                                 <td class="align-middle text-left td-actions">
                                     <a href="http://light.gg/i/ow8sgw/" target= "_blank"><i class="fas fa-link" aria-hidden="true"></i></a>
                                 </td>
@@ -499,7 +553,7 @@
 
                             <tr data-status="vanguard">
                                 <td class="align-middle text-left"><img src="https://bungie.net/common/destiny2_content/icons/77364d95fdc16bb1d23f6f00817dc6ab.jpg" width="45" height="45"></td>
-                                <td class="align-middle text-left">Silicon Neuroma <span class="badge badge-pill badge-secondary" data-balloon-pos="up" aria-label="The Pyramidion">Nightfall</span></td>
+                                <td class="align-middle text-left">Silicon Neuroma <span class="badge badge-pill badge-secondary">The Pyramidion</span></td>
                                 <td class="align-middle text-left">Legendary | Kinetic | Sniper Rifle</td>
                                 <td class="align-middle text-left"><span class="text-white">KINETIC</span></td>
                                 <td class="align-middle text-left">
@@ -520,13 +574,37 @@
                                         <li><img src="https://bungie.net/common/destiny2_content/icons/0fd9dbe1c09b8cc7d0be888c68ff4526.png" width="30" height="30"></li>
                                     </ul>
                                 </td>
-                                <td><h4><span id="SiliconNeuroma" class="badge badge-primary align-middle"></span></h4></td>
+                                <td><h4><span id="SiliconNeuroma" class="badge badge-primary align-middle" tabindex="0" data-toggle="popover" data-html="true" data-trigger="focus" data-placement="left" title="Missed by:" data-content=""></span></h4></td>
                                 <td class="align-middle text-left td-actions">
                                     <a href="http://light.gg/i/4IwIOw/" target= "_blank"><i class="fas fa-link" aria-hidden="true"></i></a>
                                 </td>
                             </tr>
 
-                            <tr data-status="exotics">
+                            <tr data-status="destinations">
+                                <td class="align-middle text-left"><img src="https://bungie.net/common/destiny2_content/icons/c4cce6bf993e1d4391f3846638f04e83.jpg" width="45" height="45"></td>
+                                <td class="align-middle text-left">Silver Tercel <span class="badge badge-pill badge-secondary">Petra's Weekly Story Mission</span></td>
+                                <td class="align-middle text-left">Legendary | Sparrow</td>
+                                <td class="align-middle text-left"></td>
+                                <td class="align-middle text-left"></td>
+                                <td><h4><span id="SilverTercel" class="badge badge-primary align-middle" tabindex="0" data-toggle="popover" data-html="true" data-trigger="focus" data-placement="left" title="Missed by:" data-content=""></span></h4></td>
+                                <td class="align-middle text-left td-actions">
+                                    <a href="http://light.gg/i/7fmGTg/" target= "_blank"><i class="fas fa-link" aria-hidden="true"></i></a>
+                                </td>
+                            </tr>
+
+                            <tr data-status="destinations">
+                                <td class="align-middle text-left"><img src="https://bungie.net/common/destiny2_content/icons/a5be7f207cc65de65f99d3224ec440dd.jpg" width="45" height="45"></td>
+                                <td class="align-middle text-left">Starlight Shell <span class="badge badge-pill badge-secondary">Ascendant Challenge</span></td>
+                                <td class="align-middle text-left">Legendary | Ghost Shell</td>
+                                <td class="align-middle text-left"></td>
+                                <td class="align-middle text-left"></td>
+                                <td><h4><span id="StarlightShell" class="badge badge-primary align-middle" tabindex="0" data-toggle="popover" data-html="true" data-trigger="focus" data-placement="left" title="Missed by:" data-content=""></span></h4></td>
+                                <td class="align-middle text-left td-actions">
+                                    <a href="http://light.gg/i/Y7CDMA/" target= "_blank"><i class="fas fa-link" aria-hidden="true"></i></a>
+                                </td>
+                            </tr>
+
+                            <tr data-status="raid">
                                 <td class="align-middle text-left"><img src="https://bungie.net/common/destiny2_content/icons/ce6bd07715a082bad0ba946f5f8dca5e.jpg" width="45" height="45"></td>
                                 <td class="align-middle text-left">Tarrabah <span class="badge badge-pill badge-secondary">Crown of Sorrows</span></td>
                                 <td class="align-middle text-left">Exotic | Energy | Submachine Gun</td>
@@ -538,25 +616,25 @@
                                     <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/3324891b5d90c263b31595023e05ea49.png" width="30" height="30">
                                     <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/93da84acac42c670c093b90224237e2b.png" width="30" height="30">
                                 </td>
-                                <td><h4><span id="Tarrabah" class="badge badge-primary align-middle"></span></h4></td>
+                                <td><h4><span id="Tarrabah" class="badge badge-primary align-middle" tabindex="0" data-toggle="popover" data-html="true" data-trigger="focus" data-placement="left" title="Missed by:" data-content=""></span></h4></td>
                                 <td class="align-middle text-left td-actions">
                                     <a href="http://light.gg/i/PH9puQ/" target= "_blank"><i class="fas fa-link" aria-hidden="true"></i></a>
                                 </td>
                             </tr>
 
-                            <tr data-status="vanguard">
+                            <tr data-status="destinations">
                                 <td class="align-middle text-left"><img src="https://bungie.net/common/destiny2_content/icons/959843672ada475eca734e73b284fde0.jpg" width="45" height="45"></td>
                                 <td class="align-middle text-left">The Emperor&#39;s Chosen <span class="badge badge-pill badge-secondary">Heroic Menagerie</span></td>
                                 <td class="align-middle text-left">Legendary | Ship</td>
                                 <td class="align-middle text-left"></td>
                                 <td class="align-middle text-left"></td>
-                                <td><h4><span id="EmperorsChosen" class="badge badge-primary align-middle"></span></h4></td>
+                                <td><h4><span id="EmperorsChosen" class="badge badge-primary align-middle" tabindex="0" data-toggle="popover" data-html="true" data-trigger="focus" data-placement="left" title="Missed by:" data-content=""></span></h4></td>
                                 <td class="align-middle text-left td-actions">
                                     <a href="http://light.gg/i/dpX-5g/" target= "_blank"><i class="fas fa-link" aria-hidden="true"></i></a>
                                 </td>
                             </tr>
 
-                            <tr data-status="exotics">
+                            <tr data-status="destinations">
                                 <td class="align-middle text-left"><img src="https://bungie.net/common/destiny2_content/icons/f7ca2e7dfde0f38ead5ce1c36176603f.jpg" width="45" height="45"></td>
                                 <td class="align-middle text-left">The Last Word</td>
                                 <td class="align-middle text-left">Exotic | Kinetic | Hand Cannon</td>
@@ -568,7 +646,7 @@
                                     <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/9f3c3ae1bddbed21af1cc6487338028e.png" width="30" height="30">
                                     <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/cbe48e1decc292c61d296e0d3159a372.png" width="30" height="30">
                                 </td>
-                                <td><h4><span id="TheLastWord" class="badge badge-primary align-middle"></span></h4></td>
+                                <td><h4><span id="TheLastWord" class="badge badge-primary align-middle" tabindex="0" data-toggle="popover" data-html="true" data-trigger="focus" data-placement="left" title="Missed by:" data-content=""></span></h4></td>
                                 <td class="align-middle text-left td-actions">
                                     <a href="http://light.gg/i/2WlOUQ/" target= "_blank"><i class="fas fa-link" aria-hidden="true"></i></a>
                                 </td>
@@ -576,7 +654,7 @@
 
                             <tr data-status="vanguard">
                                 <td class="align-middle text-left"><img src="https://bungie.net/common/destiny2_content/icons/fe07633a2ee87f0c00d5b0c0f3838a7d.jpg" width="45" height="45"></td>
-                                <td class="align-middle text-left">The Long Goodbye <span class="badge badge-pill badge-secondary" data-balloon-pos="up" aria-label="The Insight Terminus">Nightfall</span></td>
+                                <td class="align-middle text-left">The Long Goodbye <span class="badge badge-pill badge-secondary">The Insight Terminus</span></td>
                                 <td class="align-middle text-left">Legendary | Energy | Sniper Rifle</td>
                                 <td class="align-middle text-left"><span class="text-arc">ARC</span></td>
                                 <td class="align-middle text-left">
@@ -586,7 +664,7 @@
                                     <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/cd4bc691a022136dc149e56ff4e04bf4.png" width="30" height="30">
                                     <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/56f26a865c24a6a10cb4177794eb7788.png" width="30" height="30">
                                 </td>
-                                <td><h4><span id="TheLongGoodbye" class="badge badge-primary align-middle"></span></h4></td>
+                                <td><h4><span id="TheLongGoodbye" class="badge badge-primary align-middle" tabindex="0" data-toggle="popover" data-html="true" data-trigger="focus" data-placement="left" title="Missed by:" data-content=""></span></h4></td>
                                 <td class="align-middle text-left td-actions">
                                     <a href="http://light.gg/i/tFZkgA/" target= "_blank"><i class="fas fa-link" aria-hidden="true"></i></a>
                                 </td>
@@ -594,7 +672,7 @@
 
                             <tr data-status="vanguard">
                                 <td class="align-middle text-left"><img src="https://bungie.net/common/destiny2_content/icons/39b67dae56153d70e935bfad21faecc7.jpg" width="45" height="45"></td>
-                                <td class="align-middle text-left">The Militia&#39;s Birthright <span class="badge badge-pill badge-secondary" data-balloon-pos="up" aria-label="Lake of Shadows">Nightfall</span></td>
+                                <td class="align-middle text-left">The Militia&#39;s Birthright <span class="badge badge-pill badge-secondary">Lake of Shadows</span></td>
                                 <td class="align-middle text-left">Legendary | Kinetic | Grenade Launcher</td>
                                 <td class="align-middle text-left"><span class="text-white">KINETIC</span></td>
                                 <td class="align-middle text-left">
@@ -604,7 +682,7 @@
                                     <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/e52e3441db003abe3aa2b8a2f7fda730.png" width="30" height="30">
                                     <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/1cc8d4604d29dfe5bdc321b4c2681bfb.png" width="30" height="30">
                                 </td>
-                                <td><h4><span id="MilitiasBirthright" class="badge badge-primary align-middle"></span></h4></td>
+                                <td><h4><span id="MilitiasBirthright" class="badge badge-primary align-middle" tabindex="0" data-toggle="popover" data-html="true" data-trigger="focus" data-placement="left" title="Missed by:" data-content=""></span></h4></td>
                                 <td class="align-middle text-left td-actions">
                                     <a href="http://light.gg/i/-QhH3w/" target= "_blank"><i class="fas fa-link" aria-hidden="true"></i></a>
                                 </td>
@@ -634,7 +712,7 @@
                                         <li><img src="https://bungie.net/common/destiny2_content/icons/22a38b81cb2ec0fe9811b5440a52b223.png" width="30" height="30"></li>
                                     </ul>
                                 </td>
-                                <td><h4><span id="Mountaintop" class="badge badge-primary align-middle"></span></h4></td>
+                                <td><h4><span id="Mountaintop" class="badge badge-primary align-middle" tabindex="0" data-toggle="popover" data-html="true" data-trigger="focus" data-placement="left" title="Missed by:" data-content=""></span></h4></td>
                                 <td class="align-middle text-left td-actions">
                                     <a href="http://light.gg/i/B4otCQ/" target="_blank"><i class="fas fa-link" aria-hidden="true"></i></a>
                                 </td>
@@ -652,13 +730,25 @@
                                     <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/5838b4ef410895011edfed3eaf11641f.png" width="30" height="30">
                                     <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/0412c5b7c3b66065a258b65458f852a2.png" width="30" height="30">
                                 </td>
-                               <td><h4><span id="Recluse" class="badge badge-primary align-middle"></span></h4></td>
+                               <td><h4><span id="Recluse" class="badge badge-primary align-middle" tabindex="0" data-toggle="popover" data-html="true" data-trigger="focus" data-placement="left" title="Missed by:" data-content=""></span></h4></td>
                                 <td class="align-middle text-left td-actions">
                                     <a href="http://light.gg/i/9q3txw/" target= "_blank"><i class="fas fa-link" aria-hidden="true"></i></a>
                                 </td>
                             </tr>
 
-                            <tr data-status="exotics">
+                            <tr data-status="vanguard">
+                                <td class="align-middle text-left"><img src="https://bungie.net/common/destiny2_content/icons/a2dd642b18b15f764db069f845f5173c.jpg" width="45" height="45"></td>
+                                <td class="align-middle text-left">Tilt Fuse <span class="badge badge-pill badge-secondary">The Arms Dealer</span></td>
+                                <td class="align-middle text-left">Exotic | Sparrow</td>
+                                <td class="align-middle text-left"></td>
+                                <td class="align-middle text-left"></td>
+                               <td><h4><span id="TiltFuse" class="badge badge-primary align-middle" tabindex="0" data-toggle="popover" data-html="true" data-trigger="focus" data-placement="left" title="Missed by:" data-content=""></span></h4></td>
+                                <td class="align-middle text-left td-actions">
+                                    <a href="http://light.gg/i/HK5WpA/" target= "_blank"><i class="fas fa-link" aria-hidden="true"></i></a>
+                                </td>
+                            </tr>
+
+                            <tr data-status="destinations">
                                 <td class="align-middle text-left"><img src="https://bungie.net/common/destiny2_content/icons/3e518a2eb8ba6888ba723866af55ce8b.jpg" width="45" height="45"></td>
                                 <td class="align-middle text-left">Thorn</td>
                                 <td class="align-middle text-left">Exotic | Kinetic | Hand Cannon</td>
@@ -670,13 +760,25 @@
                                     <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/e994975f4fae7a9a4e0d27e5173dece3.png" width="30" height="30">
                                     <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/cbe48e1decc292c61d296e0d3159a372.png" width="30" height="30">
                                 </td>
-                                <td><h4><span id="Thorn" class="badge badge-primary align-middle"></span></h4></td>
+                                <td><h4><span id="Thorn" class="badge badge-primary align-middle" tabindex="0" data-toggle="popover" data-html="true" data-trigger="focus" data-placement="left" title="Missed by:" data-content=""></span></h4></td>
                                 <td class="align-middle text-left td-actions">
                                     <a href="http://light.gg/i/1EDS7A/" target= "_blank"><i class="fas fa-link" aria-hidden="true"></i></a>
                                 </td>
                             </tr>
 
-                            <tr data-status="exotics">
+                            <tr data-status="vanguard">
+                                <td class="align-middle text-left"><img src="https://bungie.net/common/destiny2_content/icons/bb72e6b7b2a7ac6165431d4a47171b2f.jpg" width="45" height="45"></td>
+                                <td class="align-middle text-left">Trichromatica <span class="badge badge-pill badge-secondary">The Inverted Spire</span></td>
+                                <td class="align-middle text-left">Exotic | Ghost Shell</td>
+                                <td class="align-middle text-left"></td>
+                                <td class="align-middle text-left"></td>
+                               <td><h4><span id="Trichromatica" class="badge badge-primary align-middle" tabindex="0" data-toggle="popover" data-html="true" data-trigger="focus" data-placement="left" title="Missed by:" data-content=""></span></h4></td>
+                                <td class="align-middle text-left td-actions">
+                                    <a href="http://light.gg/i/kBbTOA/" target= "_blank"><i class="fas fa-link" aria-hidden="true"></i></a>
+                                </td>
+                            </tr>
+
+                            <tr data-status="destinations">
                                 <td class="align-middle text-left"><img src="https://bungie.net/common/destiny2_content/icons/dadddaaa66c1dd3d450dd758345af389.jpg" width="45" height="45"></td>
                                 <td class="align-middle text-left">Truth</td>
                                 <td class="align-middle text-left">Exotic | Power | Rocket Launcher</td>
@@ -688,15 +790,27 @@
                                     <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/4b62cf374e460cf685eac7da87ee86c4.png" width="30" height="30">
                                     <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/433673d0d64fd026c771612a6a9ff7f7.png" width="30" height="30">
                                 </td>
-                                <td><h4><span id="Truth" class="badge badge-primary align-middle"></span></h4></td>
+                                <td><h4><span id="Truth" class="badge badge-primary align-middle" tabindex="0" data-toggle="popover" data-html="true" data-trigger="focus" data-placement="left" title="Missed by:" data-content=""></span></h4></td>
                                 <td class="align-middle text-left td-actions">
                                     <a href="http://light.gg/i/33qiRw/" target= "_blank"><i class="fas fa-link" aria-hidden="true"></i></a>
                                 </td>
                             </tr>
 
                             <tr data-status="vanguard">
+                                <td class="align-middle text-left"><img src="https://bungie.net/common/destiny2_content/icons/d6c77755df5761e5626b052d440cf5c7.jpg" width="45" height="45"></td>
+                                <td class="align-middle text-left">Universal Wavefunction <span class="badge badge-pill badge-secondary">A Garden World</span></td>
+                                <td class="align-middle text-left">Exotic | Ship</td>
+                                <td class="align-middle text-left"></td>
+                                <td class="align-middle text-left"></td>
+                                <td><h4><span id="UniversalWavefunction" class="badge badge-primary align-middle" tabindex="0" data-toggle="popover" data-html="true" data-trigger="focus" data-placement="left" title="Missed by:" data-content=""></span></h4></td>
+                                <td class="align-middle text-left td-actions">
+                                    <a href="http://light.gg/i/_qP6RQ/" target= "_blank"><i class="fas fa-link" aria-hidden="true"></i></a>
+                                </td>
+                            </tr>
+
+                            <tr data-status="vanguard">
                                 <td class="align-middle text-left"><img src="https://bungie.net/common/destiny2_content/icons/89a68f864854dd80155eb194ee8f5cb7.jpg" width="45" height="45"></td>
-                                <td class="align-middle text-left">Warden&#39;s Law <span class="badge badge-pill badge-secondary" data-balloon-pos="up" aria-label="Warden of Nothing">Nightfall</span></td>
+                                <td class="align-middle text-left">Warden&#39;s Law <span class="badge badge-pill badge-secondary">Warden of Nothing</span></td>
                                 <td class="align-middle text-left">Legendary | Kinetic | Hand Cannon</td>
                                 <td class="align-middle text-left"><span class="text-white">KINETIC</span></td>
                                 <td class="align-middle text-left">
@@ -706,7 +820,7 @@
                                     <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/e9aa2f479812bfabc8d48effde384737.png" width="30" height="30">
                                     <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/49958f356ea1df930888d15fe6539fe1.png" width="30" height="30">
                                 </td>
-                                <td><h4><span id="WardensLaw" class="badge badge-primary align-middle"></span></h4></td>
+                                <td><h4><span id="WardensLaw" class="badge badge-primary align-middle" tabindex="0" data-toggle="popover" data-html="true" data-trigger="focus" data-placement="left" title="Missed by:" data-content=""></span></h4></td>
                                 <td class="align-middle text-left td-actions">
                                     <a href="http://light.gg/i/bcTpDQ/" target= "_blank"><i class="fas fa-link" aria-hidden="true"></i></a>
                                 </td>
@@ -724,13 +838,13 @@
                                     <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/d355b1117307c9f187729249361cecc3.png" width="30" height="30">
                                     <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/7381a042ca97533623f6dff66d8f0347.png" width="30" height="30">
                                 </td>
-                                <td><h4><span id="Wendigo" class="badge badge-primary align-middle"></span></h4></td>
+                                <td><h4><span id="Wendigo" class="badge badge-primary align-middle" tabindex="0" data-toggle="popover" data-html="true" data-trigger="focus" data-placement="left" title="Missed by:" data-content=""></span></h4></td>
                                 <td class="align-middle text-left td-actions">
                                     <a href="http://light.gg/i/jZd6Ig/" target= "_blank"><i class="fas fa-link" aria-hidden="true"></i></a>
                                 </td>
                             </tr>
 
-                            <tr data-status="exotics">
+                            <tr data-status="destinations">
                                 <td class="align-middle text-left"><img src="https://bungie.net/common/destiny2_content/icons/a8c172a3090a64463f482167cd467786.jpg" width="45" height="45"></td>
                                 <td class="align-middle text-left">Whisper of the Worm <span class="badge badge-pill badge-secondary">The Whisper</span></td>
                                 <td class="align-middle text-left">Exotic | Power | Sniper Rifle</td>
@@ -742,13 +856,13 @@
                                     <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/72d0300b728c2b8c81cc37f1abc53ddc.png" width="30" height="30">
                                     <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/27c6695ec475d3fa1aefa71c2b099bfc.png" width="30" height="30">
                                 </td>
-                                <td><h4><span id="Whisper" class="badge badge-primary align-middle"></span></h4></td>
+                                <td><h4><span id="Whisper" class="badge badge-primary align-middle" tabindex="0" data-toggle="popover" data-html="true" data-trigger="focus" data-placement="left" title="Missed by:" data-content=""></span></h4></td>
                                 <td class="align-middle text-left td-actions">
                                     <a href="http://light.gg/i/VvG-cA/" target= "_blank"><i class="fas fa-link" aria-hidden="true"></i></a>
                                 </td>
                             </tr>
 
-                            <tr data-status="exotics">
+                            <tr data-status="destinations">
                                 <td class="align-middle text-left"><img src="https://bungie.net/common/destiny2_content/icons/1ba5d953e30fd1dfdf1d33c98c95c3e0.jpg" width="45" height="45"></td>
                                 <td class="align-middle text-left">Wish-Ender</td>
                                 <td class="align-middle text-left">Exotic | Kinetic | Combat Bow</td>
@@ -759,9 +873,21 @@
                                     <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/4016276610786794fc64c3dd50f95369.png" width="30" height="30">
                                     <img style="list-style:none;float: left;padding-left: 0;margin-right: 5px" src="https://bungie.net/common/destiny2_content/icons/3715358c47a773d0181502f697d59cad.png" width="30" height="30">
                                 </td>
-                                <td><h4><span id="WishEnder" class="badge badge-primary align-middle"></span></h4></td>
+                                <td><h4><span id="WishEnder" class="badge badge-primary align-middle" tabindex="0" data-toggle="popover" data-html="true" data-trigger="focus" data-placement="left" title="Missed by:" data-content=""></span></h4></td>
                                 <td class="align-middle text-left td-actions">
                                     <a href="http://light.gg/i/DAiSMA/" target= "_blank"><i class="fas fa-link" aria-hidden="true"></i></a>
+                                </td>
+                            </tr>
+
+                            <tr data-status="vanguard">
+                                <td class="align-middle text-left"><img src="https://bungie.net/common/destiny2_content/icons/2d6ff9e9e65253a82ec0856f310e2b94.jpg" width="45" height="45"></td>
+                                <td class="align-middle text-left">Worm God Incarnation <span class="badge badge-pill badge-secondary">Will of the Thousands</span></td>
+                                <td class="align-middle text-left">Legendary | Transmat Effect</td>
+                                <td class="align-middle text-left"></td>
+                                <td class="align-middle text-left"></td>
+                                <td><h4><span id="WormGod" class="badge badge-primary align-middle" tabindex="0" data-toggle="popover" data-html="true" data-trigger="focus" data-placement="left" title="Missed by:" data-content=""></span></h4></td>
+                                <td class="align-middle text-left td-actions">
+                                    <a href="http://light.gg/i/5TYqTg/" target= "_blank"><i class="fas fa-link" aria-hidden="true"></i></a>
                                 </td>
                             </tr>
 
