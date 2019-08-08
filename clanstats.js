@@ -47,7 +47,6 @@ var bungieAPIkey = "0a11942f318647978979f13ad8aa53ee";
         clan.membersWith.Goldtusk               = {hash:3376099856,apilocation:'profileCollectibles',  got:[],need:[],amountgot:0,amountneed:0};
         clan.membersWith.ThroneCleaver          = {hash:1692129580,apilocation:'profileCollectibles',  got:[],need:[],amountgot:0,amountneed:0};
         clan.membersWith.Armory                 = {hash:3531075476,apilocation:'profileCollectibles',  got:[],need:[],amountgot:0,amountneed:0};
-        clan.membersWith.Voidstreak             = {hash:1966171335,apilocation:'profileCollectibles',  got:[],need:[],amountgot:0,amountneed:0};
         clan.membersWith.CleansingKnife         = {hash:1469913804,apilocation:'characterCollectibles',  got:[],need:[],amountgot:0,amountneed:0};
         clan.membersWith.DFA                    = {hash:1279318110,apilocation:'characterCollectibles',  got:[],need:[],amountgot:0,amountneed:0};
         clan.membersWith.BrayTechOsprey         = {hash:1534387877,apilocation:'characterCollectibles',  got:[],need:[],amountgot:0,amountneed:0};
