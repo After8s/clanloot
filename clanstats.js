@@ -42,7 +42,6 @@ var bungieAPIkey = "0a11942f318647978979f13ad8aa53ee";
         clan.membersWith.Thorn                  = {hash:4009683574,apilocation:'profileCollectibles',   got:[],need:[],amountgot:0,amountneed:0};
         clan.membersWith.ThroneCleaver          = {hash:1692129580,apilocation:'profileCollectibles',   got:[],need:[],amountgot:0,amountneed:0};
         clan.membersWith.Truth                  = {hash:1763840761,apilocation:'profileCollectibles',   got:[],need:[],amountgot:0,amountneed:0};
-        clan.membersWith.Voidstreak             = {hash:1966171335,apilocation:'profileCollectibles',   got:[],need:[],amountgot:0,amountneed:0};
         clan.membersWith.WardensLaw             = {hash:1279318101,apilocation:'profileCollectibles',   got:[],need:[],amountgot:0,amountneed:0};
         clan.membersWith.Wendigo                = {hash:3830703103,apilocation:'profileCollectibles',   got:[],need:[],amountgot:0,amountneed:0};
         clan.membersWith.Whisper                = {hash:3875807583,apilocation:'profileCollectibles',   got:[],need:[],amountgot:0,amountneed:0};
@@ -63,6 +62,7 @@ var bungieAPIkey = "0a11942f318647978979f13ad8aa53ee";
         clan.membersWith.TiltFuse               = {hash:3036030066,apilocation:'characterCollectibles', got:[],need:[],amountgot:0,amountneed:0};
         clan.membersWith.Trichromatica          = {hash:1718922261,apilocation:'characterCollectibles', got:[],need:[],amountgot:0,amountneed:0};
         clan.membersWith.UniversalWavefunction  = {hash:2448009818,apilocation:'characterCollectibles', got:[],need:[],amountgot:0,amountneed:0};
+        clan.membersWith.Voidstreak             = {hash:1966171335,apilocation:'characterCollectibles', got:[],need:[],amountgot:0,amountneed:0};
         clan.membersWith.WishMaker              = {hash:3360537485,apilocation:'characterCollectibles', got:[],need:[],amountgot:0,amountneed:0};
 
      
