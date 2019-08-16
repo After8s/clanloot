@@ -132,7 +132,7 @@ function getAccountData(memberid) {
 }
 
 function checkForSpecialAchievements(memberid) {
-    var aquiredCollectibleStateValues = [0, 8, 16, 24, 32, 64, 80];
+    var aquiredCollectibleStateValues = [0, 8, 16, 24, 32, 40, 48, 56, 64, 72, 80, 88, 96];
     $.ajax({
         url: "https://www.bungie.net/Platform/Destiny2/2/Profile/" + memberid + "/?components=800,900",
         headers: {
