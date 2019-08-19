@@ -45,6 +45,7 @@ var bungieAPIkey = "0a11942f318647978979f13ad8aa53ee";
         clan.membersWith.Tarrabah               = {hash:2329697053,apilocation:'profileCollectibles',   got:[],need:[],amountgot:0,amountneed:0};
         clan.membersWith.TheLastWord            = {hash:3074058273,apilocation:'profileCollectibles',   got:[],need:[],amountgot:0,amountneed:0};
         clan.membersWith.TheLongGoodbye         = {hash:1186314105,apilocation:'profileCollectibles',   got:[],need:[],amountgot:0,amountneed:0};
+        clan.membersWith.TheTributeHall         = {hash:193320248, apilocation:'profileCollectibles',   got:[],need:[],amountgot:0,amountneed:0};
         clan.membersWith.Thorn                  = {hash:4009683574,apilocation:'profileCollectibles',   got:[],need:[],amountgot:0,amountneed:0};
         clan.membersWith.ThroneCleaver          = {hash:1692129580,apilocation:'profileCollectibles',   got:[],need:[],amountgot:0,amountneed:0};
         clan.membersWith.TrueGlory              = {hash:2237933811,apilocation:'profileCollectibles',   got:[],need:[],amountgot:0,amountneed:0};
