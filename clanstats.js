@@ -1,5 +1,6 @@
 var bungieAPIkey = "0a11942f318647978979f13ad8aa53ee";
     var clan = {};
+        clan.clanId = 1801684;
         clan.memberIds = [];
         clan.memberCount = 0;
         clan.membersFetched = 0;
@@ -78,7 +79,7 @@ var bungieAPIkey = "0a11942f318647978979f13ad8aa53ee";
      
 $(document).ready(function() {
     $.ajax({
-        url: "https://www.bungie.net/Platform/GroupV2/1801684/Members/",
+        url: "https://www.bungie.net/Platform/GroupV2/" + clan.clanId +"/Members/",
         headers: {
             "X-API-KEY": bungieAPIkey
         },
@@ -101,16 +102,25 @@ $(document).ready(function() {
     })
 });
 $(document).ajaxStop(function() {
-    $(".sk-folding-cube").hide();
-    if (clan.unresolvedMemberNames.length > 0) $(".cubelegend").append("<br><small>(unable to fetch " + clan.unresolvedMemberNames.join(", ") + ")</small>")
+    if (clan.unresolvedMemberNames.length > 0) {
+        $('#membercounter').prop("title", "unable to fetch data from " + clan.unresolvedMemberNames.join(", ")).append("!");
+    } else $("#membercounter").hide();
 });
 
 function getAccountData(memberid) {
+    
     clan.retryCounter[memberid] = clan.retryCounter[memberid] + 1;
     if (clan.retryCounter[memberid] > 4) {
         clan.unresolvedMemberNames.push(clan.memberName[memberid]);
         return
     }
+
+//debugging, simulate incomplete fetching
+//    if (memberid == '4611686018435274157' || memberid == '4611686018453612628') {
+//        getAccountData(memberid);
+//        return;
+//    }
+
     $.ajax({
         url: "https://www.bungie.net/Platform/Destiny2/2/Account/" + memberid + "/Character/0/Stats/",
         headers: {
@@ -122,10 +132,10 @@ function getAccountData(memberid) {
         },
         method: "GET"
     }).done(function(data) {
-        if (data.ErrorCode > 1 || !data.Response) getAccountData(memberid);
-        else {
-            clan.membersFetched = clan.membersFetched +
-                1;
+        if (data.ErrorCode > 1 || !data.Response) {
+            getAccountData(memberid);
+        } else {
+            clan.membersFetched = clan.membersFetched + 1;
             outputClanData(clan)
         }
     });
@@ -133,7 +143,6 @@ function getAccountData(memberid) {
 }
 
 function checkForSpecialAchievements(memberid) {
-    var aquiredCollectibleStateValues = [0, 8, 16, 24, 32, 40, 48, 56, 64, 72, 80, 88, 96];
     $.ajax({
         url: "https://www.bungie.net/Platform/Destiny2/2/Profile/" + memberid + "/?components=800,900",
         headers: {
@@ -153,7 +162,7 @@ function checkForSpecialAchievements(memberid) {
             $.each(clan.membersWith, function(weapon, weapondata) {
                 
                 if (weapondata.apilocation == 'profileCollectibles') {
-                    if (jQuery.inArray(data.Response.profileCollectibles.data.collectibles[weapondata.hash].state, aquiredCollectibleStateValues) !== -1) {
+                    if (data.Response.profileCollectibles.data.collectibles[weapondata.hash].state % 2 === 0) {
                         weapondata.amountgot = weapondata.amountgot + 1;
                         weapondata.got.push(clan.memberName[memberid]);
                     } else {
@@ -165,7 +174,7 @@ function checkForSpecialAchievements(memberid) {
                 if (weapondata.apilocation == 'characterCollectibles') {
                     tmpItemWasNotFound = true;
                     $.each(data.Response.characterCollectibles.data, function(index, value) {
-                        if ((jQuery.inArray(value.collectibles[weapondata.hash].state, aquiredCollectibleStateValues) !== -1)) {
+                        if (value.collectibles[weapondata.hash].state % 2 === 0) {
                             weapondata.amountgot = weapondata.amountgot + 1;
                             weapondata.got.push(clan.memberName[memberid]);
                             tmpItemWasNotFound = false;
@@ -198,7 +207,12 @@ function getDescendantProp(obj, desc) {
 function outputClanData(clanobject) {
     
     $.each(clanobject.membersWith, function(weapon, weapondata) {
-        $("#"+weapon).html(weapondata.amountgot).attr('data-content' , weapondata.need.sort().join(", "));
+        if (weapondata.amountgot == clanobject.memberCount) {
+            $("#"+weapon).html(weapondata.amountgot).attr('data-content' , 'Nobody! <br> Everyone in the clan has gotten this!');
+            $("#"+weapon).css('background-color', 'goldenrod');
+        } else {
+            $("#"+weapon).html(weapondata.amountgot).attr('data-content' , weapondata.need.sort().join(", "));
+        }
     });  
   
     $("#membercounter").html(clanobject.membersFetched + "/" + clanobject.memberCount);
