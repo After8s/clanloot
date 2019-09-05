@@ -8,6 +8,7 @@ var bungieAPIkey = "0a11942f318647978979f13ad8aa53ee";
         clan.retryCounter = {};
         clan.unresolvedMemberNames = [];
         clan.membersWith = {};
+        
         clan.membersWith.AfterTheNightfall      = {hash:2618436059,apilocation:'profileCollectibles',   got:[],need:[],amountgot:0,amountneed:0};
         clan.membersWith.AThousandWings         = {hash:3142437750,apilocation:'profileCollectibles',   got:[],need:[],amountgot:0,amountneed:0};
         clan.membersWith.AlwaysOnTime           = {hash:1903459810,apilocation:'profileCollectibles',   got:[],need:[],amountgot:0,amountneed:0};
@@ -56,6 +57,7 @@ var bungieAPIkey = "0a11942f318647978979f13ad8aa53ee";
         clan.membersWith.Whisper                = {hash:3875807583,apilocation:'profileCollectibles',   got:[],need:[],amountgot:0,amountneed:0};
         clan.membersWith.WishEnder              = {hash:1660030044,apilocation:'profileCollectibles',   got:[],need:[],amountgot:0,amountneed:0};
         clan.membersWith.WormGod                = {hash:2466440635,apilocation:'profileCollectibles',   got:[],need:[],amountgot:0,amountneed:0};
+        clan.membersWith.Antediluvian           = {hash:1469913806,apilocation:'characterCollectibles', got:[],need:[],amountgot:0,amountneed:0};
         clan.membersWith.BrayTechOsprey         = {hash:1534387877,apilocation:'characterCollectibles', got:[],need:[],amountgot:0,amountneed:0};
         clan.membersWith.CleansingKnife         = {hash:1469913804,apilocation:'characterCollectibles', got:[],need:[],amountgot:0,amountneed:0};
         clan.membersWith.DFA                    = {hash:1279318110,apilocation:'characterCollectibles', got:[],need:[],amountgot:0,amountneed:0};
