@@ -260,11 +260,11 @@ function outputClanData(clanobject) {
 // Lookup via enter clicked
 // NOTE: This function could be used later for provided autocomplete results
 function keypressInSearchbox(event) {
-	var key = event.keyCode;
+	 var key = event.keyCode;
 
-	if(key === 13) { // Enter keyu
-		var clanName = $('input#ClanLookupInput').val();
-		lookupClan(clanName);
+	 if(key === 13) { // Enter keyu
+		 var clanName = $('input#ClanLookupInput').val();
+		 lookupClan(clanName);
 	}
 }
 
