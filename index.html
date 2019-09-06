@@ -13,22 +13,24 @@
     <link href="clanstats.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/58d6f88603.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="clanstats.js"></script>
+	 <script src="clanstats.js"></script>
+
 </head>
 
 <body>
-    
+
     <div class="container" id="claninfo">
-        
+
         <div class="row">
             <div class="col-md-12">
+					<div id="temp"></div>
                 <h3 id='headerText'>Clan Loot</h3>
-                <input type="text" id="ClanLookupInput" style="border-color: white; border-width: 1px; width:200px; display:inline;" class="form-control-plaintext" title="" placeholder="Enter clan name">
+                <input type="text" id="ClanLookupInput" style="border-color: white; border-width: 1px; width:200px; display:inline;" class="form-control-plaintext" title="" placeholder="Enter clan name" onkeyup="keypressInSearchbox(event)">
                 <button id="ClanLookupButton" class="btn btn-dark" onclick="lookupClan($('input#ClanLookupInput').val())">Search</button>
                 <span id="lookupError" style="display:none;">Sorry, unable to find that clan..</span>
                 <div><span style="font-size: 0.8em">Click on the number in the 'Total' column to see who in your clan is still missing something!</span></div>
                 <div><span style="float: left; font-size: 0.6em" id="membercounter"></span></div>
-                
+
                 <div class="float-right">
                     <div>
                         <button type="button" class="btn btn-destinations btn-filter" data-target="destinations" title="Destinations"><img src="https://www.bungie.net/common/destiny2_content/icons/c60303e278aa5fc566a04e98c3d8024c.png" width="30" height="30"></button>
@@ -72,7 +74,7 @@
                                     <img style="list-style:none;float: left;padding-left: 0;margin-right: 2px" src="https://bungie.net/common/destiny2_content/icons/03e2db0c911d07fc0e9f505927aab055.png" width="30" height="30">
                                 </td>
                                 <td><h4><span id="Delirium" class="badge badge-primary align-middle" tabindex="0" data-toggle="popover" data-html="true" data-trigger="focus" data-placement="left" title="Missed by:" data-content=""></span></h4></td>
-                                <td class="align-middle text-left td-actions"> 
+                                <td class="align-middle text-left td-actions">
                                     <a href="http://light.gg/i/orlnXw/" target= "_blank"><i class="fas fa-link" aria-hidden="true"></i></a>
                                 </td>
                             </tr>
@@ -143,11 +145,11 @@
                                 <td class="align-middle text-left">Ascendant Primeval Servitor</td>
                                 <td class="align-middle text-left"></td>
                                 <td><h4><span id="Antediluvian" class="badge badge-primary align-middle" tabindex="0" data-toggle="popover" data-html="true" data-trigger="focus" data-placement="left" title="Missed by:" data-content=""></span></h4></td>
-                                <td class="align-middle text-left td-actions"> 
+                                <td class="align-middle text-left td-actions">
                                     <a href="http://light.gg/i/4m2V_g/" target= "_blank"><i class="fas fa-link" aria-hidden="true"></i></a>
                                 </td>
                             </tr>
-                                                    
+
                             <tr data-status="destinations">
                                 <td class="align-middle text-left"><img src="https://bungie.net/common/destiny2_content/icons/f11798754a8195a3d847ea9d6ebae7dd.jpg" width="45" height="45"></td>
                                 <td class="align-middle text-left">Armory Forged Shell</td>
@@ -178,7 +180,7 @@
                                 <td class="align-middle text-left td-actions">
                                     <a href="http://light.gg/i/Ov_bpw/" target= "_blank"><i class="fas fa-link" aria-hidden="true"></i></a>
                                 </td>
-                            </tr>                                                                                                                                                                              
+                            </tr>
                             <tr data-status="vanguard">
                                 <td class="align-middle text-left"><img src="https://bungie.net/common/destiny2_content/icons/659ebe95206951d7c97022b47a93c459.jpg" width="45" height="45"></td>
                                 <td class="align-middle text-left">BrayTech Osprey</td>
@@ -309,7 +311,7 @@
                                 <td class="align-middle text-left">Ascendant Primeval Servitor</td>
                                 <td class="align-middle text-left"></td>
                                 <td><h4><span id="DriftApart" class="badge badge-primary align-middle" tabindex="0" data-toggle="popover" data-html="true" data-trigger="focus" data-placement="left" title="Missed by:" data-content=""></span></h4></td>
-                                <td class="align-middle text-left td-actions"> 
+                                <td class="align-middle text-left td-actions">
                                     <a href="http://light.gg/i/wN051w/" target= "_blank"><i class="fas fa-link" aria-hidden="true"></i></a>
                                 </td>
                             </tr>
@@ -377,7 +379,7 @@
                                 <td class="align-middle text-left">3 Infamy resets in a single season</td>
                                 <td class="align-middle text-left"></td>
                                 <td><h4><span id="FurtiveShell" class="badge badge-primary align-middle" tabindex="0" data-toggle="popover" data-html="true" data-trigger="focus" data-placement="left" title="Missed by:" data-content=""></span></h4></td>
-                                <td class="align-middle text-left td-actions"> 
+                                <td class="align-middle text-left td-actions">
                                     <a href="http://light.gg/i/Dq7J_Q/" target= "_blank"><i class="fas fa-link" aria-hidden="true"></i></a>
                                 </td>
                             </tr>
@@ -483,7 +485,7 @@
                                 <td class="align-middle text-left">Izanagi&#39;s Burden</td>
                                 <td class="align-middle text-left">Exotic | Kinetic | Sniper Rifle</td>
                                 <td class="align-middle text-left"><img src="https://www.bungie.net/common/destiny2_content/icons/DestinyDamageTypeDefinition_3385a924fd3ccb92c343ade19f19a370.png" width="25" height="25"></td>
-                                <td class="align-middle text-left">Quest - Season 5</td> 
+                                <td class="align-middle text-left">Quest - Season 5</td>
                                 <td class="align-middle text-left">
                                     <img style="list-style:none;float: left;padding-left: 0;margin-right: 2px" src="https://bungie.net/common/destiny2_content/icons/ab986167a03f6f9eb1d22835fb2bec63.png" width="30" height="30">
                                     <img style="list-style:none;float: left;padding-left: 0;margin-right: 2px" src="https://bungie.net/common/destiny2_content/icons/376aa9bd8c392567f501012fc3b3d4d0.png" width="30" height="30">
