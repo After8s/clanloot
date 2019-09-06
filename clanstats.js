@@ -21,7 +21,7 @@ function lookupClan(clanName) {
         method: 'GET',
         success: function (data) {
             if (typeof data.Response.detail.groupId !== "undefined"){
-                getClanData(data.Response.detail.groupId, data.Response.detail.name + ' - ' +  data.Response.detail.motto);
+                getClanData(data.Response.detail.groupId, data.Response.detail.name + ' [' +  data.Response.detail.clanInfo.clanCallsign+ ']');
             } else {
                 $('#lookupError').show();
             }
