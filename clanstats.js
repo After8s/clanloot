@@ -118,8 +118,8 @@ function getClanData(clanId, clanName) {
     $("#headerText").html(header + ': ' + clan.clanName);
     //reset membercounter
     $("#membercounter").html('').show();
-   
-    
+
+
     $.ajax({
         url: "https://www.bungie.net/Platform/GroupV2/" + clan.clanId + "/Members/",
         headers: {
@@ -256,6 +256,17 @@ function outputClanData(clanobject) {
     $("#membercounter").html(clanobject.membersFetched + "/" + clanobject.memberCount);
     return
 };
+
+// Lookup via enter clicked
+// NOTE: This function could be used later for provided autocomplete results
+function keypressInSearchbox(event) {
+	 var key = event.keyCode;
+
+	 if(key === 13) { // Enter keyu
+		 var clanName = $('input#ClanLookupInput').val();
+		 lookupClan(clanName);
+	}
+}
 
 $(document).ready(function () {
     $(function () {
