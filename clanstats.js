@@ -1,7 +1,7 @@
 var bungieAPIkey = "0a11942f318647978979f13ad8aa53ee";
 var clan = {};
 var header = 'Clan Loot';
-var version = 'v2.5.2';
+var version = 'v2.5.3';
 var A8sClanId = 1801684;
 
 
