@@ -1,9 +1,10 @@
 var bungieAPIkey = "0a11942f318647978979f13ad8aa53ee";
 var clan = {};
 var header = 'Clan Loot';
-var version = 'v2.5.3';
+var version = 'v2.6.1';
 var A8sClanId = 1801684;
-
+var retriesPerCharacter = 2;
+var consoleTypes = [2,1,3,4,5,10]; //psn,xbox,steam,blizzard,stadia,demon
 
 $(document).ready(function () {
     lookupClan('After8s');
@@ -41,6 +42,7 @@ function getClanData(clanId, clanName) {
     clan.memberCount = 0;
     clan.membersFetched = 0;
     clan.memberName = {};
+    clan.consoleTypeInOrder = {};
     clan.retryCounter = {};
     clan.unresolvedMemberNames = [];
     clan.membersWith = {};
@@ -134,68 +136,57 @@ function getClanData(clanId, clanName) {
         $.each(data.Response.results, function (index, value) {
             clan.memberIds.push(value.destinyUserInfo.membershipId);
             clan.retryCounter[value.destinyUserInfo.membershipId] = 0;
+            clan.consoleTypeInOrder[value.destinyUserInfo.membershipId] = 0;
             clan.memberName[value.destinyUserInfo.membershipId] = value.destinyUserInfo.displayName
         });
         clan.memberCount = clan.memberIds.length;
         $.each(clan.memberIds, function (index, memberid) {
-            getAccountData(memberid);
             checkForSpecialAchievements(memberid)
         })
     })
 }
 
-function getAccountData(memberid) {
-
-    clan.retryCounter[memberid] = clan.retryCounter[memberid] + 1;
-    if (clan.retryCounter[memberid] > 4) {
-        clan.unresolvedMemberNames.push(clan.memberName[memberid]);
-        return
-    }
-
-//debugging, simulate incomplete fetching
-//    if (memberid == '4611686018435274157' || memberid == '4611686018453612628') {
-//        getAccountData(memberid);
-//        return;
-//    }
-
-    $.ajax({
-        url: "https://www.bungie.net/Platform/Destiny2/2/Account/" + memberid + "/Character/0/Stats/",
-        headers: {
-            "X-API-KEY": bungieAPIkey
-        },
-        data: {
-            groups: "1,2,3",
-            modes: "4,5,7,10,12,15,19,25,31,32,37,38,39,41,42,43,44,45,48,49,50,51,52,53,54,58,59,60,61,62,64,65,68,69,70,71,72,73,74,75,76,77"
-        },
-        method: "GET"
-    }).done(function (data) {
-        if (data.ErrorCode > 1 || !data.Response) {
-            getAccountData(memberid);
-        } else {
-            clan.membersFetched = clan.membersFetched + 1;
-            outputClanData(clan)
-        }
-    });
-    return
-}
-
 function checkForSpecialAchievements(memberid) {
+
+    if (memberid == '4611686018471325093' ) {
+        console.log('console: '+ consoleTypes[clan.consoleTypeInOrder[memberid]]);
+        console.log('consoleindex: '+clan.consoleTypeInOrder[memberid]);
+        console.log('retries: '+clan.retryCounter[memberid]);
+    }
     $.ajax({
-        url: "https://www.bungie.net/Platform/Destiny2/2/Profile/" + memberid + "/?components=800,900",
+        url: "https://www.bungie.net/Platform/Destiny2/"+consoleTypes[clan.consoleTypeInOrder[memberid]]+"/Profile/" + memberid + "/?components=800,900",
         headers: {
             "X-API-KEY": bungieAPIkey
         },
-        method: "GET"
+        method: "GET",
+        error: function (data) {
+            //try different platform
+            if (clan.consoleTypeInOrder[memberid] < consoleTypes.length) {
+                clan.consoleTypeInOrder[memberid]++;
+                checkForSpecialAchievements(memberid)
+            } else {
+                //one more round then stop trying
+                clan.consoleTypeInOrder[memberid] = 0;
+                clan.retryCounter[memberid]++;
+                if (clan.retryCounter[memberid] >= retriesPerCharacter) {
+                    clan.unresolvedMemberNames.push(clan.memberName[memberid]);
+                    return
+                }
+                checkForSpecialAchievements(memberid)
+            }
+        }
     }).done(function (data) {
         if (data.ErrorCode > 1 || !data.Response || typeof data.Response.profileCollectibles.data === "undefined") {
             clan.retryCounter[memberid]++;
-            if (clan.retryCounter[memberid] > 4) {
+            if (clan.retryCounter[memberid] >= retriesPerCharacter) {
                 clan.unresolvedMemberNames.push(clan.memberName[memberid]);
                 return
             }
             checkForSpecialAchievements(memberid)
         } else {
-
+            
+            clan.membersFetched = clan.membersFetched + 1;
+            
             $.each(clan.membersWith, function (weapon, weapondata) {
 
                 if (weapondata.apilocation == 'profileCollectibles') {
