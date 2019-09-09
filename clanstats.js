@@ -1,7 +1,7 @@
 var bungieAPIkey = "0a11942f318647978979f13ad8aa53ee";
 var clan = {};
 var header = 'Clan Loot';
-var version = 'v2.6.1';
+var version = 'v2.6.2';
 var A8sClanId = 1801684;
 var retriesPerCharacter = 2;
 var consoleTypes = [2,1,3,4,5,10]; //psn,xbox,steam,blizzard,stadia,demon
@@ -42,6 +42,7 @@ function getClanData(clanId, clanName) {
     clan.memberCount = 0;
     clan.membersFetched = 0;
     clan.memberName = {};
+    clan.explicitConsoleType = {};
     clan.consoleTypeInOrder = {};
     clan.retryCounter = {};
     clan.unresolvedMemberNames = [];
@@ -121,7 +122,6 @@ function getClanData(clanId, clanName) {
     //reset membercounter
     $("#membercounter").html('').show();
 
-
     $.ajax({
         url: "https://www.bungie.net/Platform/GroupV2/" + clan.clanId + "/Members/",
         headers: {
@@ -136,6 +136,7 @@ function getClanData(clanId, clanName) {
         $.each(data.Response.results, function (index, value) {
             clan.memberIds.push(value.destinyUserInfo.membershipId);
             clan.retryCounter[value.destinyUserInfo.membershipId] = 0;
+            clan.explicitConsoleType[value.destinyUserInfo.membershipId] = value.destinyUserInfo.membershipType;
             clan.consoleTypeInOrder[value.destinyUserInfo.membershipId] = 0;
             clan.memberName[value.destinyUserInfo.membershipId] = value.destinyUserInfo.displayName
         });
@@ -147,19 +148,18 @@ function getClanData(clanId, clanName) {
 }
 
 function checkForSpecialAchievements(memberid) {
+    var useThisMembershipType = clan.explicitConsoleType[memberid] > 0 ? clan.explicitConsoleType[memberid] : consoleTypes[clan.consoleTypeInOrder[memberid]]; 
 
-    if (memberid == '4611686018471325093' ) {
-        console.log('console: '+ consoleTypes[clan.consoleTypeInOrder[memberid]]);
-        console.log('consoleindex: '+clan.consoleTypeInOrder[memberid]);
-        console.log('retries: '+clan.retryCounter[memberid]);
-    }
     $.ajax({
-        url: "https://www.bungie.net/Platform/Destiny2/"+consoleTypes[clan.consoleTypeInOrder[memberid]]+"/Profile/" + memberid + "/?components=800,900",
+        url: "https://www.bungie.net/Platform/Destiny2/"+ useThisMembershipType +"/Profile/" + memberid + "/?components=800,900",
         headers: {
             "X-API-KEY": bungieAPIkey
         },
         method: "GET",
         error: function (data) {
+            //don't use type from memberlist
+            clan.explicitConsoleType[memberid] = 0;
+            
             //try different platform
             if (clan.consoleTypeInOrder[memberid] < consoleTypes.length) {
                 clan.consoleTypeInOrder[memberid]++;
