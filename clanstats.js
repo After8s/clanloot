@@ -283,7 +283,7 @@ function keypressInSearchbox(event) {
 
 //reloads page with new parameter, discards all present parameter
 function reloadPage(newParameter, newValue) {
-    location.href = '/' + window.location.hostname + window.location.pathname + '?' + newParameter + '=' + newValue;
+    location.href = 'http:\\' + window.location.hostname + window.location.pathname + '?' + newParameter + '=' + newValue;
 }
 
 $(document).ready(function () {
