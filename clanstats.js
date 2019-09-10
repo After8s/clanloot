@@ -1,9 +1,10 @@
 var bungieAPIkey = "0a11942f318647978979f13ad8aa53ee";
 var clan = {};
 var header = 'Clan Loot';
-var version = 'v2.6.5';
+var version = 'v2.6.6';
 var retriesPerCharacter = 2;
-var consoleTypes = [2, 1, 3, 4, 5, 10]; //psn,xbox,steam,blizzard,stadia,demon
+var consoleTypes = [2, 1, 3, 4, 5, 10]; 
+var consoleTypesNames = {"2" : "PSN","1" : "XBOX","3" : "PC","4" : "BNET","5" : "Stadia","10" : "demon"}
 var loadingCircle = ['&#x25D1;', '&#x25D2;', '&#x25D0;', '&#x25D3;'];
 var loadingCircleIndex = 0;
 
@@ -19,7 +20,11 @@ $(document).ready(function () {
 
 });
 
-function lookupClan(clanNameOrId, isId = false) {
+function lookupClan(clanNameOrId, isId) {
+
+    if (isId === undefined) {
+        isId = false;
+    }
 
     $('#lookupError').hide();
 
@@ -63,6 +68,7 @@ function getClanData(clanId, clanName) {
     clan.retryCounter = {};
     clan.unresolvedMemberNames = [];
     clan.membersWith = {};
+    clan.memberPlatforms = new Set();
 
     clan.membersWith.AfterTheNightfall      = {hash:2618436059,apilocation:'profileCollectibles',   got:[],need:[],amountgot:0,amountneed:0};
     clan.membersWith.AThousandWings         = {hash:3142437750,apilocation:'profileCollectibles',   got:[],need:[],amountgot:0,amountneed:0};
@@ -149,12 +155,22 @@ function getClanData(clanId, clanName) {
             $("#claninfo").html("API down?");
             return
         }
+        //check if it's a cross platform clan
+        $.each(data.Response.results, function (index, value) {
+            clan.memberPlatforms.add(consoleTypesNames[value.destinyUserInfo.membershipType]);
+        });
+        $("#headerText").append( '<span style="font-size: 0.6em"> on ' + Array.from(clan.memberPlatforms).join(', ') + '</span>');
+
+        
         $.each(data.Response.results, function (index, value) {
             clan.memberIds.push(value.destinyUserInfo.membershipId);
             clan.retryCounter[value.destinyUserInfo.membershipId] = 0;
             clan.explicitConsoleType[value.destinyUserInfo.membershipId] = value.destinyUserInfo.membershipType;
             clan.consoleTypeInOrder[value.destinyUserInfo.membershipId] = 0;
-            clan.memberName[value.destinyUserInfo.membershipId] = value.destinyUserInfo.displayName
+            clan.memberName[value.destinyUserInfo.membershipId] = value.destinyUserInfo.displayName;
+            //append platform to user if there are more than one platform
+            if (clan.memberPlatforms.size > 1) clan.memberName[value.destinyUserInfo.membershipId] += ' ('+consoleTypesNames[value.destinyUserInfo.membershipType]+')';       
+            
         });
         clan.memberCount = clan.memberIds.length;
         $.each(clan.memberIds, function (index, memberid) {
