@@ -1,38 +1,54 @@
 var bungieAPIkey = "0a11942f318647978979f13ad8aa53ee";
 var clan = {};
 var header = 'Clan Loot';
-var version = 'v2.6.2';
-var A8sClanId = 1801684;
+var version = 'v2.6.5';
 var retriesPerCharacter = 2;
-var consoleTypes = [2,1,3,4,5,10]; //psn,xbox,steam,blizzard,stadia,demon
+var consoleTypes = [2, 1, 3, 4, 5, 10]; //psn,xbox,steam,blizzard,stadia,demon
+var loadingCircle = ['&#x25D1;', '&#x25D2;', '&#x25D0;', '&#x25D3;'];
+var loadingCircleIndex = 0;
 
 $(document).ready(function () {
-    lookupClan('After8s');
+    $('.table > tbody').hide();
+    var searchParams = new URLSearchParams(window.location.search);
+
+    if (searchParams.has('clanid')) {
+        lookupClan(searchParams.get('clanid'), true);
+    } else if (searchParams.has('clanname')) {
+        lookupClan(searchParams.get('clanname'), false);
+    }
+
 });
 
-function lookupClan(clanName) {
+function lookupClan(clanNameOrId, isId = false) {
 
     $('#lookupError').hide();
 
+    var queryUrl = 'https://www.bungie.net/Platform/GroupV2/Name/' + clanNameOrId + '/1/';
+
+    if (isId) {
+        queryUrl = 'https://www.bungie.net/Platform/GroupV2/' + clanNameOrId + '/';
+    }
+
     $.ajax({
-        url: 'https://www.bungie.net/Platform/GroupV2/Name/' + clanName + '/1/',
+        url: queryUrl,
         headers: {
             'X-API-KEY': bungieAPIkey
         },
         method: 'GET',
         success: function (data) {
-            if (typeof data.Response.detail.groupId !== "undefined"){
-                getClanData(data.Response.detail.groupId, data.Response.detail.name + ' [' +  data.Response.detail.clanInfo.clanCallsign+ ']');
+            if (typeof data.Response.detail.groupId !== "undefined") {
+                getClanData(data.Response.detail.groupId, data.Response.detail.name + ' [' + data.Response.detail.clanInfo.clanCallsign + ']');
             } else {
                 $('#lookupError').show();
             }
         },
         error: function (data) {
             $('#lookupError').show();
+            $('.table > tbody').hide();
         }
     });
-
 }
+
 
 function getClanData(clanId, clanName) {
 
@@ -148,10 +164,10 @@ function getClanData(clanId, clanName) {
 }
 
 function checkForSpecialAchievements(memberid) {
-    var useThisMembershipType = clan.explicitConsoleType[memberid] > 0 ? clan.explicitConsoleType[memberid] : consoleTypes[clan.consoleTypeInOrder[memberid]]; 
+    var useThisMembershipType = clan.explicitConsoleType[memberid] > 0 ? clan.explicitConsoleType[memberid] : consoleTypes[clan.consoleTypeInOrder[memberid]];
 
     $.ajax({
-        url: "https://www.bungie.net/Platform/Destiny2/"+ useThisMembershipType +"/Profile/" + memberid + "/?components=800,900",
+        url: "https://www.bungie.net/Platform/Destiny2/" + useThisMembershipType + "/Profile/" + memberid + "/?components=800,900",
         headers: {
             "X-API-KEY": bungieAPIkey
         },
@@ -159,7 +175,7 @@ function checkForSpecialAchievements(memberid) {
         error: function (data) {
             //don't use type from memberlist
             clan.explicitConsoleType[memberid] = 0;
-            
+
             //try different platform
             if (clan.consoleTypeInOrder[memberid] < consoleTypes.length) {
                 clan.consoleTypeInOrder[memberid]++;
@@ -184,9 +200,9 @@ function checkForSpecialAchievements(memberid) {
             }
             checkForSpecialAchievements(memberid)
         } else {
-            
+
             clan.membersFetched = clan.membersFetched + 1;
-            
+
             $.each(clan.membersWith, function (weapon, weapondata) {
 
                 if (weapondata.apilocation == 'profileCollectibles') {
@@ -233,7 +249,7 @@ function getDescendantProp(obj, desc) {
 }
 
 function outputClanData(clanobject) {
-
+    $('.table > tbody').show();
     $.each(clanobject.membersWith, function (weapon, weapondata) {
         if (weapondata.amountgot == clanobject.memberCount) {
             $("#" + weapon).html(weapondata.amountgot).attr('data-content', 'Nobody! <br> Everyone in the clan has gotten this!');
@@ -244,19 +260,30 @@ function outputClanData(clanobject) {
         }
     });
 
-    $("#membercounter").html(clanobject.membersFetched + "/" + clanobject.memberCount);
+    $("#membercounter").html(loadingCircle[loadingCircleIndex++ % loadingCircle.length] + ' ' + clanobject.membersFetched + "/" + clanobject.memberCount);
     return
 };
+
+
+function searchButtonPressed() {
+    var clanName = $('input#ClanLookupInput').val();
+    reloadPage('clanname', clanName);
+}
 
 // Lookup via enter clicked
 // NOTE: This function could be used later for provided autocomplete results
 function keypressInSearchbox(event) {
-	 var key = event.keyCode;
+    var key = event.keyCode;
 
-	 if(key === 13) { // Enter keyu
-		 var clanName = $('input#ClanLookupInput').val();
-		 lookupClan(clanName);
-	}
+    if (key === 13) { // Enter key
+        var clanName = $('input#ClanLookupInput').val();
+        reloadPage('clanname', clanName);
+    }
+}
+
+//reloads page with new parameter, discards all present parameter
+function reloadPage(newParameter, newValue) {
+    location.href = window.location.hostname + window.location.pathname + '?' + newParameter + '=' + newValue;
 }
 
 $(document).ready(function () {
@@ -289,10 +316,11 @@ $(document).ready(function () {
 });
 
 $(document).ajaxStop(function () {
-    if   ( typeof clan.unresolvedMemberNames !== 'undefined') {
+    if (typeof clan.unresolvedMemberNames !== 'undefined') {
         if (clan.unresolvedMemberNames.length > 0) {
-            $('#membercounter').prop("title", "unable to fetch data from " + clan.unresolvedMemberNames.join(", ")).append("!");
-        } else $("#membercounter").hide();
+            $("#membercounter").html('! ' + clan.membersFetched + "/" + clan.memberCount).prop("title", "unable to fetch data from " + clan.unresolvedMemberNames.join(", "));
+        } else {
+            $("#membercounter").hide();
+        }
     }
-
 });
