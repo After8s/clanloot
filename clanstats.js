@@ -271,7 +271,32 @@ function outputClanData(clanobject) {
             $("#" + weapon).html(weapondata.amountgot).attr('data-content', 'Nobody! <br> Everyone in the clan has gotten this!');
             $("#" + weapon).css('background-color', 'goldenrod');
         } else {
-            $("#" + weapon).html(weapondata.amountgot).attr('data-content', weapondata.need.sort().join(", "));
+            if (clan.memberPlatforms.size > 1) {
+                var popoverhtml = '';
+                var membersByPlatform = {};
+                //build array for each platform with corresponding membernames
+                $.each(consoleTypesNames, function (platformid, platformname) {
+                    $.each(weapondata.need, function (index, membername) {
+                        if (membername.endsWith(' (' + platformname + ')')) {
+                            if (typeof membersByPlatform[platformname] === 'undefined') membersByPlatform[platformname] = [];
+                            membersByPlatform[platformname].push(membername.slice(0, membername.length - platformname.length - 3));
+                        }
+                    });
+                });
+
+                //build html
+                $.each(membersByPlatform, function (platformname, membernames) {
+                    popoverhtml += ' <span class="platform-item">' + platformname + '</span><br> ' + membernames.sort(function (a, b) {return a.toLowerCase().localeCompare(b.toLowerCase());}).join(", ") + '<hr>';
+                });
+                //remove last <hr>
+                popoverhtml = popoverhtml.slice(0, popoverhtml.length - 4);
+
+                $("#" + weapon).html(weapondata.amountgot).attr('data-content', popoverhtml);
+            } else {
+                //it's only a single platform clan, making things way easier =)
+                $("#" + weapon).html(weapondata.amountgot).attr('data-content', weapondata.need.sort(function (a, b) {return a.toLowerCase().localeCompare(b.toLowerCase());}).join(", "));
+            }
+
             $("#" + weapon).css('background-color', '');
         }
     });
@@ -297,9 +322,10 @@ function keypressInSearchbox(event) {
     }
 }
 
+
 //reloads page with new parameter, discards all present parameter
 function reloadPage(newParameter, newValue) {
-    location.href = 'http:\\' + window.location.hostname + window.location.pathname + '?' + newParameter + '=' + newValue;
+    location.href = window.location.protocol + '//' + window.location.hostname + window.location.pathname + '?' + newParameter + '=' + newValue;
 }
 
 $(document).ready(function () {
@@ -330,6 +356,7 @@ $(document).ready(function () {
     });
 
 });
+
 
 $(document).ajaxStop(function () {
     if (typeof clan.unresolvedMemberNames !== 'undefined') {
