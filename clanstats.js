@@ -1,7 +1,7 @@
 var bungieAPIkey = "0a11942f318647978979f13ad8aa53ee";
 var clan = {};
 var header = 'Clan Loot';
-var version = 'v2.6.6';
+var version = 'v2.6.8';
 var retriesPerCharacter = 2;
 var consoleTypes = [2, 1, 3, 4, 5, 10]; 
 var consoleTypesNames = {"2" : "PSN","1" : "XBOX","3" : "PC","4" : "BNET","5" : "Stadia","10" : "demon"}
@@ -159,7 +159,7 @@ function getClanData(clanId, clanName) {
         $.each(data.Response.results, function (index, value) {
             clan.memberPlatforms.add(consoleTypesNames[value.destinyUserInfo.membershipType]);
         });
-        $("#headerText").append( '<span style="font-size: 0.6em"> on ' + Array.from(clan.memberPlatforms).join(', ') + '</span>');
+        $("#headerText").append( '<span style="font-size: 0.5em"> on ' + Array.from(clan.memberPlatforms).join(', ') + '</span>');
 
         
         $.each(data.Response.results, function (index, value) {
@@ -286,7 +286,7 @@ function outputClanData(clanobject) {
 
                 //build html
                 $.each(membersByPlatform, function (platformname, membernames) {
-                    popoverhtml += ' <span class="platform-item">' + platformname + '</span><br> ' + membernames.sort(function (a, b) {return a.toLowerCase().localeCompare(b.toLowerCase());}).join(", ") + '<hr>';
+                    popoverhtml += ' <span class="platform-item">' + platformname + '</span><br> ' + membernames.sort(function (a, b) {return a.toLowerCase().localeCompare(b.toLowerCase());}).join(", ") + '<hr class="style-two">';
                 });
                 //remove last <hr>
                 popoverhtml = popoverhtml.slice(0, popoverhtml.length - 4);
