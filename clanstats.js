@@ -69,6 +69,8 @@ function getClanData(clanId, clanName) {
     clan.unresolvedMemberNames = [];
     clan.membersWith = {};
     clan.memberPlatforms = new Set();
+    
+    clan.SystemNotices = new Set();
 
     clan.membersWith.AfterTheNightfall      = {hash:2618436059,apilocation:'profileCollectibles',   got:[],need:[],amountgot:0,amountneed:0};
     clan.membersWith.AThousandWings         = {hash:3142437750,apilocation:'profileCollectibles',   got:[],need:[],amountgot:0,amountneed:0};
@@ -118,26 +120,29 @@ function getClanData(clanId, clanName) {
     clan.membersWith.Whisper                = {hash:3875807583,apilocation:'profileCollectibles',   got:[],need:[],amountgot:0,amountneed:0};
     clan.membersWith.WishEnder              = {hash:1660030044,apilocation:'profileCollectibles',   got:[],need:[],amountgot:0,amountneed:0};
     clan.membersWith.WormGod                = {hash:2466440635,apilocation:'profileCollectibles',   got:[],need:[],amountgot:0,amountneed:0};
-    clan.membersWith.Antediluvian           = {hash:1469913806,apilocation:'characterCollectibles', got:[],need:[],amountgot:0,amountneed:0};
-    clan.membersWith.BrayTechOsprey         = {hash:1534387877,apilocation:'characterCollectibles', got:[],need:[],amountgot:0,amountneed:0};
-    clan.membersWith.CleansingKnife         = {hash:1469913804,apilocation:'characterCollectibles', got:[],need:[],amountgot:0,amountneed:0};
-    clan.membersWith.DFA                    = {hash:1279318110,apilocation:'characterCollectibles', got:[],need:[],amountgot:0,amountneed:0};
-    clan.membersWith.DriftApart             = {hash:3163873691,apilocation:'characterCollectibles', got:[],need:[],amountgot:0,amountneed:0};
-    clan.membersWith.DutyBound              = {hash:1333654061,apilocation:'characterCollectibles', got:[],need:[],amountgot:0,amountneed:0};
-    clan.membersWith.Ermine                 = {hash:3163873693,apilocation:'characterCollectibles', got:[],need:[],amountgot:0,amountneed:0};
-    clan.membersWith.FurtiveShell           = {hash:3360537486,apilocation:'characterCollectibles', got:[],need:[],amountgot:0,amountneed:0};
-    clan.membersWith.ImpactVelocity         = {hash:3036030067,apilocation:'characterCollectibles', got:[],need:[],amountgot:0,amountneed:0};
-    clan.membersWith.Ludomaniacal           = {hash:923458194, apilocation:'characterCollectibles', got:[],need:[],amountgot:0,amountneed:0};
-    clan.membersWith.PallasGalliot          = {hash:3163873689,apilocation:'characterCollectibles', got:[],need:[],amountgot:0,amountneed:0};
-    clan.membersWith.SiliconNeuroma         = {hash:1152758802,apilocation:'characterCollectibles', got:[],need:[],amountgot:0,amountneed:0};
-    clan.membersWith.SilverTercel           = {hash:1469913807,apilocation:'characterCollectibles', got:[],need:[],amountgot:0,amountneed:0};
-    clan.membersWith.StarlightShell         = {hash:3360537487,apilocation:'characterCollectibles', got:[],need:[],amountgot:0,amountneed:0};
-    clan.membersWith.TiltFuse               = {hash:3036030066,apilocation:'characterCollectibles', got:[],need:[],amountgot:0,amountneed:0};
-    clan.membersWith.Trichromatica          = {hash:1718922261,apilocation:'characterCollectibles', got:[],need:[],amountgot:0,amountneed:0};
-    clan.membersWith.UniversalWavefunction  = {hash:2448009818,apilocation:'characterCollectibles', got:[],need:[],amountgot:0,amountneed:0};
+    clan.membersWith.Antediluvian           = {hash:1469913806,apilocation:'profileCollectibles',   got:[],need:[],amountgot:0,amountneed:0};
+    clan.membersWith.BrayTechOsprey         = {hash:1534387877,apilocation:'profileCollectibles',   got:[],need:[],amountgot:0,amountneed:0};
+    clan.membersWith.CleansingKnife         = {hash:1469913804,apilocation:'profileCollectibles',   got:[],need:[],amountgot:0,amountneed:0};
+    clan.membersWith.DFA                    = {hash:1279318110,apilocation:'profileCollectibles',   got:[],need:[],amountgot:0,amountneed:0};
+    clan.membersWith.DriftApart             = {hash:3163873691,apilocation:'profileCollectibles',   got:[],need:[],amountgot:0,amountneed:0};
+    clan.membersWith.DutyBound              = {hash:1333654061,apilocation:'profileCollectibles',   got:[],need:[],amountgot:0,amountneed:0};
+    clan.membersWith.Ermine                 = {hash:3163873693,apilocation:'profileCollectibles',   got:[],need:[],amountgot:0,amountneed:0};
+    clan.membersWith.FurtiveShell           = {hash:3360537486,apilocation:'profileCollectibles',   got:[],need:[],amountgot:0,amountneed:0};
+    clan.membersWith.ImpactVelocity         = {hash:3036030067,apilocation:'profileCollectibles',   got:[],need:[],amountgot:0,amountneed:0};
+    clan.membersWith.Ludomaniacal           = {hash:923458194, apilocation:'profileCollectibles',   got:[],need:[],amountgot:0,amountneed:0};
+    clan.membersWith.PallasGalliot          = {hash:3163873689,apilocation:'profileCollectibles',   got:[],need:[],amountgot:0,amountneed:0};
+    clan.membersWith.SiliconNeuroma         = {hash:1152758802,apilocation:'profileCollectibles',   got:[],need:[],amountgot:0,amountneed:0};
+    clan.membersWith.SilverTercel           = {hash:1469913807,apilocation:'profileCollectibles',   got:[],need:[],amountgot:0,amountneed:0};
+    clan.membersWith.StarlightShell         = {hash:3360537487,apilocation:'profileCollectibles',   got:[],need:[],amountgot:0,amountneed:0};
+    clan.membersWith.TiltFuse               = {hash:3036030066,apilocation:'profileCollectibles',   got:[],need:[],amountgot:0,amountneed:0};
+    clan.membersWith.Trichromatica          = {hash:1718922261,apilocation:'profileCollectibles',   got:[],need:[],amountgot:0,amountneed:0};
+    clan.membersWith.UniversalWavefunction  = {hash:2448009818,apilocation:'profileCollectibles',   got:[],need:[],amountgot:0,amountneed:0};
     clan.membersWith.Voidstreak             = {hash:1966171335,apilocation:'characterCollectibles', got:[],need:[],amountgot:0,amountneed:0};
-    clan.membersWith.Warminded              = {hash:1716561040,apilocation:'characterCollectibles', got:[],need:[],amountgot:0,amountneed:0};
-    clan.membersWith.WishMaker              = {hash:3360537485,apilocation:'characterCollectibles', got:[],need:[],amountgot:0,amountneed:0};
+    clan.membersWith.Warminded              = {hash:1716561040,apilocation:'profileCollectibles',   got:[],need:[],amountgot:0,amountneed:0};
+    clan.membersWith.WishMaker              = {hash:3360537485,apilocation:'profileCollectibles',   got:[],need:[],amountgot:0,amountneed:0};
+
+    // Apparently with shadowkeep all collectibles moved to profiles... except fucking EV-37 Voidstreak... BUNGO!
+
 
     //put clan name in headline
     $("#headerText").html(header + ': ' + clan.clanName);
@@ -222,23 +227,34 @@ function checkForSpecialAchievements(memberid) {
             $.each(clan.membersWith, function (weapon, weapondata) {
 
                 if (weapondata.apilocation == 'profileCollectibles') {
-                    if (data.Response.profileCollectibles.data.collectibles[weapondata.hash].state % 2 === 0) {
+                                          
+                    if (typeof data.Response.profileCollectibles.data.collectibles[weapondata.hash] !== "undefined" && data.Response.profileCollectibles.data.collectibles[weapondata.hash].state % 2 === 0) {
                         weapondata.amountgot = weapondata.amountgot + 1;
                         weapondata.got.push(clan.memberName[memberid]);
                     } else {
                         weapondata.amountneed = weapondata.amountneed + 1;
                         weapondata.need.push(clan.memberName[memberid]);
+                        
+                        //additional output to catch changed hashes
+                        if (typeof data.Response.profileCollectibles.data.collectibles[weapondata.hash] === "undefined"){
+                            clan.SystemNotices.add('please check hash and location for ' +weapon+' ('+weapondata.hash+' in '+weapondata.apilocation+')');
+                        } 
                     }
                 }
 
                 if (weapondata.apilocation == 'characterCollectibles') {
                     tmpItemWasNotFound = true;
                     $.each(data.Response.characterCollectibles.data, function (index, value) {
-                        if (value.collectibles[weapondata.hash].state % 2 === 0) {
+                        if (typeof value.collectibles[weapondata.hash] !== "undefined" && value.collectibles[weapondata.hash].state % 2 === 0) {
                             weapondata.amountgot = weapondata.amountgot + 1;
                             weapondata.got.push(clan.memberName[memberid]);
                             tmpItemWasNotFound = false;
                             return false
+                        }else {
+                            //additional output to catch changed hashes
+                            if (typeof value.collectibles[weapondata.hash] === "undefined"){
+                                clan.SystemNotices.add('please check hash and location for ' +weapon+' ('+weapondata.hash+' in '+weapondata.apilocation+')');
+                            } 
                         }
                     });
                     if (tmpItemWasNotFound) {
@@ -366,4 +382,11 @@ $(document).ajaxStop(function () {
             $("#membercounter").hide();
         }
     }
+    
+    if (typeof clan.SystemNotices !== 'undefined') {
+        if (clan.SystemNotices.size > 0) {
+            console.log(clan.SystemNotices);
+        } 
+    }
+    
 });
