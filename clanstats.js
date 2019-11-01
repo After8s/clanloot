@@ -1,7 +1,7 @@
 var bungieAPIkey = "0a11942f318647978979f13ad8aa53ee";
 var clan = {};
 var header = 'Clan Loot';
-var version = 'v2.6.8';
+var version = 'v2.7.0';
 var retriesPerCharacter = 2;
 var consoleTypes = [2, 1, 3, 4, 5, 10]; 
 var consoleTypesNames = {"2" : "PSN","1" : "XBOX","3" : "PC","4" : "BNET","5" : "Stadia","10" : "demon"}
@@ -137,9 +137,20 @@ function getClanData(clanId, clanName) {
     clan.membersWith.TiltFuse               = {hash:3036030066,apilocation:'profileCollectibles',   got:[],need:[],amountgot:0,amountneed:0};
     clan.membersWith.Trichromatica          = {hash:1718922261,apilocation:'profileCollectibles',   got:[],need:[],amountgot:0,amountneed:0};
     clan.membersWith.UniversalWavefunction  = {hash:2448009818,apilocation:'profileCollectibles',   got:[],need:[],amountgot:0,amountneed:0};
-    clan.membersWith.Voidstreak             = {hash:1966171335,apilocation:'characterCollectibles', got:[],need:[],amountgot:0,amountneed:0};
     clan.membersWith.Warminded              = {hash:1716561040,apilocation:'profileCollectibles',   got:[],need:[],amountgot:0,amountneed:0};
     clan.membersWith.WishMaker              = {hash:3360537485,apilocation:'profileCollectibles',   got:[],need:[],amountgot:0,amountneed:0};
+    clan.membersWith.RandysThrowingKnife    = {hash:1303705556,apilocation:'profileCollectibles',   got:[],need:[],amountgot:0,amountneed:0};
+    clan.membersWith.LeviathansBreath       = {hash:3552855013,apilocation:'profileCollectibles',   got:[],need:[],amountgot:0,amountneed:0};
+    clan.membersWith.Edgewise               = {hash:853534062,apilocation:'profileCollectibles',    got:[],need:[],amountgot:0,amountneed:0};
+    clan.membersWith.BrayTechWerewolf       = {hash:1715819504,apilocation:'profileCollectibles',   got:[],need:[],amountgot:0,amountneed:0};
+    clan.membersWith.Divinity               = {hash:1988948484,apilocation:'profileCollectibles',   got:[],need:[],amountgot:0,amountneed:0};
+    clan.membersWith.Deathbringer           = {hash:888224289,apilocation:'profileCollectibles',    got:[],need:[],amountgot:0,amountneed:0};
+    clan.membersWith.Xenophage              = {hash:1258579677,apilocation:'profileCollectibles',   got:[],need:[],amountgot:0,amountneed:0};
+    clan.membersWith.ExitStrategy           = {hash:1510655351,apilocation:'profileCollectibles',   got:[],need:[],amountgot:0,amountneed:0};
+    clan.membersWith.SimulantSpring         = {hash:3702643914,apilocation:'profileCollectibles',   got:[],need:[],amountgot:0,amountneed:0};
+    clan.membersWith.SugaryShell            = {hash:1561962824,apilocation:'profileCollectibles',   got:[],need:[],amountgot:0,amountneed:0};
+    clan.membersWith.AffinitysGift          = {hash:845125280,apilocation:'profileCollectibles',    got:[],need:[],amountgot:0,amountneed:0};
+    clan.membersWith.Voidstreak             = {hash:1966171335,apilocation:'characterCollectibles', got:[],need:[],amountgot:0,amountneed:0};
 
     // Apparently with shadowkeep all collectibles moved to profiles... except fucking EV-37 Voidstreak... BUNGO!
 
