@@ -149,11 +149,10 @@ function getClanData(clanId, clanName) {
     clan.membersWith.ExitStrategy           = {hash:1510655351,apilocation:'profileCollectibles',   got:[],need:[],amountgot:0,amountneed:0};
     clan.membersWith.SimulantSpring         = {hash:3702643914,apilocation:'profileCollectibles',   got:[],need:[],amountgot:0,amountneed:0};
     clan.membersWith.SugaryShell            = {hash:1561962824,apilocation:'profileCollectibles',   got:[],need:[],amountgot:0,amountneed:0};
-    clan.membersWith.AffinitysGift          = {hash:845125280,apilocation:'profileCollectibles',    got:[],need:[],amountgot:0,amountneed:0};
-    clan.membersWith.Voidstreak             = {hash:1966171335,apilocation:'characterCollectibles', got:[],need:[],amountgot:0,amountneed:0};
+    clan.membersWith.AffinitysGift          = {hash:845125280, apilocation:'profileCollectibles',   got:[],need:[],amountgot:0,amountneed:0};
+    clan.membersWith.Voidstreak             = {hash:1966171335,apilocation:'profileCollectibles',   got:[],need:[],amountgot:0,amountneed:0};
 
-    // Apparently with shadowkeep all collectibles moved to profiles... except fucking EV-37 Voidstreak... BUNGO!
-
+    // Apparently with shadowkeep all collectibles moved to profiles... 
 
     //put clan name in headline
     $("#headerText").html(header + ': ' + clan.clanName);
