@@ -1,7 +1,7 @@
 var bungieAPIkey = "0a11942f318647978979f13ad8aa53ee";
 var clan = {};
 var header = 'Clan Loot';
-var version = 'v2.7.0';
+var version = 'v2.7.1';
 var retriesPerCharacter = 2;
 var consoleTypes = [2, 1, 3, 4, 5, 10]; 
 var consoleTypesNames = {"2" : "PSN","1" : "XBOX","3" : "PC","4" : "BNET","5" : "Stadia","10" : "demon"}
@@ -151,6 +151,7 @@ function getClanData(clanId, clanName) {
     clan.membersWith.SugaryShell            = {hash:1561962824,apilocation:'profileCollectibles',   got:[],need:[],amountgot:0,amountneed:0};
     clan.membersWith.AffinitysGift          = {hash:845125280, apilocation:'profileCollectibles',   got:[],need:[],amountgot:0,amountneed:0};
     clan.membersWith.Voidstreak             = {hash:1966171335,apilocation:'profileCollectibles',   got:[],need:[],amountgot:0,amountneed:0};
+    clan.membersWith.YouAreWorthy           = {hash:2237933812,apilocation:'profileCollectibles',   got:[],need:[],amountgot:0,amountneed:0};
 
     // Apparently with shadowkeep all collectibles moved to profiles... 
 
@@ -387,7 +388,7 @@ $(document).ready(function () {
 $(document).ajaxStop(function () {
     if (typeof clan.unresolvedMemberNames !== 'undefined') {
         if (clan.unresolvedMemberNames.length > 0) {
-            $("#membercounter").html('! ' + clan.membersFetched + "/" + clan.memberCount).prop("title", "unable to fetch data from " + clan.unresolvedMemberNames.join(", "));
+            $("#membercounter").html(clan.membersFetched + "/" + clan.memberCount + '!').prop("title", "unable to fetch data from " + clan.unresolvedMemberNames.join(", "));
         } else {
             $("#membercounter").hide();
         }
