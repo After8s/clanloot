@@ -153,6 +153,9 @@ function getClanData(clanId, clanName) {
     clan.membersWith.Voidstreak             = {hash:1966171335,apilocation:'profileCollectibles',   got:[],need:[],amountgot:0,amountneed:0};
     clan.membersWith.YouAreWorthy           = {hash:2237933812,apilocation:'profileCollectibles',   got:[],need:[],amountgot:0,amountneed:0};
 
+    clan.membersWith.Cursebreaker           = {hash:1693645129,apilocation:'profileCollectibles',   got:[],need:[],amountgot:0,amountneed:0};
+c   clan.membersWith.Shadow		            = {hash:1883929036,apilocation:'profileCollectibles',   got:[],need:[],amountgot:0,amountneed:0};
+    
     // Apparently with shadowkeep all collectibles moved to profiles... 
 
     //put clan name in headline
