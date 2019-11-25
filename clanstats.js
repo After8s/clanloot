@@ -153,8 +153,8 @@ function getClanData(clanId, clanName) {
     clan.membersWith.Voidstreak             = {hash:1966171335,apilocation:'profileCollectibles',   got:[],need:[],amountgot:0,amountneed:0};
     clan.membersWith.YouAreWorthy           = {hash:2237933812,apilocation:'profileCollectibles',   got:[],need:[],amountgot:0,amountneed:0};
 
-    clan.membersWith.Cursebreaker           = {hash:1693645129,apilocation:'profileCollectibles',   got:[],need:[],amountgot:0,amountneed:0};
-    clan.membersWith.Shadow		            = {hash:1883929036,apilocation:'profileCollectibles',   got:[],need:[],amountgot:0,amountneed:0};
+    clan.membersWith.Cursebreaker           = {hash:1693645129,apilocation:'profileRecords',        got:[],need:[],amountgot:0,amountneed:0};
+    clan.membersWith.Shadow		            = {hash:1883929036,apilocation:'profileRecords',        got:[],need:[],amountgot:0,amountneed:0};
     
     // Apparently with shadowkeep all collectibles moved to profiles... 
 
@@ -239,7 +239,23 @@ function checkForSpecialAchievements(memberid) {
             clan.membersFetched = clan.membersFetched + 1;
 
             $.each(clan.membersWith, function (weapon, weapondata) {
-
+                
+                if (weapondata.apilocation == 'profileRecords') {
+                                          
+                    if (typeof data.Response.profileRecords.data.records[weapondata.hash] !== "undefined" && data.Response.profileRecords.data.records[weapondata.hash].state % 2 === 0) {
+                        weapondata.amountgot = weapondata.amountgot + 1;
+                        weapondata.got.push(clan.memberName[memberid]);
+                    } else {
+                        weapondata.amountneed = weapondata.amountneed + 1;
+                        weapondata.need.push(clan.memberName[memberid]);
+                        
+                        //additional output to catch changed hashes
+                        if (typeof data.Response.profileRecords.data.records[weapondata.hash] === "undefined"){
+                            clan.SystemNotices.add('please check hash and location for ' +weapon+' ('+weapondata.hash+' in '+weapondata.apilocation+')');
+                        } 
+                    }
+                }
+                
                 if (weapondata.apilocation == 'profileCollectibles') {
                                           
                     if (typeof data.Response.profileCollectibles.data.collectibles[weapondata.hash] !== "undefined" && data.Response.profileCollectibles.data.collectibles[weapondata.hash].state % 2 === 0) {
