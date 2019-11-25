@@ -1,7 +1,7 @@
 var bungieAPIkey = "0a11942f318647978979f13ad8aa53ee";
 var clan = {};
 var header = 'Clan Loot';
-var version = 'v2.7.1';
+var version = 'v2.8.0';
 var retriesPerCharacter = 2;
 var consoleTypes = [2, 1, 3, 4, 5, 10]; 
 var consoleTypesNames = {"2" : "PSN","1" : "XBOX","3" : "PC","4" : "BNET","5" : "Stadia","10" : "demon"}
@@ -153,18 +153,18 @@ function getClanData(clanId, clanName) {
     clan.membersWith.Voidstreak             = {hash:1966171335,apilocation:'profileCollectibles',   got:[],need:[],amountgot:0,amountneed:0};
     clan.membersWith.YouAreWorthy           = {hash:2237933812,apilocation:'profileCollectibles',   got:[],need:[],amountgot:0,amountneed:0};
 
-    clan.membersWith.SealCursebreaker           = {hash:1693645129,apilocation:'profileRecords',   got:[],need:[],amountgot:0,amountneed:0};
-    clan.membersWith.SealShadow		            = {hash:1883929036,apilocation:'profileRecords',   got:[],need:[],amountgot:0,amountneed:0};
-    clan.membersWith.SealBlacksmith	            = {hash:2053985130,apilocation:'profileRecords',   got:[],need:[],amountgot:0,amountneed:0};
-    clan.membersWith.SealUnbroken	            = {hash:3369119720,apilocation:'profileRecords',   got:[],need:[],amountgot:0,amountneed:0};
-    clan.membersWith.SealWayfarer	            = {hash:2757681677,apilocation:'profileRecords',   got:[],need:[],amountgot:0,amountneed:0};
-    clan.membersWith.SealDredgen		        = {hash:3798931976,apilocation:'profileRecords',   got:[],need:[],amountgot:0,amountneed:0};
-    clan.membersWith.SealEnlightened	        = {hash:3387213440,apilocation:'profileRecords',   got:[],need:[],amountgot:0,amountneed:0};
-    clan.membersWith.SealChronicler	            = {hash:1754983323,apilocation:'profileRecords',   got:[],need:[],amountgot:0,amountneed:0};
-    clan.membersWith.SealRivensbane	            = {hash:2182090828,apilocation:'profileRecords',   got:[],need:[],amountgot:0,amountneed:0};
-    clan.membersWith.SealReckoner	            = {hash:1313291220,apilocation:'profileRecords',   got:[],need:[],amountgot:0,amountneed:0};
-    clan.membersWith.SealHarbinger	            = {hash:3793754396,apilocation:'profileRecords',   got:[],need:[],amountgot:0,amountneed:0};
-    clan.membersWith.SealUndying                = {hash:2707428411,apilocation:'profileRecords',   got:[],need:[],amountgot:0,amountneed:0};
+    clan.membersWith.sealCursebreaker       = {hash:1693645129,apilocation:'profileRecords',   got:[],need:[],amountgot:0,amountneed:0};
+    clan.membersWith.sealShadow		        = {hash:1883929036,apilocation:'profileRecords',   got:[],need:[],amountgot:0,amountneed:0};
+    clan.membersWith.sealBlacksmith	        = {hash:2053985130,apilocation:'profileRecords',   got:[],need:[],amountgot:0,amountneed:0};
+    clan.membersWith.sealUnbroken	        = {hash:3369119720,apilocation:'profileRecords',   got:[],need:[],amountgot:0,amountneed:0};
+    clan.membersWith.sealWayfarer	        = {hash:2757681677,apilocation:'profileRecords',   got:[],need:[],amountgot:0,amountneed:0};
+    clan.membersWith.sealDredgen		    = {hash:3798931976,apilocation:'profileRecords',   got:[],need:[],amountgot:0,amountneed:0};
+    clan.membersWith.sealEnlightened	    = {hash:3387213440,apilocation:'profileRecords',   got:[],need:[],amountgot:0,amountneed:0};
+    clan.membersWith.sealChronicler	        = {hash:1754983323,apilocation:'profileRecords',   got:[],need:[],amountgot:0,amountneed:0};
+    clan.membersWith.sealRivensbane	        = {hash:2182090828,apilocation:'profileRecords',   got:[],need:[],amountgot:0,amountneed:0};
+    clan.membersWith.sealReckoner	        = {hash:1313291220,apilocation:'profileRecords',   got:[],need:[],amountgot:0,amountneed:0};
+    clan.membersWith.sealHarbinger	        = {hash:3793754396,apilocation:'profileRecords',   got:[],need:[],amountgot:0,amountneed:0};
+    clan.membersWith.sealUndying            = {hash:2707428411,apilocation:'profileRecords',   got:[],need:[],amountgot:0,amountneed:0};
     // Apparently with shadowkeep all collectibles moved to profiles... 
 
     //put clan name in headline
