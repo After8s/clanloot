@@ -153,18 +153,18 @@ function getClanData(clanId, clanName) {
     clan.membersWith.Voidstreak             = {hash:1966171335,apilocation:'profileCollectibles',   got:[],need:[],amountgot:0,amountneed:0};
     clan.membersWith.YouAreWorthy           = {hash:2237933812,apilocation:'profileCollectibles',   got:[],need:[],amountgot:0,amountneed:0};
 
-    clan.membersWith.Cursebreaker           = {hash:1693645129,apilocation:'profileRecords',   got:[],need:[],amountgot:0,amountneed:0};
-    clan.membersWith.Shadow		            = {hash:1883929036,apilocation:'profileRecords',   got:[],need:[],amountgot:0,amountneed:0};
-    clan.membersWith.Blacksmith	            = {hash:2053985130,apilocation:'profileRecords',   got:[],need:[],amountgot:0,amountneed:0};
-    clan.membersWith.Unbroken	            = {hash:3369119720,apilocation:'profileRecords',   got:[],need:[],amountgot:0,amountneed:0};
-    clan.membersWith.Wayfarer	            = {hash:2757681677,apilocation:'profileRecords',   got:[],need:[],amountgot:0,amountneed:0};
-    clan.membersWith.Dredgen		        = {hash:3798931976,apilocation:'profileRecords',   got:[],need:[],amountgot:0,amountneed:0};
-    clan.membersWith.Enlightened	        = {hash:3387213440,apilocation:'profileRecords',   got:[],need:[],amountgot:0,amountneed:0};
-    clan.membersWith.Chronicler	            = {hash:1754983323,apilocation:'profileRecords',   got:[],need:[],amountgot:0,amountneed:0};
-    clan.membersWith.Rivensbane	            = {hash:2182090828,apilocation:'profileRecords',   got:[],need:[],amountgot:0,amountneed:0};
-    clan.membersWith.Reckoner	            = {hash:1313291220,apilocation:'profileRecords',   got:[],need:[],amountgot:0,amountneed:0};
-    clan.membersWith.Harbinger	            = {hash:3793754396,apilocation:'profileRecords',   got:[],need:[],amountgot:0,amountneed:0};
-    clan.membersWith.Undying                = {hash:2707428411,apilocation:'profileRecords',   got:[],need:[],amountgot:0,amountneed:0};
+    clan.membersWith.SealCursebreaker           = {hash:1693645129,apilocation:'profileRecords',   got:[],need:[],amountgot:0,amountneed:0};
+    clan.membersWith.SealShadow		            = {hash:1883929036,apilocation:'profileRecords',   got:[],need:[],amountgot:0,amountneed:0};
+    clan.membersWith.SealBlacksmith	            = {hash:2053985130,apilocation:'profileRecords',   got:[],need:[],amountgot:0,amountneed:0};
+    clan.membersWith.SealUnbroken	            = {hash:3369119720,apilocation:'profileRecords',   got:[],need:[],amountgot:0,amountneed:0};
+    clan.membersWith.SealWayfarer	            = {hash:2757681677,apilocation:'profileRecords',   got:[],need:[],amountgot:0,amountneed:0};
+    clan.membersWith.SealDredgen		        = {hash:3798931976,apilocation:'profileRecords',   got:[],need:[],amountgot:0,amountneed:0};
+    clan.membersWith.SealEnlightened	        = {hash:3387213440,apilocation:'profileRecords',   got:[],need:[],amountgot:0,amountneed:0};
+    clan.membersWith.SealChronicler	            = {hash:1754983323,apilocation:'profileRecords',   got:[],need:[],amountgot:0,amountneed:0};
+    clan.membersWith.SealRivensbane	            = {hash:2182090828,apilocation:'profileRecords',   got:[],need:[],amountgot:0,amountneed:0};
+    clan.membersWith.SealReckoner	            = {hash:1313291220,apilocation:'profileRecords',   got:[],need:[],amountgot:0,amountneed:0};
+    clan.membersWith.SealHarbinger	            = {hash:3793754396,apilocation:'profileRecords',   got:[],need:[],amountgot:0,amountneed:0};
+    clan.membersWith.SealUndying                = {hash:2707428411,apilocation:'profileRecords',   got:[],need:[],amountgot:0,amountneed:0};
     // Apparently with shadowkeep all collectibles moved to profiles... 
 
     //put clan name in headline
