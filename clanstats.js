@@ -165,6 +165,7 @@ function getClanData(clanId, clanName) {
     clan.membersWith.sealReckoner	        = {hash:1313291220,apilocation:'profileRecords',   got:[],need:[],amountgot:0,amountneed:0};
     clan.membersWith.sealHarbinger	        = {hash:3793754396,apilocation:'profileRecords',   got:[],need:[],amountgot:0,amountneed:0};
     clan.membersWith.sealUndying            = {hash:2707428411,apilocation:'profileRecords',   got:[],need:[],amountgot:0,amountneed:0};
+    clan.membersWith.sealMMXIX              = {hash:2254764897,apilocation:'profileRecords',   got:[],need:[],amountgot:0,amountneed:0};
     // Apparently with shadowkeep all collectibles moved to profiles... 
 
     //put clan name in headline
