@@ -1,7 +1,7 @@
 var bungieAPIkey = "0a11942f318647978979f13ad8aa53ee";
 var clan = {};
 var header = 'Clan Loot';
-var version = 'v2.8.0';
+var version = 'v2.8.1';
 var retriesPerCharacter = 2;
 var consoleTypes = [2, 1, 3, 4, 5, 10]; 
 var consoleTypesNames = {"2" : "PSN","1" : "XBOX","3" : "PC","4" : "BNET","5" : "Stadia","10" : "demon"}
@@ -78,7 +78,9 @@ function getClanData(clanId, clanName) {
     clan.membersWith.Anarchy                = {hash:2220014607,apilocation:'profileCollectibles',   got:[],need:[],amountgot:0,amountneed:0};
     clan.membersWith.Armory                 = {hash:3531075476,apilocation:'profileCollectibles',   got:[],need:[],amountgot:0,amountneed:0};
     clan.membersWith.BadJuju                = {hash:4207100358,apilocation:'profileCollectibles',   got:[],need:[],amountgot:0,amountneed:0};
+    clan.membersWith.Bastion                = {hash:3207791447,apilocation:'profileCollectibles',   got:[],need:[],amountgot:0,amountneed:0};
     clan.membersWith.Breakneck              = {hash:1666039008,apilocation:'profileCollectibles',   got:[],need:[],amountgot:0,amountneed:0};
+    clan.membersWith.Buzzard                = {hash:2011258732,apilocation:'profileCollectibles',   got:[],need:[],amountgot:0,amountneed:0};
     clan.membersWith.DeathsRazor            = {hash:1572606157,apilocation:'profileCollectibles',   got:[],need:[],amountgot:0,amountneed:0};
     clan.membersWith.Delirium               = {hash:1639266456,apilocation:'profileCollectibles',   got:[],need:[],amountgot:0,amountneed:0};
     clan.membersWith.EmperorsChosen         = {hash:2678796997,apilocation:'profileCollectibles',   got:[],need:[],amountgot:0,amountneed:0};
@@ -88,6 +90,7 @@ function getClanData(clanId, clanName) {
     clan.membersWith.HorrorsLeast           = {hash:1099984904,apilocation:'profileCollectibles',   got:[],need:[],amountgot:0,amountneed:0};
     clan.membersWith.Hush                   = {hash:1670904512,apilocation:'profileCollectibles',   got:[],need:[],amountgot:0,amountneed:0};
     clan.membersWith.IzanagisBurden         = {hash:24541428,  apilocation:'profileCollectibles',   got:[],need:[],amountgot:0,amountneed:0};
+    clan.membersWith.Komodo                 = {hash:4116184726,apilocation:'profileCollectibles',   got:[],need:[],amountgot:0,amountneed:0};
     clan.membersWith.LoadedQuestion         = {hash:3810740723,apilocation:'profileCollectibles',   got:[],need:[],amountgot:0,amountneed:0};
     clan.membersWith.LunasHowl              = {hash:3260604718,apilocation:'profileCollectibles',   got:[],need:[],amountgot:0,amountneed:0};
     clan.membersWith.Lumina                 = {hash:2924632392,apilocation:'profileCollectibles',   got:[],need:[],amountgot:0,amountneed:0};
@@ -100,6 +103,7 @@ function getClanData(clanId, clanName) {
     clan.membersWith.OutbreakPerfected      = {hash:2500286745,apilocation:'profileCollectibles',   got:[],need:[],amountgot:0,amountneed:0};
     clan.membersWith.Oxygen                 = {hash:543982652, apilocation:'profileCollectibles',   got:[],need:[],amountgot:0,amountneed:0};
     clan.membersWith.PersistentBlaze        = {hash:1822110017,apilocation:'profileCollectibles',   got:[],need:[],amountgot:0,amountneed:0};
+    clan.membersWith.Python                 = {hash:3972149937,apilocation:'profileCollectibles',   got:[],need:[],amountgot:0,amountneed:0};
     clan.membersWith.QuarantineZone         = {hash:3525340634,apilocation:'profileCollectibles',   got:[],need:[],amountgot:0,amountneed:0};
     clan.membersWith.Recluse                = {hash:2335550020,apilocation:'profileCollectibles',   got:[],need:[],amountgot:0,amountneed:0};
     clan.membersWith.RedrixsBroadsword      = {hash:1111219481,apilocation:'profileCollectibles',   got:[],need:[],amountgot:0,amountneed:0};
@@ -166,6 +170,7 @@ function getClanData(clanId, clanName) {
     clan.membersWith.sealHarbinger	        = {hash:3793754396,apilocation:'profileRecords',   got:[],need:[],amountgot:0,amountneed:0};
     clan.membersWith.sealUndying            = {hash:2707428411,apilocation:'profileRecords',   got:[],need:[],amountgot:0,amountneed:0};
     clan.membersWith.sealMMXIX              = {hash:2254764897,apilocation:'profileRecords',   got:[],need:[],amountgot:0,amountneed:0};
+    clan.membersWith.sealDawn               = {hash:2460356851,apilocation:'profileRecords',   got:[],need:[],amountgot:0,amountneed:0};
     // Apparently with shadowkeep all collectibles moved to profiles... 
 
     //put clan name in headline
