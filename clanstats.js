@@ -1,7 +1,7 @@
 var bungieAPIkey = "0a11942f318647978979f13ad8aa53ee";
 var clan = {};
 var header = 'Clan Loot';
-var version = 'v2.8.1';
+var version = 'v2.8.2';
 var retriesPerCharacter = 2;
 var consoleTypes = [2, 1, 3, 4, 5, 10]; 
 var consoleTypesNames = {"2" : "PSN","1" : "XBOX","3" : "PC","4" : "BNET","5" : "Stadia","10" : "demon"}
@@ -156,6 +156,7 @@ function getClanData(clanId, clanName) {
     clan.membersWith.AffinitysGift          = {hash:845125280, apilocation:'profileCollectibles',   got:[],need:[],amountgot:0,amountneed:0};
     clan.membersWith.Voidstreak             = {hash:1966171335,apilocation:'profileCollectibles',   got:[],need:[],amountgot:0,amountneed:0};
     clan.membersWith.YouAreWorthy           = {hash:2237933812,apilocation:'profileCollectibles',   got:[],need:[],amountgot:0,amountneed:0};
+    clan.membersWith.DevilsRuin             = {hash:2190071629,apilocation:'profileCollectibles',   got:[],need:[],amountgot:0,amountneed:0};
 
     clan.membersWith.sealCursebreaker       = {hash:1693645129,apilocation:'profileRecords',   got:[],need:[],amountgot:0,amountneed:0};
     clan.membersWith.sealShadow		        = {hash:1883929036,apilocation:'profileRecords',   got:[],need:[],amountgot:0,amountneed:0};
