@@ -72,7 +72,7 @@ function getClanData(clanId, clanName) {
     
     clan.SystemNotices = new Set();
 
-    clan.membersWith.AffinitysGift          = {hash:845125280, apilocation:'profileCollectibles',   got:[],need:[],amountgot:0,amountneed:0};
+    clan.membersWith.AffinitysGift          = {hash:845125280, apilocation:'characterCollectibles',   got:[],need:[],amountgot:0,amountneed:0};
     clan.membersWith.AfterTheNightfall      = {hash:2618436059,apilocation:'profileCollectibles',   got:[],need:[],amountgot:0,amountneed:0};
     clan.membersWith.AThousandWings         = {hash:3142437750,apilocation:'profileCollectibles',   got:[],need:[],amountgot:0,amountneed:0};
     clan.membersWith.AlpineDash             = {hash:555990606, apilocation:'profileCollectibles',   got:[],need:[],amountgot:0,amountneed:0};
