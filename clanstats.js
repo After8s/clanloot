@@ -130,6 +130,7 @@ function getClanData(clanId, clanName) {
     clan.membersWith.RedrixsBroadsword      = {hash:1111219481,apilocation:'profileCollectibles',   got:[],need:[],amountgot:0,amountneed:0};
     clan.membersWith.RedrixsClaymore        = {hash:4274523516,apilocation:'profileCollectibles',   got:[],need:[],amountgot:0,amountneed:0};
     clan.membersWith.Revoker                = {hash:3066162258,apilocation:'profileCollectibles',   got:[],need:[],amountgot:0,amountneed:0};
+    clan.membersWith.SaviorofthePast        = {hash:3717371848,apilocation:'profileCollectibles',   got:[],need:[],amountgot:0,amountneed:0};
     clan.membersWith.Scrap                  = {hash:1840126886,apilocation:'profileCollectibles',   got:[],need:[],amountgot:0,amountneed:0};
     clan.membersWith.ShadowofEarth          = {hash:753635605, apilocation:'profileCollectibles',   got:[],need:[],amountgot:0,amountneed:0};
     clan.membersWith.SiliconNeuroma         = {hash:1152758802,apilocation:'profileCollectibles',   got:[],need:[],amountgot:0,amountneed:0};
