@@ -3,7 +3,7 @@ clan= {}
 
 ,
 header="Clan Loot",
-version="v2.8.5",
+version="v2.8.6",
 retriesPerCharacter=2,
 consoleTypes=[2,
 1,
@@ -329,6 +329,10 @@ function getClanData(e, o) {
     ,
     clan.membersWith.Tarrabah= {
         hash: 2329697053, apilocation: "profileCollectibles", got: [], need: [], amountgot: 0, amountneed: 0
+    }
+    ,
+    clan.membersWith.TheFourthHorseman= {
+        hash: 2318862156, apilocation: "profileCollectibles", got: [], need: [], amountgot: 0, amountneed: 0
     }
     ,
     clan.membersWith.TheLastWord= {
