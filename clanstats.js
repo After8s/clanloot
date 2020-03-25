@@ -1,7 +1,7 @@
 var bungieAPIkey = "0a11942f318647978979f13ad8aa53ee",
   clan = {},
   header = "Clan Loot",
-  version = "v2.8.6",
+  version = "v2.8.7",
   retriesPerCharacter = 2,
   consoleTypes = [2, 1, 3, 4, 5, 10],
   consoleTypesNames = {
@@ -465,6 +465,14 @@ function getClanData(e, o) {
     }),
     (clan.membersWith.PersistentBlaze = {
       hash: 1822110017,
+      apilocation: "profileCollectibles",
+      got: [],
+      need: [],
+      amountgot: 0,
+      amountneed: 0
+    }),
+    (clan.membersWith.PointoftheStag = {
+      hash: 1135136071,
       apilocation: "profileCollectibles",
       got: [],
       need: [],
