@@ -720,7 +720,7 @@ function getClanData(e, o) {
       amountneed: 0
     }),
     (clan.membersWith.Warminded = {
-      hash: 1716561040,
+      hash: 2691646946,
       apilocation: "profileCollectibles",
       got: [],
       need: [],
