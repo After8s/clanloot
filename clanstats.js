@@ -64,7 +64,7 @@ function getClanData(e, o) {
       amountneed: 0
     }),
     (clan.membersWith.AfterTheNightfall = {
-      hash: 2618436059,
+      hash: 319846607,
       apilocation: "profileCollectibles",
       got: [],
       need: [],
