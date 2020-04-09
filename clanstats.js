@@ -1,7 +1,7 @@
 var bungieAPIkey = "0a11942f318647978979f13ad8aa53ee",
   clan = {},
   header = "Clan Loot",
-  version = "v2.8.7",
+  version = "v2.9",
   retriesPerCharacter = 2,
   consoleTypes = [2, 1, 3, 4, 5, 10],
   consoleTypesNames = {
@@ -80,7 +80,7 @@ function getClanData(e, o) {
       amountneed: 0
     }),
     (clan.membersWith.AlpineDash = {
-      hash: 555990606,
+      hash: 2957990665,
       apilocation: "profileCollectibles",
       got: [],
       need: [],
@@ -304,7 +304,7 @@ function getClanData(e, o) {
       amountneed: 0
     }),
     (clan.membersWith.HubrisOfNiobe = {
-      hash: 888672408,
+      hash: 3689404793,
       apilocation: "profileCollectibles",
       got: [],
       need: [],
@@ -368,7 +368,7 @@ function getClanData(e, o) {
       amountneed: 0
     }),
     (clan.membersWith.Ludomaniacal = {
-      hash: 923458194,
+      hash: 1387277885,
       apilocation: "profileCollectibles",
       got: [],
       need: [],
@@ -488,7 +488,7 @@ function getClanData(e, o) {
       amountneed: 0
     }),
     (clan.membersWith.QuarantineZone = {
-      hash: 3525340634,
+      hash: 3967648329,
       apilocation: "profileCollectibles",
       got: [],
       need: [],
@@ -536,7 +536,7 @@ function getClanData(e, o) {
       amountneed: 0
     }),
     (clan.membersWith.SaviorofthePast = {
-      hash: 3717371848,
+      hash: 2195312831,
       apilocation: "profileCollectibles",
       got: [],
       need: [],
@@ -576,7 +576,7 @@ function getClanData(e, o) {
       amountneed: 0
     }),
     (clan.membersWith.SimulantSpring = {
-      hash: 3702643914,
+      hash: 33346659,
       apilocation: "profileCollectibles",
       got: [],
       need: [],
@@ -632,7 +632,7 @@ function getClanData(e, o) {
       amountneed: 0
     }),
     (clan.membersWith.TheTributeHall = {
-      hash: 193320248,
+      hash: 1242690193,
       apilocation: "profileCollectibles",
       got: [],
       need: [],
@@ -783,6 +783,14 @@ function getClanData(e, o) {
       amountgot: 0,
       amountneed: 0
     }),
+    (clan.membersWith.sealAlmighty = {
+      hash: 2860165064,
+      apilocation: "profileRecords",
+      got: [],
+      need: [],
+      amountgot: 0,
+      amountneed: 0
+    }),
     (clan.membersWith.sealCursebreaker = {
       hash: 1693645129,
       apilocation: "profileRecords",
@@ -841,6 +849,22 @@ function getClanData(e, o) {
     }),
     (clan.membersWith.sealChronicler = {
       hash: 1754983323,
+      apilocation: "profileRecords",
+      got: [],
+      need: [],
+      amountgot: 0,
+      amountneed: 0
+    }),
+    (clan.membersWith.sealConqueror = {
+      hash: 1983630873,
+      apilocation: "profileRecords",
+      got: [],
+      need: [],
+      amountgot: 0,
+      amountneed: 0
+    }),
+    (clan.membersWith.sealFlawless = {
+      hash: 2945528800,
       apilocation: "profileRecords",
       got: [],
       need: [],
