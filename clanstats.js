@@ -3,7 +3,7 @@ var bungieAPIkey = "0a11942f318647978979f13ad8aa53ee",
   header = "Clan Loot",
   version = "v2.9",
   retriesPerCharacter = 2,
-  consoleTypes = [2, 1, 3, 4, 5, 10],
+  consoleTypes = [1, 2, 3, 4, 5, 10],
   consoleTypesNames = {
     1: "XBOX",
     2: "PSN",
@@ -297,6 +297,14 @@ function getClanData(e, o) {
     }),
     (clan.membersWith.HeavyAsDeath = {
       hash: 2242184255,
+      apilocation: "profileCollectibles",
+      got: [],
+      need: [],
+      amountgot: 0,
+      amountneed: 0
+    }),
+    (clan.membersWith.HeirApparent = {
+      hash: 2842076592,
       apilocation: "profileCollectibles",
       got: [],
       need: [],
