@@ -1,7 +1,7 @@
 var bungieAPIkey = "0a11942f318647978979f13ad8aa53ee",
   clan = {},
   header = "Clan Loot",
-  version = "v2.9",
+  version = "v2.10",
   retriesPerCharacter = 2,
   consoleTypes = [1, 2, 3, 4, 5, 10],
   consoleTypesNames = {
@@ -543,6 +543,14 @@ function getClanData(e, o) {
       amountgot: 0,
       amountneed: 0
     }),
+    (clan.membersWith.RuinousEffigy = {
+      hash: 1392294260,
+      apilocation: "profileCollectibles",
+      got: [],
+      need: [],
+      amountgot: 0,
+      amountneed: 0
+    }),
     (clan.membersWith.SaviorofthePast = {
       hash: 2195312831,
       apilocation: "profileCollectibles",
@@ -673,6 +681,14 @@ function getClanData(e, o) {
     }),
     (clan.membersWith.TiltFuse = {
       hash: 3036030066,
+      apilocation: "profileCollectibles",
+      got: [],
+      need: [],
+      amountgot: 0,
+      amountneed: 0
+    }),
+    (clan.membersWith.TravelersChosen = {
+      hash: 1370087379,
       apilocation: "profileCollectibles",
       got: [],
       need: [],
@@ -919,8 +935,24 @@ function getClanData(e, o) {
       amountgot: 0,
       amountneed: 0
     }),
+    (clan.membersWith.sealMMXX = {
+      hash: 4239091332,
+      apilocation: "profileRecords",
+      got: [],
+      need: [],
+      amountgot: 0,
+      amountneed: 0
+    }),
     (clan.membersWith.sealDawn = {
       hash: 2460356851,
+      apilocation: "profileRecords",
+      got: [],
+      need: [],
+      amountgot: 0,
+      amountneed: 0
+    }),
+     (clan.membersWith.sealArrivals = {
+      hash: 2972478098,
       apilocation: "profileRecords",
       got: [],
       need: [],
