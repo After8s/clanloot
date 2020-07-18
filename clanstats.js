@@ -1,7 +1,7 @@
 var bungieAPIkey = "0a11942f318647978979f13ad8aa53ee",
   clan = {},
   header = "Clan Loot",
-  version = "v2.10",
+  version = "v2.10.1",
   retriesPerCharacter = 2,
   consoleTypes = [1, 2, 3, 4, 5, 10],
   consoleTypesNames = {
