@@ -14,16 +14,24 @@ var bungieAPIkey = "0a11942f318647978979f13ad8aa53ee",
   },
   loadingCircle = ["&#x25D1;", "&#x25D2;", "&#x25D0;", "&#x25D3;"],
   loadingCircleIndex = 0;
+
 function lookupClan(e, o) {
   void 0 === o && (o = !1), $("#lookupError").hide();
-  var t = "https://www.bungie.net/Platform/GroupV2/Name/" + e + "/1/";
-  o && (t = "https://www.bungie.net/Platform/GroupV2/" + e + "/"),
+  
+  //old version for get endpoint
+  //var t = "https://www.bungie.net/Platform/GroupV2/Name/" + e + "/1/";
+  //o && (t = "https://www.bungie.net/Platform/GroupV2/" + e + "/"),
+  
+  var t = "https://www.bungie.net/Platform/GroupV2/NameV2/";
+  
+  var d = "{'groupName': '" + e + "', 'groupType':'1'}";
     $.ajax({
       url: t,
       headers: {
         "X-API-KEY": bungieAPIkey
       },
-      method: "GET",
+	  data: d, 
+      method: "POST",
       success: function(e) {
         void 0 !== e.Response.detail.groupId
           ? getClanData(
