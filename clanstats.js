@@ -1,7 +1,7 @@
 var bungieAPIkey = "0a11942f318647978979f13ad8aa53ee",
   clan = {},
   header = "Clan Loot",
-  version = "v2.10.1",
+  version = "v2.10.2",
   retriesPerCharacter = 2,
   consoleTypes = [1, 2, 3, 4, 5, 10],
   consoleTypesNames = {
@@ -441,6 +441,14 @@ function getClanData(e, o) {
     }),
     (clan.membersWith.NotForgotten = {
       hash: 3260604717,
+      apilocation: "profileCollectibles",
+      got: [],
+      need: [],
+      amountgot: 0,
+      amountneed: 0
+    }),
+    (clan.membersWith.OfTenSuns = {
+      hash: 1669843839,
       apilocation: "profileCollectibles",
       got: [],
       need: [],
