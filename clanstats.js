@@ -1,7 +1,7 @@
 var bungieAPIkey = "0a11942f318647978979f13ad8aa53ee",
   clan = {},
   header = "Clan Loot",
-  version = "v2.10.2",
+  version = "v2.11",
   retriesPerCharacter = 2,
   consoleTypes = [1, 2, 3, 4, 5, 10],
   consoleTypesNames = {
@@ -823,8 +823,8 @@ function getClanData(e, o) {
       amountgot: 0,
       amountneed: 0
     }),
-    (clan.membersWith.sealAlmighty = {
-      hash: 2860165064,
+    (clan.membersWith.sealBeyondLight = {
+      hash: 2482004751,
       apilocation: "profileRecords",
       got: [],
       need: [],
@@ -832,39 +832,15 @@ function getClanData(e, o) {
       amountneed: 0
     }),
     (clan.membersWith.sealCursebreaker = {
-      hash: 1693645129,
+      hash: 3214425110,
       apilocation: "profileRecords",
       got: [],
       need: [],
       amountgot: 0,
       amountneed: 0
     }),
-    (clan.membersWith.sealShadow = {
-      hash: 1883929036,
-      apilocation: "profileRecords",
-      got: [],
-      need: [],
-      amountgot: 0,
-      amountneed: 0
-    }),
-    (clan.membersWith.sealBlacksmith = {
-      hash: 2053985130,
-      apilocation: "profileRecords",
-      got: [],
-      need: [],
-      amountgot: 0,
-      amountneed: 0
-    }),
-    (clan.membersWith.sealUnbroken = {
-      hash: 3369119720,
-      apilocation: "profileRecords",
-      got: [],
-      need: [],
-      amountgot: 0,
-      amountneed: 0
-    }),
-    (clan.membersWith.sealWayfarer = {
-      hash: 2757681677,
+    (clan.membersWith.sealDeepStoneCrypt = {
+      hash: 540377256,
       apilocation: "profileRecords",
       got: [],
       need: [],
@@ -872,7 +848,7 @@ function getClanData(e, o) {
       amountneed: 0
     }),
     (clan.membersWith.sealDredgen = {
-      hash: 3798931976,
+      hash: 1556658903,
       apilocation: "profileRecords",
       got: [],
       need: [],
@@ -880,23 +856,7 @@ function getClanData(e, o) {
       amountneed: 0
     }),
     (clan.membersWith.sealEnlightened = {
-      hash: 3387213440,
-      apilocation: "profileRecords",
-      got: [],
-      need: [],
-      amountgot: 0,
-      amountneed: 0
-    }),
-    (clan.membersWith.sealChronicler = {
-      hash: 1754983323,
-      apilocation: "profileRecords",
-      got: [],
-      need: [],
-      amountgot: 0,
-      amountneed: 0
-    }),
-    (clan.membersWith.sealConqueror = {
-      hash: 1983630873,
+      hash: 2909250963,
       apilocation: "profileRecords",
       got: [],
       need: [],
@@ -904,23 +864,7 @@ function getClanData(e, o) {
       amountneed: 0
     }),
     (clan.membersWith.sealFlawless = {
-      hash: 2945528800,
-      apilocation: "profileRecords",
-      got: [],
-      need: [],
-      amountgot: 0,
-      amountneed: 0
-    }),
-    (clan.membersWith.sealRivensbane = {
-      hash: 2182090828,
-      apilocation: "profileRecords",
-      got: [],
-      need: [],
-      amountgot: 0,
-      amountneed: 0
-    }),
-    (clan.membersWith.sealReckoner = {
-      hash: 1313291220,
+      hash: 2126548397,
       apilocation: "profileRecords",
       got: [],
       need: [],
@@ -928,53 +872,133 @@ function getClanData(e, o) {
       amountneed: 0
     }),
     (clan.membersWith.sealHarbinger = {
-      hash: 3793754396,
+      hash: 2584970263,
       apilocation: "profileRecords",
       got: [],
       need: [],
       amountgot: 0,
       amountneed: 0
     }),
-    (clan.membersWith.sealUndying = {
+    (clan.membersWith.sealRivensbane = {
+      hash: 1384029371,
+      apilocation: "profileRecords",
+      got: [],
+      need: [],
+      amountgot: 0,
+      amountneed: 0
+    }),
+    (clan.membersWith.sealUnbroken = {
+      hash: 1343839969,
+      apilocation: "profileRecords",
+      got: [],
+      need: [],
+      amountgot: 0,
+      amountneed: 0
+    }),
+    (clan.membersWith.sealWarden = {
+      hash: 1561715947,
+      apilocation: "profileRecords",
+      got: [],
+      need: [],
+      amountgot: 0,
+      amountneed: 0
+    }),
+    /*(clan.membersWith.sealShadow = {
+      hash: 1883929036,
+      apilocation: "profileRecords",
+      got: [],
+      need: [],
+      amountgot: 0,
+      amountneed: 0
+    }),*/
+    /*(clan.membersWith.sealBlacksmith = {
+      hash: 2053985130,
+      apilocation: "profileRecords",
+      got: [],
+      need: [],
+      amountgot: 0,
+      amountneed: 0
+    }),*/
+        /*(clan.membersWith.sealAlmighty = {
+      hash: 2860165064,
+      apilocation: "profileRecords",
+      got: [],
+      need: [],
+      amountgot: 0,
+      amountneed: 0
+    }),*/
+    /*(clan.membersWith.sealWayfarer = {
+      hash: 2757681677,
+      apilocation: "profileRecords",
+      got: [],
+      need: [],
+      amountgot: 0,
+      amountneed: 0
+    }),*/
+    /*(clan.membersWith.sealChronicler = {
+      hash: 1754983323,
+      apilocation: "profileRecords",
+      got: [],
+      need: [],
+      amountgot: 0,
+      amountneed: 0
+    }),*/
+    /*(clan.membersWith.sealConqueror = {
+      hash: 1983630873,
+      apilocation: "profileRecords",
+      got: [],
+      need: [],
+      amountgot: 0,
+      amountneed: 0
+    }),*/
+    /*(clan.membersWith.sealReckoner = {
+      hash: 1313291220,
+      apilocation: "profileRecords",
+      got: [],
+      need: [],
+      amountgot: 0,
+      amountneed: 0
+    }),*/
+    /*(clan.membersWith.sealUndying = {
       hash: 2707428411,
       apilocation: "profileRecords",
       got: [],
       need: [],
       amountgot: 0,
       amountneed: 0
-    }),
-    (clan.membersWith.sealMMXIX = {
+    }),*/
+    /*(clan.membersWith.sealMMXIX = {
       hash: 2254764897,
       apilocation: "profileRecords",
       got: [],
       need: [],
       amountgot: 0,
       amountneed: 0
-    }),
-    (clan.membersWith.sealMMXX = {
+    }),*/
+    /*(clan.membersWith.sealMMXX = {
       hash: 4239091332,
       apilocation: "profileRecords",
       got: [],
       need: [],
       amountgot: 0,
       amountneed: 0
-    }),
-    (clan.membersWith.sealDawn = {
+    }),*/
+    /*(clan.membersWith.sealDawn = {
       hash: 2460356851,
       apilocation: "profileRecords",
       got: [],
       need: [],
       amountgot: 0,
       amountneed: 0
-    }),
-     (clan.membersWith.sealArrivals = {
+    }),*/
+    /*(clan.membersWith.sealArrivals = {
       hash: 2972478098,
       apilocation: "profileRecords",
       got: [],
       need: [],
       amountgot: 0,
       amountneed: 0
-    }),
+    }),*/
     $("#headerText").html(header + ": " + clan.clanName),
     $("#membercounter")
       .html("")
