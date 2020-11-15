@@ -823,6 +823,14 @@ function getClanData(e, o) {
       amountgot: 0,
       amountneed: 0
     }),
+    (clan.membersWith.EyesofTomorrow = {
+      hash: 753200559,
+      apilocation: "profileCollectibles",
+      got: [],
+      need: [],
+      amountgot: 0,
+      amountneed: 0
+    }),
     (clan.membersWith.sealBeyondLight = {
       hash: 2482004751,
       apilocation: "profileRecords",
