@@ -1,7 +1,7 @@
 var bungieAPIkey = "0a11942f318647978979f13ad8aa53ee",
   clan = {},
   header = "Clan Loot",
-  version = "v2.12",
+  version = "v2.12.1",
   retriesPerCharacter = 2,
   consoleTypes = [1, 2, 3, 4, 5, 10],
   consoleTypesNames = {
@@ -135,6 +135,14 @@ function getClanData(e, o) {
       amountgot: 0,
       amountneed: 0
     }),
+    (clan.membersWith.AthryssEmbrace = {
+      hash: 117301517,
+      apilocation: "characterCollectibles",
+      got: [],
+      need: [],
+      amountgot: 0,
+      amountneed: 0
+    }),
     (clan.membersWith.BadJuju = {
       hash: 4207100358,
       apilocation: "profileCollectibles",
@@ -194,6 +202,14 @@ function getClanData(e, o) {
     (clan.membersWith.Cloudstrike = {
       hash: 396432035,
       apilocation: "profileCollectibles",
+      got: [],
+      need: [],
+      amountgot: 0,
+      amountneed: 0
+    }),
+    (clan.membersWith.DawnChorus = {
+      hash: 1789224066,
+      apilocation: "characterCollectibles",
       got: [],
       need: [],
       amountgot: 0,
@@ -367,6 +383,14 @@ function getClanData(e, o) {
       amountgot: 0,
       amountneed: 0
     }),
+    (clan.membersWith.IcefallMantle = {
+      hash: 2705309061,
+      apilocation: "characterCollectibles",
+      got: [],
+      need: [],
+      amountgot: 0,
+      amountneed: 0
+    }),
     (clan.membersWith.ImpactVelocity = {
       hash: 3036030067,
       apilocation: "profileCollectibles",
@@ -439,6 +463,14 @@ function getClanData(e, o) {
       amountgot: 0,
       amountneed: 0
     }),
+    (clan.membersWith.MaskofBakris = {
+      hash: 1244896500,
+      apilocation: "characterCollectibles",
+      got: [],
+      need: [],
+      amountgot: 0,
+      amountneed: 0
+    }),
     (clan.membersWith.MilitiasBirthright = {
       hash: 1602518767,
       apilocation: "profileCollectibles",
@@ -462,15 +494,15 @@ function getClanData(e, o) {
       need: [],
       amountgot: 0,
       amountneed: 0
-    }),/*
+    }),
     (clan.membersWith.NecroticGrip = {
       hash: 1128765419,
-      apilocation: "profileCollectibles",
+      apilocation: "characterCollectibles",
       got: [],
       need: [],
       amountgot: 0,
       amountneed: 0
-    }),*/
+    }),
     (clan.membersWith.NoLoveLost = {
       hash: 3574313939,
       apilocation: "profileCollectibles",
@@ -538,6 +570,14 @@ function getClanData(e, o) {
     (clan.membersWith.PointoftheStag = {
       hash: 1135136071,
       apilocation: "profileCollectibles",
+      got: [],
+      need: [],
+      amountgot: 0,
+      amountneed: 0
+    }),
+    (clan.membersWith.PreciousScars = {
+      hash: 3551011276,
+      apilocation: "characterCollectibles",
       got: [],
       need: [],
       amountgot: 0,
