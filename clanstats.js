@@ -1,7 +1,7 @@
 var bungieAPIkey = "0a11942f318647978979f13ad8aa53ee",
   clan = {},
   header = "Clan Loot",
-  version = "v2.11",
+  version = "v2.12",
   retriesPerCharacter = 2,
   consoleTypes = [1, 2, 3, 4, 5, 10],
   consoleTypesNames = {
@@ -81,6 +81,14 @@ function getClanData(e, o) {
     }),
     (clan.membersWith.AThousandWings = {
       hash: 3142437750,
+      apilocation: "profileCollectibles",
+      got: [],
+      need: [],
+      amountgot: 0,
+      amountneed: 0
+    }),
+    (clan.membersWith.Adored = {
+      hash: 843352923,
       apilocation: "profileCollectibles",
       got: [],
       need: [],
@@ -177,6 +185,14 @@ function getClanData(e, o) {
     }),
     (clan.membersWith.CleansingKnife = {
       hash: 1469913804,
+      apilocation: "profileCollectibles",
+      got: [],
+      need: [],
+      amountgot: 0,
+      amountneed: 0
+    }),
+    (clan.membersWith.Cloudstrike = {
+      hash: 396432035,
       apilocation: "profileCollectibles",
       got: [],
       need: [],
@@ -297,6 +313,14 @@ function getClanData(e, o) {
     }),
     (clan.membersWith.Goldtusk = {
       hash: 3376099856,
+      apilocation: "profileCollectibles",
+      got: [],
+      need: [],
+      amountgot: 0,
+      amountneed: 0
+    }),
+    (clan.membersWith.Hawkmoon = {
+      hash: 653763964,
       apilocation: "profileCollectibles",
       got: [],
       need: [],
@@ -433,6 +457,22 @@ function getClanData(e, o) {
     }),
     (clan.membersWith.Mountaintop = {
       hash: 4047371119,
+      apilocation: "profileCollectibles",
+      got: [],
+      need: [],
+      amountgot: 0,
+      amountneed: 0
+    }),/*
+    (clan.membersWith.NecroticGrip = {
+      hash: 1128765419,
+      apilocation: "profileCollectibles",
+      got: [],
+      need: [],
+      amountgot: 0,
+      amountneed: 0
+    }),*/
+    (clan.membersWith.NoLoveLost = {
+      hash: 3574313939,
       apilocation: "profileCollectibles",
       got: [],
       need: [],
@@ -641,6 +681,14 @@ function getClanData(e, o) {
     }),
     (clan.membersWith.TheFourthHorseman = {
       hash: 2318862156,
+      apilocation: "profileCollectibles",
+      got: [],
+      need: [],
+      amountgot: 0,
+      amountneed: 0
+    }),
+    (clan.membersWith.TheLament = {
+      hash: 3935854305,
       apilocation: "profileCollectibles",
       got: [],
       need: [],
