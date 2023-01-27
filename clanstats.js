@@ -18,11 +18,11 @@ var bungieAPIkey = "0a11942f318647978979f13ad8aa53ee",
 function lookupClan(e, o) {
   void 0 === o && (o = !1), $("#lookupError").hide();
   
-  //old version for get endpoint
-  //var t = "https://www.bungie.net/Platform/GroupV2/Name/" + e + "/1/";
-  //o && (t = "https://www.bungie.net/Platform/GroupV2/" + e + "/"),
-  
-  var t = "https://www.bungie.net/Platform/GroupV2/NameV2/";
+if(isNaN(e)){
+	 //old version for get endpoint
+    //var t = "https://www.bungie.net/Platform/GroupV2/Name/" + e + "/1/";
+  	//o && (t = "https://www.bungie.net/Platform/GroupV2/" + e + "/"),
+   var t = "https://www.bungie.net/Platform/GroupV2/NameV2/";
   
   var d = "{'groupName': '" + e + "', 'groupType':'1'}";
     $.ajax({
@@ -47,6 +47,31 @@ function lookupClan(e, o) {
         $("#lookupError").show(), $(".table > tbody").hide();
       }
     });
+ }else{
+	  //lookup clan by id
+     $.ajax({
+      url: "https://www.bungie.net/Platform/GroupV2/" + e + "/",
+      headers: {
+        "X-API-KEY": bungieAPIkey
+      },
+	  method: "GET",
+      success: function(e) {
+        void 0 !== e.Response.detail.groupId
+          ? getClanData(
+              e.Response.detail.groupId,
+              e.Response.detail.name +
+                " [" +
+                e.Response.detail.clanInfo.clanCallsign +
+                "]"
+            )
+          : $("#lookupError").show();
+      },
+      error: function(e) {
+        $("#lookupError").show(), $(".table > tbody").hide();
+      }
+    });
+ }
+
 }
 
 function getClanData(e, o) {
